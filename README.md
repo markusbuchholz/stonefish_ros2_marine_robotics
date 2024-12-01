@@ -13,7 +13,7 @@ The repository provides all necessary commands and references that can boost you
 
 SITL allows you to simulate the vehicle hardware and firmware [ArduSub](https://www.ardusub.com/) on your host directly.<br>
 
-There are several scripts in: ```/extras_rov```, ```/extras_boat``` to communicate with vehicle using [Pymavlink](https://www.ardusub.com/developers/pymavlink.html)<br>
+There are several scripts in: ```/extras_rov```, ```/extras_boat``` to communicate with vehicle using [Pymavlink](https://www.ardusub.com/developers/pymavlink.html).<br>
 
 
 ## Prerequisites
