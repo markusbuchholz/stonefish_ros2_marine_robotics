@@ -7,11 +7,13 @@
 
 The repository provides a Docker container with a bash scripts that can seamlessly build and run the container. <br>
 
-Docker containers with ROS 2 environment can launch vehicles in both [StoneFish](https://stonefish.readthedocs.io/en/latest/) software, and they run with the support of NVIDIA GPU.<br>
+Docker container offers ROS 2 environment whare you can launch vehicles in [StoneFish](https://stonefish.readthedocs.io/en/latest/).<br>
 
 The repository provides all necessary commands and references that can boost your software's research and development process, which utilizes the ROS 2 stack.<br>
 
 SITL allows you to simulate the vehicle hardware and firmware [ArduSub](https://www.ardusub.com/) on your host directly.<br>
+
+There are several scripts in: ```/extras_rov```, ```/extras_boat``` to communicate with vehicle using [Pymavlink](https://www.ardusub.com/developers/pymavlink.html)<br>
 
 
 ## Prerequisites
@@ -22,7 +24,7 @@ SITL allows you to simulate the vehicle hardware and firmware [ArduSub](https://
 
 ## Notes
 
-Adjust in ```run.sh```.
+Adjust paths in ```run.sh```.
 
 ```bash
 local_workspace="/home/markus/underwater/ros2_marine_robotics_sim_env/src"
@@ -113,7 +115,11 @@ python3 python3 pos_req.py
 
 ## Links
 
-- [stonefish_bluerov2](https://github.com/bvibhav/stonefish_bluerov2)
+- [StoneFish github](https://github.com/patrykcieslak/stonefish)
+- [ArduSub](https://www.ardusub.com/)
+- [Pymavlink](https://www.ardusub.com/developers/pymavlink.html)
+- [Stonefish_bluerov2](https://github.com/bvibhav/stonefish_bluerov2)
+- [StoneFish paper](https://ieeexplore.ieee.org/document/8867434)
 
 
 
