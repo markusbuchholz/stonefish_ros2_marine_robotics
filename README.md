@@ -1,4 +1,4 @@
-## StoneFish ROS 2 Marine Robotics Simulator Environment
+# StoneFish ROS 2 Marine Robotics Simulator
 
 ![image](https://github.com/user-attachments/assets/5654ddf9-6532-4610-aca9-8ed265ed5d94)
 
@@ -104,9 +104,9 @@ ros2 launch cola2_stonefish bluerov_fls_simulation.launch.py
 sim_vehicle.py -v ArduSub -f vectored_6dof --model JSON --map  -l 55.99541530863445,-3.3010225004910683,0,0 -m --streamrate=-1
 
 #terminal 4
-
 cd /home/sf_ws/src/extras_rov
 # run example script
+# check for other scripts
 python3 python3 pos_req.py
 
 ```
