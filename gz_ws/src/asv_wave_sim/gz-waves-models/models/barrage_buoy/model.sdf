@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="barrage_buoy">        
+    <plugin
+        filename="gz-waves1-hydrodynamics-system"
+        name="gz::sim::systems::Hydrodynamics">
+    </plugin>
+    <link name="base_link">
+      <visual name="visual">
+        <geometry>
+          <sphere>
+            <radius>0.1</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1.0 0.5 0.0 1.0</ambient>
+          <diffuse>1.0 0.5 0.0 1.0</diffuse>
+          <specular>0.8 0.8 0.8 1.0</specular>
+        </material>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <sphere>
+            <radius>0.1</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass>0.12</mass>
+        <inertia>
+          <!-- Recalculated based on the solid sphere inertia formula -->
+          <ixx>0.000016</ixx> <!-- 2/5 * mass * radius^2 -->
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.000016</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.000016</izz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+</sdf>

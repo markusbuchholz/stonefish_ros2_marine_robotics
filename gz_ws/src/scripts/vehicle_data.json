@@ -1,0 +1,1306 @@
+{
+    "AHRS": [
+        {
+            "mavpackettype": "AHRS",
+            "omegaIx": 4.7295743570430204e-05,
+            "omegaIy": 0.00026843996602110565,
+            "omegaIz": -5.108810364617966e-05,
+            "accel_weight": 0.0,
+            "renorm_val": 0.0,
+            "error_rp": 0.007919372990727425,
+            "error_yaw": 0.041333265602588654
+        },
+        {
+            "mavpackettype": "AHRS",
+            "omegaIx": 4.7295743570430204e-05,
+            "omegaIy": 0.00026843996602110565,
+            "omegaIz": -5.108810364617966e-05,
+            "accel_weight": 0.0,
+            "renorm_val": 0.0,
+            "error_rp": 0.007923598401248455,
+            "error_yaw": 0.051884621381759644
+        },
+        {
+            "mavpackettype": "AHRS",
+            "omegaIx": 4.7295743570430204e-05,
+            "omegaIy": 0.00026843996602110565,
+            "omegaIz": -5.108810364617966e-05,
+            "accel_weight": 0.0,
+            "renorm_val": 0.0,
+            "error_rp": 0.00829597283154726,
+            "error_yaw": 0.054650261998176575
+        },
+        {
+            "mavpackettype": "AHRS",
+            "omegaIx": 4.7295743570430204e-05,
+            "omegaIy": 0.00026843996602110565,
+            "omegaIz": -5.108810364617966e-05,
+            "accel_weight": 0.0,
+            "renorm_val": 0.0,
+            "error_rp": 0.00721572944894433,
+            "error_yaw": 0.048707298934459686
+        },
+        {
+            "mavpackettype": "AHRS",
+            "omegaIx": 4.7295743570430204e-05,
+            "omegaIy": 0.00026843996602110565,
+            "omegaIz": -5.108810364617966e-05,
+            "accel_weight": 0.0,
+            "renorm_val": 0.0,
+            "error_rp": 0.008111908100545406,
+            "error_yaw": 0.052846889942884445
+        }
+    ],
+    "AHRS2": [
+        {
+            "mavpackettype": "AHRS2",
+            "roll": -0.005952284671366215,
+            "pitch": -0.06942802667617798,
+            "yaw": 1.603289246559143,
+            "altitude": 0.14000000059604645,
+            "lat": 559954155,
+            "lng": -33010259
+        },
+        {
+            "mavpackettype": "AHRS2",
+            "roll": -0.01327521726489067,
+            "pitch": 0.006413768976926804,
+            "yaw": 1.6047093868255615,
+            "altitude": 0.11999999731779099,
+            "lat": 559954155,
+            "lng": -33010260
+        },
+        {
+            "mavpackettype": "AHRS2",
+            "roll": -0.0054656704887747765,
+            "pitch": 0.07865850627422333,
+            "yaw": 1.6014041900634766,
+            "altitude": 0.12999999523162842,
+            "lat": 559954155,
+            "lng": -33010263
+        },
+        {
+            "mavpackettype": "AHRS2",
+            "roll": 0.007736706640571356,
+            "pitch": 0.04199735075235367,
+            "yaw": 1.5964970588684082,
+            "altitude": 0.12999999523162842,
+            "lat": 559954155,
+            "lng": -33010264
+        },
+        {
+            "mavpackettype": "AHRS2",
+            "roll": 0.0065846918150782585,
+            "pitch": -0.026086334139108658,
+            "yaw": 1.5945019721984863,
+            "altitude": 0.14000000059604645,
+            "lat": 559954155,
+            "lng": -33010263
+        }
+    ],
+    "ATTITUDE": [
+        {
+            "mavpackettype": "ATTITUDE",
+            "time_boot_ms": 17588,
+            "roll": -0.008088060654699802,
+            "pitch": -0.07144801318645477,
+            "yaw": 1.6294089555740356,
+            "rollspeed": -0.09440542757511139,
+            "pitchspeed": -0.028245016932487488,
+            "yawspeed": 0.010956527665257454
+        },
+        {
+            "mavpackettype": "ATTITUDE",
+            "time_boot_ms": 17828,
+            "roll": -0.014729809015989304,
+            "pitch": 0.007420299109071493,
+            "yaw": 1.614680528640747,
+            "rollspeed": -0.0025669317692518234,
+            "pitchspeed": 0.40383437275886536,
+            "yawspeed": 0.00660718884319067
+        },
+        {
+            "mavpackettype": "ATTITUDE",
+            "time_boot_ms": 18088,
+            "roll": -0.007257615681737661,
+            "pitch": 0.07789582759141922,
+            "yaw": 1.5876272916793823,
+            "rollspeed": 0.038363393396139145,
+            "pitchspeed": 0.1724308431148529,
+            "yawspeed": -0.00877523235976696
+        },
+        {
+            "mavpackettype": "ATTITUDE",
+            "time_boot_ms": 18328,
+            "roll": 0.006885077804327011,
+            "pitch": 0.037966642528772354,
+            "yaw": 1.5907191038131714,
+            "rollspeed": 0.05879944935441017,
+            "pitchspeed": -0.2560378611087799,
+            "yawspeed": -0.01119821984320879
+        },
+        {
+            "mavpackettype": "ATTITUDE",
+            "time_boot_ms": 18569,
+            "roll": 0.00621410645544529,
+            "pitch": -0.028500529006123543,
+            "yaw": 1.611223816871643,
+            "rollspeed": -0.03408191353082657,
+            "pitchspeed": -0.2467242330312729,
+            "yawspeed": 0.002289918949827552
+        }
+    ],
+    "GLOBAL_POSITION_INT": [
+        {
+            "mavpackettype": "GLOBAL_POSITION_INT",
+            "time_boot_ms": 17588,
+            "lat": 559954155,
+            "lon": -33010259,
+            "alt": 80,
+            "relative_alt": 103,
+            "vx": 0,
+            "vy": -1,
+            "vz": 6,
+            "hdg": 9335
+        },
+        {
+            "mavpackettype": "GLOBAL_POSITION_INT",
+            "time_boot_ms": 17828,
+            "lat": 559954155,
+            "lon": -33010261,
+            "alt": 70,
+            "relative_alt": 270,
+            "vx": 0,
+            "vy": -3,
+            "vz": 3,
+            "hdg": 9251
+        },
+        {
+            "mavpackettype": "GLOBAL_POSITION_INT",
+            "time_boot_ms": 18088,
+            "lat": 559954155,
+            "lon": -33010263,
+            "alt": -70,
+            "relative_alt": -52,
+            "vx": 0,
+            "vy": -2,
+            "vz": -2,
+            "hdg": 9096
+        },
+        {
+            "mavpackettype": "GLOBAL_POSITION_INT",
+            "time_boot_ms": 18328,
+            "lat": 559954155,
+            "lon": -33010264,
+            "alt": 240,
+            "relative_alt": -14,
+            "vx": 0,
+            "vy": 0,
+            "vz": -3,
+            "hdg": 9114
+        }
+    ],
+    "VFR_HUD": [
+        {
+            "mavpackettype": "VFR_HUD",
+            "airspeed": 0.018000001087784767,
+            "groundspeed": 0.018000001087784767,
+            "heading": 93,
+            "throttle": 0,
+            "alt": 0.07999999821186066,
+            "climb": -0.06800000369548798
+        },
+        {
+            "mavpackettype": "VFR_HUD",
+            "airspeed": 0.03500000014901161,
+            "groundspeed": 0.03500000014901161,
+            "heading": 92,
+            "throttle": 0,
+            "alt": 0.07000000029802322,
+            "climb": -0.039000000804662704
+        },
+        {
+            "mavpackettype": "VFR_HUD",
+            "airspeed": 0.02800000086426735,
+            "groundspeed": 0.0279999990016222,
+            "heading": 90,
+            "throttle": 0,
+            "alt": -0.07000000029802322,
+            "climb": 0.026000000536441803
+        },
+        {
+            "mavpackettype": "VFR_HUD",
+            "airspeed": 0.00800000037997961,
+            "groundspeed": 0.008000001311302185,
+            "heading": 91,
+            "throttle": 0,
+            "alt": 0.23999999463558197,
+            "climb": 0.03100000135600567
+        }
+    ],
+    "SYS_STATUS": [
+        {
+            "mavpackettype": "SYS_STATUS",
+            "onboard_control_sensors_present": 322034735,
+            "onboard_control_sensors_enabled": 302088239,
+            "onboard_control_sensors_health": 51478831,
+            "load": 0,
+            "voltage_battery": 12600,
+            "current_battery": 0,
+            "battery_remaining": 100,
+            "drop_rate_comm": 0,
+            "errors_comm": 0,
+            "errors_count1": 0,
+            "errors_count2": 0,
+            "errors_count3": 0,
+            "errors_count4": 0
+        },
+        {
+            "mavpackettype": "SYS_STATUS",
+            "onboard_control_sensors_present": 322034735,
+            "onboard_control_sensors_enabled": 302088239,
+            "onboard_control_sensors_health": 51478831,
+            "load": 0,
+            "voltage_battery": 12600,
+            "current_battery": 0,
+            "battery_remaining": 100,
+            "drop_rate_comm": 0,
+            "errors_comm": 0,
+            "errors_count1": 0,
+            "errors_count2": 0,
+            "errors_count3": 0,
+            "errors_count4": 0
+        },
+        {
+            "mavpackettype": "SYS_STATUS",
+            "onboard_control_sensors_present": 322034735,
+            "onboard_control_sensors_enabled": 302088239,
+            "onboard_control_sensors_health": 51478831,
+            "load": 0,
+            "voltage_battery": 12600,
+            "current_battery": 0,
+            "battery_remaining": 100,
+            "drop_rate_comm": 0,
+            "errors_comm": 0,
+            "errors_count1": 0,
+            "errors_count2": 0,
+            "errors_count3": 0,
+            "errors_count4": 0
+        },
+        {
+            "mavpackettype": "SYS_STATUS",
+            "onboard_control_sensors_present": 322034735,
+            "onboard_control_sensors_enabled": 302088239,
+            "onboard_control_sensors_health": 51478831,
+            "load": 0,
+            "voltage_battery": 12600,
+            "current_battery": 0,
+            "battery_remaining": 100,
+            "drop_rate_comm": 0,
+            "errors_comm": 0,
+            "errors_count1": 0,
+            "errors_count2": 0,
+            "errors_count3": 0,
+            "errors_count4": 0
+        }
+    ],
+    "POWER_STATUS": [
+        {
+            "mavpackettype": "POWER_STATUS",
+            "Vcc": 5000,
+            "Vservo": 0,
+            "flags": 0
+        },
+        {
+            "mavpackettype": "POWER_STATUS",
+            "Vcc": 5000,
+            "Vservo": 0,
+            "flags": 0
+        },
+        {
+            "mavpackettype": "POWER_STATUS",
+            "Vcc": 5000,
+            "Vservo": 0,
+            "flags": 0
+        },
+        {
+            "mavpackettype": "POWER_STATUS",
+            "Vcc": 5000,
+            "Vservo": 0,
+            "flags": 0
+        }
+    ],
+    "MEMINFO": [
+        {
+            "mavpackettype": "MEMINFO",
+            "brkval": 0,
+            "freemem": 65535,
+            "freemem32": 131072
+        },
+        {
+            "mavpackettype": "MEMINFO",
+            "brkval": 0,
+            "freemem": 65535,
+            "freemem32": 131072
+        },
+        {
+            "mavpackettype": "MEMINFO",
+            "brkval": 0,
+            "freemem": 65535,
+            "freemem32": 131072
+        },
+        {
+            "mavpackettype": "MEMINFO",
+            "brkval": 0,
+            "freemem": 65535,
+            "freemem32": 131072
+        }
+    ],
+    "MISSION_CURRENT": [
+        {
+            "mavpackettype": "MISSION_CURRENT",
+            "seq": 0,
+            "total": 0,
+            "mission_state": 1,
+            "mission_mode": 0
+        },
+        {
+            "mavpackettype": "MISSION_CURRENT",
+            "seq": 0,
+            "total": 0,
+            "mission_state": 1,
+            "mission_mode": 0
+        },
+        {
+            "mavpackettype": "MISSION_CURRENT",
+            "seq": 0,
+            "total": 0,
+            "mission_state": 1,
+            "mission_mode": 0
+        },
+        {
+            "mavpackettype": "MISSION_CURRENT",
+            "seq": 0,
+            "total": 0,
+            "mission_state": 1,
+            "mission_mode": 0
+        }
+    ],
+    "SERVO_OUTPUT_RAW": [
+        {
+            "mavpackettype": "SERVO_OUTPUT_RAW",
+            "time_usec": 17588681,
+            "port": 0,
+            "servo1_raw": 1500,
+            "servo2_raw": 0,
+            "servo3_raw": 1500,
+            "servo4_raw": 0,
+            "servo5_raw": 0,
+            "servo6_raw": 0,
+            "servo7_raw": 0,
+            "servo8_raw": 0,
+            "servo9_raw": 0,
+            "servo10_raw": 0,
+            "servo11_raw": 0,
+            "servo12_raw": 0,
+            "servo13_raw": 0,
+            "servo14_raw": 0,
+            "servo15_raw": 0,
+            "servo16_raw": 0
+        },
+        {
+            "mavpackettype": "SERVO_OUTPUT_RAW",
+            "time_usec": 17828598,
+            "port": 0,
+            "servo1_raw": 1500,
+            "servo2_raw": 0,
+            "servo3_raw": 1500,
+            "servo4_raw": 0,
+            "servo5_raw": 0,
+            "servo6_raw": 0,
+            "servo7_raw": 0,
+            "servo8_raw": 0,
+            "servo9_raw": 0,
+            "servo10_raw": 0,
+            "servo11_raw": 0,
+            "servo12_raw": 0,
+            "servo13_raw": 0,
+            "servo14_raw": 0,
+            "servo15_raw": 0,
+            "servo16_raw": 0
+        },
+        {
+            "mavpackettype": "SERVO_OUTPUT_RAW",
+            "time_usec": 18088509,
+            "port": 0,
+            "servo1_raw": 1500,
+            "servo2_raw": 0,
+            "servo3_raw": 1500,
+            "servo4_raw": 0,
+            "servo5_raw": 0,
+            "servo6_raw": 0,
+            "servo7_raw": 0,
+            "servo8_raw": 0,
+            "servo9_raw": 0,
+            "servo10_raw": 0,
+            "servo11_raw": 0,
+            "servo12_raw": 0,
+            "servo13_raw": 0,
+            "servo14_raw": 0,
+            "servo15_raw": 0,
+            "servo16_raw": 0
+        },
+        {
+            "mavpackettype": "SERVO_OUTPUT_RAW",
+            "time_usec": 18328426,
+            "port": 0,
+            "servo1_raw": 1500,
+            "servo2_raw": 0,
+            "servo3_raw": 1500,
+            "servo4_raw": 0,
+            "servo5_raw": 0,
+            "servo6_raw": 0,
+            "servo7_raw": 0,
+            "servo8_raw": 0,
+            "servo9_raw": 0,
+            "servo10_raw": 0,
+            "servo11_raw": 0,
+            "servo12_raw": 0,
+            "servo13_raw": 0,
+            "servo14_raw": 0,
+            "servo15_raw": 0,
+            "servo16_raw": 0
+        }
+    ],
+    "RC_CHANNELS": [
+        {
+            "mavpackettype": "RC_CHANNELS",
+            "time_boot_ms": 17588,
+            "chancount": 8,
+            "chan1_raw": 1500,
+            "chan2_raw": 1500,
+            "chan3_raw": 1500,
+            "chan4_raw": 1500,
+            "chan5_raw": 1800,
+            "chan6_raw": 1000,
+            "chan7_raw": 1000,
+            "chan8_raw": 1800,
+            "chan9_raw": 0,
+            "chan10_raw": 0,
+            "chan11_raw": 0,
+            "chan12_raw": 0,
+            "chan13_raw": 0,
+            "chan14_raw": 0,
+            "chan15_raw": 0,
+            "chan16_raw": 0,
+            "chan17_raw": 0,
+            "chan18_raw": 0,
+            "rssi": 255
+        },
+        {
+            "mavpackettype": "RC_CHANNELS",
+            "time_boot_ms": 17828,
+            "chancount": 8,
+            "chan1_raw": 1500,
+            "chan2_raw": 1500,
+            "chan3_raw": 1500,
+            "chan4_raw": 1500,
+            "chan5_raw": 1800,
+            "chan6_raw": 1000,
+            "chan7_raw": 1000,
+            "chan8_raw": 1800,
+            "chan9_raw": 0,
+            "chan10_raw": 0,
+            "chan11_raw": 0,
+            "chan12_raw": 0,
+            "chan13_raw": 0,
+            "chan14_raw": 0,
+            "chan15_raw": 0,
+            "chan16_raw": 0,
+            "chan17_raw": 0,
+            "chan18_raw": 0,
+            "rssi": 255
+        },
+        {
+            "mavpackettype": "RC_CHANNELS",
+            "time_boot_ms": 18088,
+            "chancount": 8,
+            "chan1_raw": 1500,
+            "chan2_raw": 1500,
+            "chan3_raw": 1500,
+            "chan4_raw": 1500,
+            "chan5_raw": 1800,
+            "chan6_raw": 1000,
+            "chan7_raw": 1000,
+            "chan8_raw": 1800,
+            "chan9_raw": 0,
+            "chan10_raw": 0,
+            "chan11_raw": 0,
+            "chan12_raw": 0,
+            "chan13_raw": 0,
+            "chan14_raw": 0,
+            "chan15_raw": 0,
+            "chan16_raw": 0,
+            "chan17_raw": 0,
+            "chan18_raw": 0,
+            "rssi": 255
+        },
+        {
+            "mavpackettype": "RC_CHANNELS",
+            "time_boot_ms": 18328,
+            "chancount": 8,
+            "chan1_raw": 1500,
+            "chan2_raw": 1500,
+            "chan3_raw": 1500,
+            "chan4_raw": 1500,
+            "chan5_raw": 1800,
+            "chan6_raw": 1000,
+            "chan7_raw": 1000,
+            "chan8_raw": 1800,
+            "chan9_raw": 0,
+            "chan10_raw": 0,
+            "chan11_raw": 0,
+            "chan12_raw": 0,
+            "chan13_raw": 0,
+            "chan14_raw": 0,
+            "chan15_raw": 0,
+            "chan16_raw": 0,
+            "chan17_raw": 0,
+            "chan18_raw": 0,
+            "rssi": 255
+        }
+    ],
+    "RAW_IMU": [
+        {
+            "mavpackettype": "RAW_IMU",
+            "time_usec": 17588681,
+            "xacc": -91,
+            "yacc": 5,
+            "zacc": -1039,
+            "xgyro": -94,
+            "ygyro": -28,
+            "zgyro": 11,
+            "xmag": 21,
+            "ymag": -172,
+            "zmag": 469,
+            "id": 0,
+            "temperature": 2578
+        },
+        {
+            "mavpackettype": "RAW_IMU",
+            "time_usec": 17828598,
+            "xacc": 4,
+            "yacc": 12,
+            "zacc": -1003,
+            "xgyro": -2,
+            "ygyro": 403,
+            "zgyro": 6,
+            "xmag": -2,
+            "ymag": -181,
+            "zmag": 466,
+            "id": 0,
+            "temperature": 2579
+        },
+        {
+            "mavpackettype": "RAW_IMU",
+            "time_usec": 18088509,
+            "xacc": 98,
+            "yacc": 9,
+            "zacc": -1003,
+            "xgyro": 38,
+            "ygyro": 172,
+            "zgyro": -8,
+            "xmag": -36,
+            "ymag": -179,
+            "zmag": 466,
+            "id": 0,
+            "temperature": 2581
+        },
+        {
+            "mavpackettype": "RAW_IMU",
+            "time_usec": 18328426,
+            "xacc": 42,
+            "yacc": -3,
+            "zacc": -982,
+            "xgyro": 58,
+            "ygyro": -256,
+            "zgyro": -11,
+            "xmag": -35,
+            "ymag": -172,
+            "zmag": 468,
+            "id": 0,
+            "temperature": 2582
+        }
+    ],
+    "SCALED_IMU2": [
+        {
+            "mavpackettype": "SCALED_IMU2",
+            "time_boot_ms": 17588,
+            "xacc": -91,
+            "yacc": 5,
+            "zacc": -1040,
+            "xgyro": -94,
+            "ygyro": -28,
+            "zgyro": 11,
+            "xmag": 21,
+            "ymag": -172,
+            "zmag": 469,
+            "temperature": 2578
+        },
+        {
+            "mavpackettype": "SCALED_IMU2",
+            "time_boot_ms": 17828,
+            "xacc": 4,
+            "yacc": 12,
+            "zacc": -1003,
+            "xgyro": -2,
+            "ygyro": 403,
+            "zgyro": 6,
+            "xmag": -2,
+            "ymag": -181,
+            "zmag": 466,
+            "temperature": 2579
+        },
+        {
+            "mavpackettype": "SCALED_IMU2",
+            "time_boot_ms": 18088,
+            "xacc": 98,
+            "yacc": 8,
+            "zacc": -1003,
+            "xgyro": 38,
+            "ygyro": 172,
+            "zgyro": -8,
+            "xmag": -36,
+            "ymag": -179,
+            "zmag": 466,
+            "temperature": 2581
+        },
+        {
+            "mavpackettype": "SCALED_IMU2",
+            "time_boot_ms": 18328,
+            "xacc": 42,
+            "yacc": -3,
+            "zacc": -982,
+            "xgyro": 58,
+            "ygyro": -255,
+            "zgyro": -11,
+            "xmag": -35,
+            "ymag": -172,
+            "zmag": 468,
+            "temperature": 2582
+        }
+    ],
+    "SCALED_IMU3": [
+        {
+            "mavpackettype": "SCALED_IMU3",
+            "time_boot_ms": 17588,
+            "xacc": 0,
+            "yacc": 0,
+            "zacc": 0,
+            "xgyro": 0,
+            "ygyro": 0,
+            "zgyro": 0,
+            "xmag": 21,
+            "ymag": -172,
+            "zmag": 469,
+            "temperature": 0
+        },
+        {
+            "mavpackettype": "SCALED_IMU3",
+            "time_boot_ms": 17828,
+            "xacc": 0,
+            "yacc": 0,
+            "zacc": 0,
+            "xgyro": 0,
+            "ygyro": 0,
+            "zgyro": 0,
+            "xmag": -2,
+            "ymag": -181,
+            "zmag": 466,
+            "temperature": 0
+        },
+        {
+            "mavpackettype": "SCALED_IMU3",
+            "time_boot_ms": 18088,
+            "xacc": 0,
+            "yacc": 0,
+            "zacc": 0,
+            "xgyro": 0,
+            "ygyro": 0,
+            "zgyro": 0,
+            "xmag": -36,
+            "ymag": -179,
+            "zmag": 466,
+            "temperature": 0
+        },
+        {
+            "mavpackettype": "SCALED_IMU3",
+            "time_boot_ms": 18328,
+            "xacc": 0,
+            "yacc": 0,
+            "zacc": 0,
+            "xgyro": 0,
+            "ygyro": 0,
+            "zgyro": 0,
+            "xmag": -35,
+            "ymag": -172,
+            "zmag": 468,
+            "temperature": 0
+        }
+    ],
+    "SCALED_PRESSURE": [
+        {
+            "mavpackettype": "SCALED_PRESSURE",
+            "time_boot_ms": 17588,
+            "press_abs": 1013.2451171875,
+            "press_diff": 0.0,
+            "temperature": 2942,
+            "temperature_press_diff": 0
+        },
+        {
+            "mavpackettype": "SCALED_PRESSURE",
+            "time_boot_ms": 17828,
+            "press_abs": 1013.214111328125,
+            "press_diff": 0.0,
+            "temperature": 2947,
+            "temperature_press_diff": 0
+        },
+        {
+            "mavpackettype": "SCALED_PRESSURE",
+            "time_boot_ms": 18088,
+            "press_abs": 1013.2529296875,
+            "press_diff": 0.0,
+            "temperature": 2951,
+            "temperature_press_diff": 0
+        },
+        {
+            "mavpackettype": "SCALED_PRESSURE",
+            "time_boot_ms": 18328,
+            "press_abs": 1013.2482299804688,
+            "press_diff": 0.0,
+            "temperature": 2957,
+            "temperature_press_diff": 0
+        }
+    ],
+    "SCALED_PRESSURE2": [
+        {
+            "mavpackettype": "SCALED_PRESSURE2",
+            "time_boot_ms": 17588,
+            "press_abs": 1013.2360229492188,
+            "press_diff": 0.0,
+            "temperature": 2942,
+            "temperature_press_diff": 0
+        },
+        {
+            "mavpackettype": "SCALED_PRESSURE2",
+            "time_boot_ms": 17828,
+            "press_abs": 1013.2302856445312,
+            "press_diff": 0.0,
+            "temperature": 2947,
+            "temperature_press_diff": 0
+        },
+        {
+            "mavpackettype": "SCALED_PRESSURE2",
+            "time_boot_ms": 18088,
+            "press_abs": 1013.2384033203125,
+            "press_diff": 0.0,
+            "temperature": 2951,
+            "temperature_press_diff": 0
+        },
+        {
+            "mavpackettype": "SCALED_PRESSURE2",
+            "time_boot_ms": 18328,
+            "press_abs": 1013.2472534179688,
+            "press_diff": 0.0,
+            "temperature": 2957,
+            "temperature_press_diff": 0
+        }
+    ],
+    "GPS_RAW_INT": [
+        {
+            "mavpackettype": "GPS_RAW_INT",
+            "time_usec": 17433000,
+            "fix_type": 6,
+            "lat": 559954155,
+            "lon": -33010259,
+            "alt": 140,
+            "eph": 121,
+            "epv": 200,
+            "vel": 1,
+            "cog": 27167,
+            "satellites_visible": 10,
+            "alt_ellipsoid": 140,
+            "h_acc": 300,
+            "v_acc": 300,
+            "vel_acc": 0,
+            "hdg_acc": 0,
+            "yaw": 0
+        },
+        {
+            "mavpackettype": "GPS_RAW_INT",
+            "time_usec": 17633000,
+            "fix_type": 6,
+            "lat": 559954155,
+            "lon": -33010260,
+            "alt": 120,
+            "eph": 121,
+            "epv": 200,
+            "vel": 3,
+            "cog": 27690,
+            "satellites_visible": 10,
+            "alt_ellipsoid": 120,
+            "h_acc": 300,
+            "v_acc": 300,
+            "vel_acc": 0,
+            "hdg_acc": 0,
+            "yaw": 0
+        },
+        {
+            "mavpackettype": "GPS_RAW_INT",
+            "time_usec": 18033000,
+            "fix_type": 6,
+            "lat": 559954155,
+            "lon": -33010263,
+            "alt": 130,
+            "eph": 121,
+            "epv": 200,
+            "vel": 2,
+            "cog": 28656,
+            "satellites_visible": 10,
+            "alt_ellipsoid": 130,
+            "h_acc": 300,
+            "v_acc": 300,
+            "vel_acc": 0,
+            "hdg_acc": 0,
+            "yaw": 0
+        },
+        {
+            "mavpackettype": "GPS_RAW_INT",
+            "time_usec": 18233000,
+            "fix_type": 6,
+            "lat": 559954155,
+            "lon": -33010264,
+            "alt": 130,
+            "eph": 121,
+            "epv": 200,
+            "vel": 0,
+            "cog": 6274,
+            "satellites_visible": 10,
+            "alt_ellipsoid": 130,
+            "h_acc": 300,
+            "v_acc": 300,
+            "vel_acc": 0,
+            "hdg_acc": 0,
+            "yaw": 0
+        }
+    ],
+    "SYSTEM_TIME": [
+        {
+            "mavpackettype": "SYSTEM_TIME",
+            "time_unix_usec": 1719438820555223,
+            "time_boot_ms": 17588
+        },
+        {
+            "mavpackettype": "SYSTEM_TIME",
+            "time_unix_usec": 1719438820795140,
+            "time_boot_ms": 17828
+        },
+        {
+            "mavpackettype": "SYSTEM_TIME",
+            "time_unix_usec": 1719438821055051,
+            "time_boot_ms": 18088
+        },
+        {
+            "mavpackettype": "SYSTEM_TIME",
+            "time_unix_usec": 1719438821294968,
+            "time_boot_ms": 18328
+        }
+    ],
+    "RC_CHANNELS_SCALED": [
+        {
+            "mavpackettype": "RC_CHANNELS_SCALED",
+            "time_boot_ms": 17588,
+            "port": 0,
+            "chan1_scaled": 0,
+            "chan2_scaled": 0,
+            "chan3_scaled": 0,
+            "chan4_scaled": 0,
+            "chan5_scaled": 0,
+            "chan6_scaled": 0,
+            "chan7_scaled": 0,
+            "chan8_scaled": 0,
+            "rssi": 255
+        },
+        {
+            "mavpackettype": "RC_CHANNELS_SCALED",
+            "time_boot_ms": 17828,
+            "port": 0,
+            "chan1_scaled": 0,
+            "chan2_scaled": 0,
+            "chan3_scaled": 0,
+            "chan4_scaled": 0,
+            "chan5_scaled": 0,
+            "chan6_scaled": 0,
+            "chan7_scaled": 0,
+            "chan8_scaled": 0,
+            "rssi": 255
+        },
+        {
+            "mavpackettype": "RC_CHANNELS_SCALED",
+            "time_boot_ms": 18088,
+            "port": 0,
+            "chan1_scaled": 0,
+            "chan2_scaled": 0,
+            "chan3_scaled": 0,
+            "chan4_scaled": 0,
+            "chan5_scaled": 0,
+            "chan6_scaled": 0,
+            "chan7_scaled": 0,
+            "chan8_scaled": 0,
+            "rssi": 255
+        },
+        {
+            "mavpackettype": "RC_CHANNELS_SCALED",
+            "time_boot_ms": 18328,
+            "port": 0,
+            "chan1_scaled": 0,
+            "chan2_scaled": 0,
+            "chan3_scaled": 0,
+            "chan4_scaled": 0,
+            "chan5_scaled": 0,
+            "chan6_scaled": 0,
+            "chan7_scaled": 0,
+            "chan8_scaled": 0,
+            "rssi": 255
+        }
+    ],
+    "SIMSTATE": [
+        {
+            "mavpackettype": "SIMSTATE",
+            "roll": -0.00689842039719224,
+            "pitch": -0.0700925961136818,
+            "yaw": 1.6058543920516968,
+            "xacc": -0.8669435977935791,
+            "yacc": 0.06410297006368637,
+            "zacc": -10.17119026184082,
+            "xgyro": -0.08153719455003738,
+            "ygyro": 0.10982178896665573,
+            "zgyro": 0.012489824555814266,
+            "lat": 559954155,
+            "lng": -33010260
+        },
+        {
+            "mavpackettype": "SIMSTATE",
+            "roll": -0.014159050770103931,
+            "pitch": 0.006056216545403004,
+            "yaw": 1.6070529222488403,
+            "xacc": 0.1583755910396576,
+            "yacc": 0.1176396980881691,
+            "zacc": -9.807799339294434,
+            "xgyro": 0.014266873709857464,
+            "ygyro": 0.41467490792274475,
+            "zgyro": 0.002635280368849635,
+            "lat": 559954155,
+            "lng": -33010262
+        },
+        {
+            "mavpackettype": "SIMSTATE",
+            "roll": -0.0062510003335773945,
+            "pitch": 0.07763506472110748,
+            "yaw": 1.604901909828186,
+            "xacc": 0.9664989709854126,
+            "yacc": 0.10930541902780533,
+            "zacc": -9.86522388458252,
+            "xgyro": 0.04537368193268776,
+            "ygyro": 0.05897708237171173,
+            "zgyro": -0.01109017338603735,
+            "lat": 559954155,
+            "lng": -33010264
+        },
+        {
+            "mavpackettype": "SIMSTATE",
+            "roll": 0.007005421444773674,
+            "pitch": 0.04030961915850639,
+            "yaw": 1.6019498109817505,
+            "xacc": 0.3199681043624878,
+            "yacc": -0.05219055339694023,
+            "zacc": -9.617830276489258,
+            "xgyro": 0.0468776673078537,
+            "ygyro": -0.30803146958351135,
+            "zgyro": -0.00843916367739439,
+            "lat": 559954155,
+            "lng": -33010264
+        }
+    ],
+    "EKF_STATUS_REPORT": [
+        {
+            "mavpackettype": "EKF_STATUS_REPORT",
+            "flags": 167,
+            "velocity_variance": 0.0,
+            "pos_horiz_variance": 0.002204525750130415,
+            "pos_vert_variance": 0.007289852946996689,
+            "compass_variance": 0.007674647029489279,
+            "terrain_alt_variance": 0.0,
+            "airspeed_variance": 0.0
+        },
+        {
+            "mavpackettype": "EKF_STATUS_REPORT",
+            "flags": 167,
+            "velocity_variance": 0.0,
+            "pos_horiz_variance": 0.0016918272012844682,
+            "pos_vert_variance": 0.012307323515415192,
+            "compass_variance": 0.001224612700752914,
+            "terrain_alt_variance": 0.0,
+            "airspeed_variance": 0.0
+        },
+        {
+            "mavpackettype": "EKF_STATUS_REPORT",
+            "flags": 167,
+            "velocity_variance": 0.0,
+            "pos_horiz_variance": 0.0008214336121454835,
+            "pos_vert_variance": 0.005249509587883949,
+            "compass_variance": 0.008830808103084564,
+            "terrain_alt_variance": 0.0,
+            "airspeed_variance": 0.0
+        },
+        {
+            "mavpackettype": "EKF_STATUS_REPORT",
+            "flags": 167,
+            "velocity_variance": 0.0,
+            "pos_horiz_variance": 0.0007741629960946739,
+            "pos_vert_variance": 0.005462494678795338,
+            "compass_variance": 0.001788227236829698,
+            "terrain_alt_variance": 0.0,
+            "airspeed_variance": 0.0
+        }
+    ],
+    "LOCAL_POSITION_NED": [
+        {
+            "mavpackettype": "LOCAL_POSITION_NED",
+            "time_boot_ms": 17588,
+            "x": 0.011131884530186653,
+            "y": -0.13696341216564178,
+            "z": -0.09999999403953552,
+            "vx": 0.0,
+            "vy": -0.018000001087784767,
+            "vz": 0.06800000369548798
+        },
+        {
+            "mavpackettype": "LOCAL_POSITION_NED",
+            "time_boot_ms": 17828,
+            "x": 0.011131884530186653,
+            "y": -0.14941462874412537,
+            "z": -0.26999998092651367,
+            "vx": 0.004000000189989805,
+            "vy": -0.03500000014901161,
+            "vz": 0.039000000804662704
+        },
+        {
+            "mavpackettype": "LOCAL_POSITION_NED",
+            "time_boot_ms": 18088,
+            "x": 0.011131884530186653,
+            "y": -0.16186584532260895,
+            "z": 0.04999999701976776,
+            "vx": 0.00800000037997961,
+            "vy": -0.027000000700354576,
+            "vz": -0.026000000536441803
+        },
+        {
+            "mavpackettype": "LOCAL_POSITION_NED",
+            "time_boot_ms": 18328,
+            "x": 0.011131884530186653,
+            "y": -0.16809146106243134,
+            "z": 0.009999999776482582,
+            "vx": 0.004000000189989805,
+            "vy": 0.007000000216066837,
+            "vz": -0.03100000135600567
+        }
+    ],
+    "VIBRATION": [
+        {
+            "mavpackettype": "VIBRATION",
+            "time_usec": 17588681,
+            "vibration_x": 0.07566516101360321,
+            "vibration_y": 0.03624042868614197,
+            "vibration_z": 0.0701565146446228,
+            "clipping_0": 0,
+            "clipping_1": 0,
+            "clipping_2": 0
+        },
+        {
+            "mavpackettype": "VIBRATION",
+            "time_usec": 17828598,
+            "vibration_x": 0.14816710352897644,
+            "vibration_y": 0.013617068529129028,
+            "vibration_z": 0.05365555360913277,
+            "clipping_0": 0,
+            "clipping_1": 0,
+            "clipping_2": 0
+        },
+        {
+            "mavpackettype": "VIBRATION",
+            "time_usec": 18088509,
+            "vibration_x": 0.09315825998783112,
+            "vibration_y": 0.012102278880774975,
+            "vibration_z": 0.027754956856369972,
+            "clipping_0": 0,
+            "clipping_1": 0,
+            "clipping_2": 0
+        },
+        {
+            "mavpackettype": "VIBRATION",
+            "time_usec": 18328426,
+            "vibration_x": 0.10642565786838531,
+            "vibration_y": 0.02542443946003914,
+            "vibration_z": 0.03598770126700401,
+            "clipping_0": 0,
+            "clipping_1": 0,
+            "clipping_2": 0
+        }
+    ],
+    "BATTERY_STATUS": [
+        {
+            "mavpackettype": "BATTERY_STATUS",
+            "id": 0,
+            "battery_function": 0,
+            "type": 0,
+            "temperature": 32767,
+            "voltages": [
+                12600,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535
+            ],
+            "current_battery": 0,
+            "current_consumed": 0,
+            "energy_consumed": 0,
+            "battery_remaining": 100,
+            "time_remaining": 0,
+            "charge_state": 1,
+            "voltages_ext": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "mode": 0,
+            "fault_bitmask": 0
+        },
+        {
+            "mavpackettype": "BATTERY_STATUS",
+            "id": 0,
+            "battery_function": 0,
+            "type": 0,
+            "temperature": 32767,
+            "voltages": [
+                12600,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535
+            ],
+            "current_battery": 0,
+            "current_consumed": 0,
+            "energy_consumed": 0,
+            "battery_remaining": 100,
+            "time_remaining": 0,
+            "charge_state": 1,
+            "voltages_ext": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "mode": 0,
+            "fault_bitmask": 0
+        },
+        {
+            "mavpackettype": "BATTERY_STATUS",
+            "id": 0,
+            "battery_function": 0,
+            "type": 0,
+            "temperature": 32767,
+            "voltages": [
+                12600,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535
+            ],
+            "current_battery": 0,
+            "current_consumed": 0,
+            "energy_consumed": 0,
+            "battery_remaining": 100,
+            "time_remaining": 0,
+            "charge_state": 1,
+            "voltages_ext": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "mode": 0,
+            "fault_bitmask": 0
+        },
+        {
+            "mavpackettype": "BATTERY_STATUS",
+            "id": 0,
+            "battery_function": 0,
+            "type": 0,
+            "temperature": 32767,
+            "voltages": [
+                12600,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535,
+                65535
+            ],
+            "current_battery": 0,
+            "current_consumed": 0,
+            "energy_consumed": 0,
+            "battery_remaining": 100,
+            "time_remaining": 0,
+            "charge_state": 1,
+            "voltages_ext": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "mode": 0,
+            "fault_bitmask": 0
+        }
+    ],
+    "HEARTBEAT": [
+        {
+            "mavpackettype": "HEARTBEAT",
+            "type": 10,
+            "autopilot": 3,
+            "base_mode": 65,
+            "custom_mode": 0,
+            "system_status": 4,
+            "mavlink_version": 3
+        }
+    ]
+}

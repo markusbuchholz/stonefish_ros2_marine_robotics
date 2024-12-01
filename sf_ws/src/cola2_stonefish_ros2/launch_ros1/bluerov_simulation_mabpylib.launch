@@ -1,0 +1,22 @@
+<launch>
+    <!-- Configurable arguments -->
+    <arg name="robot_name" default="bluerov"/>
+    <arg name="magnetic_object_names" default="subsea_cable Boatlanding"/>
+    <arg name="subsea_cable_length" default="10"/>
+    <arg name="subsea_cable_diameter" default="1"/>
+    <arg name="scenario_description" value="$(find cola2_stonefish)/scenarios/bluerov_tank.scn"/>
+    
+    <!-- Namespace with robot name -->
+    <group ns="$(arg robot_name)">
+        <!-- Run Simulator -->
+        <include file="$(find stonefish_ros)/launch/simulator.launch">
+           <arg name="simulation_data" value="$(find cola2_stonefish)/data"/>
+           <arg name="simulation_rate" value="100.0"/>
+           <arg name="scenario_description" value="$(arg scenario_description)"/>
+        </include>
+        
+        <!-- Node to define the subsea cable -->
+        <node name="subsea_cable" pkg="cola2_stonefish" type="magpy_subsea_cable.py" output="screen" args="$(arg scenario_description) $(arg subsea_cable_length) $(arg subsea_cable_diameter) $(arg magnetic_object_names)"/>
+    </group>
+</launch>
+

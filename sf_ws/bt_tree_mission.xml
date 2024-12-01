@@ -1,0 +1,40 @@
+<root BTCPP_format="4">
+    <BehaviorTree ID="MainTree" _fullpath="">
+        <Sequence name="Mission Conditions WatchDog">
+            <Fallback name="Check Conditions">
+                <AlwaysSuccess name="NO"/>
+                <Sequence name="Goal global">
+                    <Fallback name="Path Planner Global">
+                        <AlwaysSuccess name="Global Goal Possible"/>
+                        <AlwaysSuccess name="Replanning"/>
+                    </Fallback>
+                    <AlwaysSuccess name="Tranist ASV-AUV"/>
+                </Sequence>
+            </Fallback>
+            <Fallback name="AUV Goal">
+                <Sequence name="Goal local">
+                    <Fallback name="Path Planner Local">
+                        <AlwaysSuccess name="AUV Goal Possible"/>
+                        <AlwaysSuccess name="Replanning"/>
+                    </Fallback>
+                    <AlwaysSuccess name="Move AUV"/>
+                </Sequence>
+                <Sequence name="Goal global">
+                    <Fallback name="Path Planner Global">
+                        <AlwaysSuccess name="Global Goal Possible"/>
+                        <AlwaysSuccess name="Replanning"/>
+                    </Fallback>
+                    <AlwaysSuccess name="Tranist ASV-AUV"/>
+                </Sequence>
+            </Fallback>
+        </Sequence>
+    </BehaviorTree>
+    <TreeNodesModel>
+        <Action ID="AUVGoalPossible"/>
+        <Action ID="GlobalGoalPossible"/>
+        <Action ID="MoveAUV"/>
+        <Action ID="NO"/>
+        <Action ID="Replanning"/>
+        <Action ID="TranistASV-AUV"/>
+    </TreeNodesModel>
+</root>

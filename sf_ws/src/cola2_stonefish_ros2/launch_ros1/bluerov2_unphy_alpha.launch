@@ -1,0 +1,22 @@
+<launch>
+    <!-- Configurable arguments -->
+    <node name="world2ned" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 3.1415 world world_ned 100"/>
+        <node name="sensortf" pkg="tf" type="static_transform_publisher" args="0.0 0.0 0.0 1.6 0 1.6 bluerov/base_link bluerov/fls 100"/>
+        
+    <!-- Namespace with robot name -->
+    <group ns="$(arg robot_name)">
+        <!-- Run Simulator -->
+        <include file="$(find stonefish_ros)/launch/simulator.launch">
+           <arg name="simulation_data" value="$(find cola2_stonefish)/data"/>
+            <arg name="scenario_description" value="$(find cola2_stonefish)/scenarios/bluerov2_unphy_alpha_tank.scn"/>
+            <arg name="simulation_rate" value="100.0"/>
+           <arg name="graphics_resolution" value="1200 800"/>
+            <arg name="graphics_quality" value="low"/> -->
+        </include>
+    </group>
+    <node name="odom2tf" pkg="cola2_stonefish" type="odom2tf.py" output="screen"/>
+        <node name="joystick" pkg="joy" type="joy_node" output="screen"/>
+        <node name="logitech_controller" pkg="cola2_stonefish" type="bluerov2_logitechF310teleop.py" output="screen"/>
+    
+
+</launch>

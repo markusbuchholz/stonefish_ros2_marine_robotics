@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<scenario>
+    <looks>
+        <look name="black" gray="0.05" roughness="0.2" metalness="0.0"/>
+    </looks>
+    
+    <looks>
+        <look name="gray" gray="1" roughness="0.2" metalness="0.0"/>
+    </looks>
+    
+        <looks>
+        <look name="transparent" gray="1.0" roughness="0.0" metalness="0.0"/>
+        <look name="blue" rgb="0.0 0.3 0.8" roughness="0.0"/>
+        <look name="yellow" rgb="1.0 1.0 0.0" roughness="0.0"/>
+    </looks>
+    
+    
+
+
+	<robot name="blueboat" fixed="false" self_collisions="false">
+		<base_link name="Vehicle" type="compound" physics="submerged">
+			<external_part name="SideR" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="opti_blueboat/right_side_or.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+          			<thickness value="0.1"/>
+				</physical>
+				<material name="Polyamid"/>
+				<mass value="4"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			
+			<external_part name="SideL" type="model" physics="submerged" buoyant="false">
+				<physical>
+					<mesh filename="opti_blueboat/left_side_or.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+          			<thickness value="0.1"/>
+				</physical>
+				<material name="Polyamid"/>
+				<mass value="4"/>
+				<look name="blue"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+
+			<external_part name="RightBack" type="model" physics="surface" buoyant="false">
+				<physical>
+					<mesh filename="opti_blueboat/right_rear_or.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+          			<thickness value="0.1"/>
+				</physical>
+				<material name="Polyamid"/>
+				<mass value="0.05"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+
+			<external_part name="LeftBack" type="model" physics="surface" buoyant="false">
+				<physical>
+					<mesh filename="opti_blueboat/left_rear_or.obj" scale="1.0"/>
+					<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+          			<thickness value="0.1"/>
+				</physical>
+				<material name="Polyamid"/>
+				<look name="black"/>
+				<mass value="0.05"/>
+				<compound_transform rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+			</external_part>
+			
+			<external_part name="MetalRear" type="box" physics="surface" buoyant="false">
+				<dimensions xyz="0.55 0.025 0.025"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.025 -0.26 -0.215"/>
+				<material name="Polyamid"/>
+				<mass value="2"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 -1.571" xyz="0.0 0.0 0.0"/>
+			</external_part>
+
+			<external_part name="MetalFront" type="box" physics="surface" buoyant="false">
+				<dimensions xyz="0.55 0.025 0.025"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.025 0.32 -0.215"/>
+				<material name="Polyamid"/>
+				<mass value="2"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 -1.571" xyz="0.0 0.0 0.0"/>
+			</external_part>
+
+			<external_part name="LeftSideBox" type="box" physics="surface" buoyant="false">
+				<dimensions xyz="0.42 0.128 0.025"/>
+				<origin rpy="0.0 0.0 1.57" xyz="0.3725 0.025 -0.225"/>
+				<material name="Polyamid"/>
+				<mass value="0.5"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 -1.571" xyz="0.0 0.0 0.0"/>
+			</external_part>			
+
+			<external_part name="RightSideBox" type="box" physics="surface" buoyant="false">
+				<dimensions xyz="0.42 0.128 0.025"/>
+				<origin rpy="0.0 0.0 1.57" xyz="-0.3325 0.025 -0.225"/>
+				<material name="Polyamid"/>
+				<mass value="0.5"/>
+				<look name="black"/>
+				<compound_transform rpy="0.0 0.0 -1.571" xyz="0.0 0.0 0.0"/>
+			</external_part>			
+						
+			<internal_part name="BatteryCylinder" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.08" height="0.7"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				<material name="Neutral"/>
+				<mass value=".5"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 1.571 0.0" xyz="0.0 -0.3 -0.1"/>
+			</internal_part> 
+
+			<internal_part name="BatteryCylinder" type="cylinder" physics="submerged" buoyant="true">
+				<dimensions radius="0.08" height="0.7"/>
+				<origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+				<material name="Neutral"/>
+				<mass value=".5"/>
+				<look name="manipulator"/>
+				<compound_transform rpy="0.0 1.571 0.0" xyz="0.0 0.22 -0.1"/>
+			</internal_part> 
+		</base_link>
+
+		<actuator name="Thruster_R" type="thruster">
+		  <origin rpy="1.57 0.0 0.0" xyz="-0.472 0.26 0.0245"/>
+			<specs thrust_coeff="0.3" torque_coeff="0.01" max_rpm="2800.0" inverted="false"/>
+			<propeller diameter="0.112" right="false">
+				<mesh filename="opti_blueboat/propeller2.obj" scale="1"/>
+				<material name="Neutral"/>
+				<look name="yellow"/>
+			</propeller>
+			<link name="Vehicle"/>
+		</actuator>
+
+		<actuator name="Thruster_L" type="thruster">
+		  <origin rpy="0.0 0.0 0.07" xyz="-0.472 -0.3 0.0245"/>
+			<specs thrust_coeff="0.3" torque_coeff="0.01" max_rpm="2800.0" inverted="false"/>
+			<propeller diameter="0.112" right="true">
+				<mesh filename="opti_blueboat/propeller_cc.obj" scale="1"/>
+				<material name="Neutral"/>
+				<look name="yellow"/>
+			</propeller>
+			<link name="Vehicle"/>
+		</actuator>
+		
+
+
+		<sensor name="dvl" type="dvl" rate="5.0">
+			<link name="Vehicle"/>
+			<origin rpy="3.1416 0.0 -0.785" xyz="-0.75 0.0 0.4"/>
+			<specs beam_angle="30.0"/>
+			<range velocity="9.0 9.0 9.0" altitude_min="0.5" altitude_max="81.0"/>
+			<noise velocity="0.0015" altitude="0.001"/>
+			<ros_publisher topic="/blueboat/navigator/dvl_sim" altitude_topic="/bluebloat/navigator/altitude"/>
+		</sensor>
+
+		<sensor name="imu_filter" type="imu" rate="20.0">
+			<link name="Vehicle"/>
+			<origin rpy="0.0 0.0 0.0" xyz="0.35 -0.35 -0.2"/>
+			<noise angle="0.000001745" angular_velocity="0.00001745"/>
+			<ros_publisher topic="/blueboat/navigator/imu"/>
+		</sensor>
+
+		<sensor name="gps" type="gps" rate="1.0">
+			<link name="Vehicle"/>
+			<origin rpy="0.0 0.0 0.0" xyz="-0.35 0.15 -0.35"/>
+			<noise ned_position="0.5"/>
+			<ros_publisher topic="/blueboat/navigator/gps"/>
+		</sensor>
+
+<!--
+		<sensor name="camera_front" type="camera" rate="13.0">
+			<link name="Vehicle"/>
+			<origin rpy="1.2 0.0 1.571" xyz="0.45 0.0 -0.1"/>
+			<specs resolution_x="1360" resolution_y="1024" horizontal_fov="55.0"/>
+			<ros_publisher topic="/girona500/camera_front"/>
+		</sensor>
+-->
+
+
+		<world_transform rpy="0.0 0.0 0.0" xyz="0 0 0.1"/>
+		
+
+	       <ros_subscriber thrusters="/blueboat/controller/thruster_setpoints_sim"/>
+		<ros_publisher thrusters="/blueboat/controller/thruster_state"/>
+		<ros_base_link_transforms publish="true"/>
+	</robot>
+</scenario>

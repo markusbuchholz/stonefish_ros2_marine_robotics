@@ -1,0 +1,14 @@
+<root BTCPP_format="4">
+    <BehaviorTree ID="MainTree" _fullpath="">
+        <Sequence name="MainSequence">
+            <move_rov_1 name="move_rov_1"/>
+            <move_arm name="move_arm"/>
+            <move_rov_2 name="move_rov_2"/>
+        </Sequence>
+    </BehaviorTree>
+    <TreeNodesModel>
+        <Action ID="move_arm"/>
+        <Action ID="move_rov_1"/>
+        <Action ID="move_rov_2"/>
+    </TreeNodesModel>
+</root>

@@ -1,0 +1,14 @@
+<launch>
+    <!-- Configurable arguments -->
+    <arg name="robot_name" default="bluerov"/>
+    
+    <!-- Namespace with robot name -->
+    <group ns="$(arg robot_name)">
+        <!-- Run Simulator -->
+        <include file="$(find stonefish_ros)/launch/python_simulator_nogui_launcher.launch">
+            <arg name="simulation_data" value="$(find cola2_stonefish)/data/"/>
+            <arg name="scenario_description" value="$(find cola2_stonefish)/scenarios/bluerov_tank.scn"/>
+            <arg name="simulation_rate" value="300.0"/>
+        </include>
+    </group>
+</launch>

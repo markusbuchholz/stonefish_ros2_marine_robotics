@@ -1,0 +1,63 @@
+<launch>
+    <!-- Configurable arguments -->
+    <node name="world2ned" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 3.1415 world world_ned 100"/>
+        <node name="sensortf" pkg="tf" type="static_transform_publisher" args="0.16 0.0 0.35 1.6 0 1.6 bluerov/base_link bluerov/camera1 100"/>
+        
+    <arg name="robot_name" default="bluerov"/>
+    <remap from="/bluerov/left/camera_info" to="/stereo/left/camera_info"/>
+    <remap from="/bluerov/left/image_color" to="/stereo/left/image_raw"/>
+    <remap from="/bluerov/right/camera_info" to="/stereo/right/camera_info"/>
+    <remap from="/bluerov/right/image_color" to="/stereo/right/image_raw"/>-->
+    <!-- Define the ROS_NAMESPACE -->
+    <group ns="stereo">
+        <!-- Launch stereo_image_proc node -->
+        <node pkg="stereo_image_proc" type="stereo_image_proc" name="stereo_image_proc" output="screen">
+            <remap from="stereo" to="stereo"/>
+            <remap from="image" to="image_rect"/>
+            <param name="approximate_sync" value="true"/>
+        </node>
+    </group>
+    <!-- Namespace with robot name -->
+    <group ns="$(arg robot_name)">
+        <!-- Run Simulator -->
+        <include file="$(find stonefish_ros)/launch/simulator.launch">
+           <arg name="simulation_data" value="$(find cola2_stonefish)/data"/>
+            <arg name="scenario_description" value="$(find cola2_stonefish)/scenarios/bluerov_stereo_tank.scn"/>
+            <arg name="simulation_rate" value="100.0"/>
+           <arg name="graphics_resolution" value="1200 800"/>
+            <arg name="graphics_quality" value="low"/> -->
+        </include>
+    </group>
+    <node name="odom2tf" pkg="cola2_stonefish" type="odom2tf.py" output="screen"/>
+        <node name="joystick" pkg="joy" type="joy_node" output="screen"/>
+        <node name="logitech_controller" pkg="cola2_stonefish" type="logitechF310teleop.py" output="screen"/>
+    
+ <!-- Set parameters for camera1 -->
+    <param name="camera1/Tx" type="double" value="0.16"/>
+    <param name="camera1/Ty" type="double" value="-0.0725"/>
+    <param name="camera1/Tz" type="double" value="0.35"/>
+    <param name="camera1/resolution_x" type="double" value="1000"/>
+    <param name="camera1/resolution_y" type="double" value="800"/>
+    <param name="camera1/horizontal_fov" type="double" value="90.0"/>
+    <param name="camera1/yaw" type="double" value="1.6"/>
+    <param name="camera1/roll" type="double" value="0.0"/>
+    <param name="camera1/pitch" type="double" value="1.6"/>
+
+    <!-- Set parameters for camera2 -->
+    <param name="camera2/Tx" type="double" value="0.16"/>
+    <param name="camera2/Ty" type="double" value="0.0725"/>
+    <param name="camera2/Tz" type="double" value="0.35"/>
+    <param name="camera2/resolution_x" type="double" value="1000"/>
+    <param name="camera2/resolution_y" type="double" value="800"/>
+    <param name="camera2/horizontal_fov" type="double" value="90.0"/>
+    <param name="camera2/yaw" type="double" value="1.6"/>
+    <param name="camera2/roll" type="double" value="0.0"/>
+    <param name="camera2/pitch" type="double" value="1.6"/>
+    
+    <param name="debug_mode" type="bool" value="true"/>
+
+    <!-- Launch your node -->
+    <!--<node name="stereo_camera_node" pkg="cola2_stonefish" type="stereo_camera_node"/>-->
+    
+
+</launch>

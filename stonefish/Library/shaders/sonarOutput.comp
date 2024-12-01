@@ -1,0 +1,157 @@
+/*
+    Copyright (c) 2020 Patryk Cieslak. All rights reserved.
+
+    This file is a part of Stonefish.
+
+    Stonefish is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Stonefish is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+// N_BINS - number of histogram bins
+// N_BEAM_SAMPLES - number of beam samples
+
+// Constants for hold and ghosting
+const float holdFactors[3] = float[](0.8, 0.6, 0.4); // Adjust as needed
+const float ghostingFactor = 0.8; // Adjust as needed
+
+// Buffers to hold previous frames' data
+layout(r32f) uniform image2DArray previousFrames; // Array of images for previous frames
+
+layout(local_size_x = 64, local_size_y = 1, local_size_z = 1) in;
+
+// Two inputs, linear range and recorded intensity.
+layout(rg32f) uniform image2DArray sonarInput;
+
+// One output - intensity for each bin/beam combination
+layout(r32f) uniform image2D sonarOutput;
+
+uniform uvec2 beams; // beams1, beams2
+uniform vec3 range; // min, max, step
+uniform float gain;
+uniform vec3 noiseSeed;
+uniform vec2 noiseStddev;
+
+vec2 binHistogram[N_BINS];
+
+// Perlin noise function
+float perlinNoise(vec2 st) {
+    vec2 i = floor(st);
+    vec2 f = fract(st);
+    f = f*f*(3.0-2.0*f);
+    float n = dot(i, vec2(12.9898,78.233));
+    float res = mix(mix(sin(n)*43758.5453123, sin(n+1.0)*43758.5453123, f.x),
+                    mix(sin(n+78.233)*43758.5453123, sin(n+79.233)*43758.5453123, f.x), f.y);
+    return fract(res);
+}
+
+// Function for beam pattern noise
+float beamPatternNoise(float beamIndex, float maxBeamIndex) {
+    return sin(beamIndex / maxBeamIndex * 3.14159 * 2) * 0.08; // Adjust frequency and amplitude as needed
+}
+
+void main() {
+    uvec3 inDim = imageSize(sonarInput).xyz;
+    uint viewBeams = gl_GlobalInvocationID.y < inDim.z - 1 ? beams.x : beams.y;
+
+    if (gl_GlobalInvocationID.x < viewBeams) {
+        for (uint i = 0; i < N_BINS; ++i) {
+            binHistogram[i] = vec2(0.0);
+        }
+
+        ivec3 sampleCoord;
+        sampleCoord.x = int(gl_GlobalInvocationID.x);
+        sampleCoord.z = int(gl_GlobalInvocationID.y);
+
+        for (int i = 0; i < N_BEAM_SAMPLES; ++i) {
+            sampleCoord.y = i;
+
+            vec2 rangeIntensity = imageLoad(sonarInput, sampleCoord).xy;
+            if (rangeIntensity.x < range.x || rangeIntensity.x >= range.y)
+                continue;
+
+            float factor = float(i) / float(N_BEAM_SAMPLES - 1);
+            uint bin = uint(floor((rangeIntensity.x - range.x) / range.z));
+
+            // Use time of flight (TOF) to modulate intensity
+            float tofIntensity = rangeIntensity.y * rangeIntensity.x; 
+            float distanceWeight = 1.0 / (rangeIntensity.x * rangeIntensity.x); 
+            binHistogram[bin].x += tofIntensity * distanceWeight;
+            binHistogram[bin].y += distanceWeight;
+        }
+
+        vec2 noiseCoord;
+        noiseCoord.x = float(sampleCoord.x * (sampleCoord.z + 1)) / float(viewBeams * (inDim.z + 1));
+        uint globalBeam = gl_GlobalInvocationID.x + beams.x * gl_GlobalInvocationID.y;
+
+        for (uint i = 0; i < N_BINS; ++i) {
+            noiseCoord.y = i / float(N_BINS - 1);
+
+            // Gradually increase noise level based on bin index
+            float noiseLevel = float(i) / float(N_BINS - 1);
+            float data = gain * perlinNoise(vec2(noiseSeed.x * i, noiseSeed.y * globalBeam)) * noiseLevel;
+
+            if (binHistogram[i].y > 0.0) {
+                // Compute hold and ghosting effect using the three previous frames
+                vec4 previous1 = imageLoad(previousFrames, ivec3(globalBeam, N_BINS - 1 - i, 0));
+                vec4 previous2 = imageLoad(previousFrames, ivec3(globalBeam, N_BINS - 1 - i, 1));
+                vec4 previous3 = imageLoad(previousFrames, ivec3(globalBeam, N_BINS - 1 - i, 2));
+                float holdData = holdFactors[0] * previous1.r + holdFactors[1] * previous2.r + holdFactors[2] * previous3.r;
+                float ghostData = (binHistogram[i].x / binHistogram[i].y) * ghostingFactor;
+
+                // Blend current and previous data
+                data = holdData + ghostData;
+            }
+            // Apply beam pattern noise
+            if(i>N_BINS/1.5){
+            float beamPattern = beamPatternNoise(float(gl_GlobalInvocationID.x), float(viewBeams));
+            data += beamPattern;
+            }
+
+            // Apply white spike near detected objects
+            float intensityThreshold = 0.5; // Example threshold for detected objects
+            if (binHistogram[i].x > intensityThreshold) {
+                float distanceFactor = 1.0 - float(i) / float(N_BINS - 1); // Decrease spike intensity with distance
+                data += distanceFactor * 0.8; // Adjust the factor to control spike intensity
+            }
+
+            // Apply black and white pepper noise only to the upper part
+            if (i > N_BINS / 100) {
+                float noise = perlinNoise(vec2(noiseSeed.x * i, noiseSeed.y * globalBeam));
+                if (noise < 0.1) {
+                    data = 0.0; // Black
+                } else if (noise > 0.999) {
+                    data = 1.0; // Strong white spike
+                } else {
+                    data *= 0.25; // Reduce brightness to tend towards black
+                }
+            } else {
+                data *= (noiseLevel * 0.01); // Lower part has gradually increasing noise
+            }
+
+            // Clamp data to valid range
+            data = clamp(data, 0.0, 1.0);
+            // Store data for current frame
+            imageStore(sonarOutput, ivec2(globalBeam, N_BINS - 1 - i), vec4(data));
+        }
+
+
+
+        // Store current frame's output for next frame's hold effect, shifting previous frames
+        for (uint i = 0; i < N_BINS; ++i) {
+            imageStore(previousFrames, ivec3(globalBeam, N_BINS - 1 - i, 2), imageLoad(previousFrames, ivec3(globalBeam, N_BINS - 1 - i, 1)));
+            imageStore(previousFrames, ivec3(globalBeam, N_BINS - 1 - i, 1), imageLoad(previousFrames, ivec3(globalBeam, N_BINS - 1 - i, 0)));
+            imageStore(previousFrames, ivec3(globalBeam, N_BINS - 1 - i, 0), imageLoad(sonarOutput, ivec2(globalBeam, N_BINS - 1 - i)));
+        }
+    }
+}
+
