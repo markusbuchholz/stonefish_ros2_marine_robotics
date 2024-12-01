@@ -1,4 +1,4 @@
-# StoneFish ROS 2 Marine Robotics Simulator Environment
+## StoneFish ROS 2 Marine Robotics Simulator Environment
 
 ![image](https://github.com/user-attachments/assets/5654ddf9-6532-4610-aca9-8ed265ed5d94)
 
