@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from cola2_msgs/srv/Recovery.srv
+// generated code does not contain a copyright notice
+
+#include "cola2_msgs/msg/RecoveryAction.idl"
+
+module cola2_msgs {
+  module srv {
+    struct Recovery_Request {
+      cola2_msgs::msg::RecoveryAction requested_action;
+    };
+    struct Recovery_Response {
+      boolean attempted;
+    };
+  };
+};

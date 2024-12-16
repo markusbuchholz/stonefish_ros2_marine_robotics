@@ -27,11 +27,11 @@ There are several scripts in: ```/extras_rov```, ```/extras_boat``` to communica
 Adjust paths in ```run.sh```.
 
 ```bash
-local_workspace="/home/markus/underwater/ros2_marine_robotics_sim_env/src"
-local_stonefish="/home/markus//underwater/ros2_marine_robotics_sim_env/stonefish"
-local_sf_ws="/home/markus//underwater/ros2_marine_robotics_sim_env/sf_ws"
-local_gz_ws="/home/markus//underwater/ros2_marine_robotics_sim_env/gz_ws"
-local_SITL_Models="/home/markus//underwater/ros2_marine_robotics_sim_env/SITL_Models"
+local_workspace="/home/markus/underwater/stonefish_ros2_marine_robotics/src"
+local_stonefish="/home/markus/underwater/stonefish_ros2_marine_robotics/stonefish"
+local_sf_ws="/home/markus/underwater/stonefish_ros2_marine_robotics/sf_ws"
+local_gz_ws="/home/markus/underwater/stonefish_ros2_marine_robotics/gz_ws"
+local_SITL_Models="/home/markus//underwater/stonefish_ros2_marine_robotics/SITL_Models"
 ```
 
 

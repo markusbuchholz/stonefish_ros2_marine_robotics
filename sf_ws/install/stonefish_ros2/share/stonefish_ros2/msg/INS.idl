@@ -1,0 +1,41 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from stonefish_ros2/msg/INS.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Vector3.idl"
+#include "std_msgs/msg/Header.idl"
+#include "stonefish_ros2/msg/NEDPose.idl"
+
+module stonefish_ros2 {
+  module msg {
+    struct INS {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Global position of robot")
+      double latitude;
+
+      double longitude;
+
+      @verbatim (language="comment", text=
+        "Global position of NED origin")
+      double origin_latitude;
+
+      double origin_longitude;
+
+      @verbatim (language="comment", text=
+        "Robot pose in NED")
+      stonefish_ros2::msg::NEDPose pose;
+
+      stonefish_ros2::msg::NEDPose pose_variance;
+
+      double altitude;
+
+      @verbatim (language="comment", text=
+        "Robot body velocity")
+      geometry_msgs::msg::Vector3 body_velocity;
+
+      geometry_msgs::msg::Vector3 rpy_rate;
+    };
+  };
+};

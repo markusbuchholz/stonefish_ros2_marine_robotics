@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cola2_msgs/msg/BodyVelocityReq.msg
+// generated code does not contain a copyright notice
+
+#include "cola2_msgs/msg/Bool6Axis.idl"
+#include "cola2_msgs/msg/GoalDescriptor.idl"
+#include "geometry_msgs/msg/Twist.idl"
+#include "std_msgs/msg/Header.idl"
+
+module cola2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Body frame vehicle velocity request." "\n"
+      "Coordinate units are metres/sec and radians/sec." "\n"
+      "NB: Coordinate frame used is ROS standard [forward, left, up]," "\n"
+      "to simplify integration with arm control systems.")
+    struct BodyVelocityReq {
+      @verbatim (language="comment", text=
+        "header.frame_id should be set to the base_link frame of the vehicle.")
+      std_msgs::msg::Header header;
+
+      cola2_msgs::msg::GoalDescriptor goal;
+
+      geometry_msgs::msg::Twist twist;
+
+      @verbatim (language="comment", text=
+        "Axes of control to disable, in body frame.")
+      cola2_msgs::msg::Bool6Axis disable_axis;
+    };
+  };
+};

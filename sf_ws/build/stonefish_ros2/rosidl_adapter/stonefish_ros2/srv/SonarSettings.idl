@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from stonefish_ros2/srv/SonarSettings.srv
+// generated code does not contain a copyright notice
+
+
+module stonefish_ros2 {
+  module srv {
+    struct SonarSettings_Request {
+      double range_min;
+
+      double range_max;
+
+      double gain;
+    };
+    struct SonarSettings_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from stonefish_ros2/msg/DVLBeam.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+
+module stonefish_ros2 {
+  module msg {
+    @verbatim (language="comment", text=
+      "Extracted from UUV Simulator:" "\n"
+      "  https://github.com/uuvsimulator/uuv_simulator")
+    struct DVLBeam {
+      @verbatim (language="comment", text=
+        "measured range or < 0 if invalid")
+      @unit (value="m")
+      double range;
+
+      double range_covariance;
+
+      @verbatim (language="comment", text=
+        "measured velocity of corr. beam")
+      @unit (value="m/s")
+      double velocity;
+
+      double velocity_covariance;
+
+      @verbatim (language="comment", text=
+        "Beam link pose wrt DVL link frame")
+      geometry_msgs::msg::PoseStamped pose;
+    };
+  };
+};

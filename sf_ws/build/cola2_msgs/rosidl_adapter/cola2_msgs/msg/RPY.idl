@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cola2_msgs/msg/RPY.msg
+// generated code does not contain a copyright notice
+
+
+module cola2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Orientation or orientation velocity in a frame consistent with the right-handed NED coordinate frame.")
+    struct RPY {
+      @verbatim (language="comment", text=
+        "Fixed-axis roll, in radians. Positive clockwise rotation about the X axis, looking forward.")
+      float roll;
+
+      @verbatim (language="comment", text=
+        "Fixed-axis pitch, in radians. Positive upwards rotation of the vehicle nose about the Y axis.")
+      float pitch;
+
+      @verbatim (language="comment", text=
+        "Fixed-axis yaw, in radians. Positive clockwise rotation about the Z axis, looking down.")
+      float yaw;
+    };
+  };
+};

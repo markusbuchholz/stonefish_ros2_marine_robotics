@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from stonefish_ros2/srv/Respawn.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+
+module stonefish_ros2 {
+  module srv {
+    struct Respawn_Request {
+      string name;
+
+      geometry_msgs::msg::Pose origin;
+    };
+    struct Respawn_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

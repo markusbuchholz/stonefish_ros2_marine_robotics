@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from cola2_msgs/srv/Action.srv
+// generated code does not contain a copyright notice
+
+
+module cola2_msgs {
+  module srv {
+    struct Action_Request {
+      sequence<string> param;
+    };
+    struct Action_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

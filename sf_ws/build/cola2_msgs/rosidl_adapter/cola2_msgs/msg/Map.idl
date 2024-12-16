@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cola2_msgs/msg/Map.msg
+// generated code does not contain a copyright notice
+
+#include "cola2_msgs/msg/Landmark.idl"
+#include "std_msgs/msg/Header.idl"
+
+module cola2_msgs {
+  module msg {
+    struct Map {
+      std_msgs::msg::Header header;
+
+      sequence<cola2_msgs::msg::Landmark> landmark;
+    };
+  };
+};
