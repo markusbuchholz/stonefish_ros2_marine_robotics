@@ -1,6 +1,0 @@
-Invoking command in '/home/sf_ws/build/stonefish_bluerov2': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/sf_ws/src/stonefish_bluerov2 -DCMAKE_INSTALL_PREFIX=/home/sf_ws/install/stonefish_bluerov2
-Invoked command in '/home/sf_ws/build/stonefish_bluerov2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/sf_ws/src/stonefish_bluerov2 -DCMAKE_INSTALL_PREFIX=/home/sf_ws/install/stonefish_bluerov2
-Invoking command in '/home/sf_ws/build/stonefish_bluerov2': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/sf_ws/build/stonefish_bluerov2 -- -j32 -l32
-Invoked command in '/home/sf_ws/build/stonefish_bluerov2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/sf_ws/build/stonefish_bluerov2 -- -j32 -l32
-Invoking command in '/home/sf_ws/build/stonefish_bluerov2': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/sf_ws/build/stonefish_bluerov2
-Invoked command in '/home/sf_ws/build/stonefish_bluerov2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/sf_ws/build/stonefish_bluerov2
