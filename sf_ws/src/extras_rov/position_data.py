@@ -1,3 +1,5 @@
+# Test of position sensors
+# Markus Buchholz
 import json
 from pymavlink import mavutil
 import math
@@ -16,7 +18,7 @@ def convert_gps_to_xy(ref_lat, ref_lon, lat, lon):
 
 def main():
     # Establish MAVLink connection
-    connection = mavutil.mavlink_connection('udpin:localhost:14550')
+    connection = mavutil.mavlink_connection('udpin:0.0.0.0:14550')
     connection.wait_heartbeat()
     print("Heartbeat from system (system %u component %u)" % (connection.target_system, connection.target_component))
 
@@ -229,8 +231,6 @@ def main():
                 'load': load
             })
             print(f"System Status JSON: {sys_status_json}")
-
-    # You can process additional message types similarly
 
 if __name__ == '__main__':
     main()
