@@ -81,6 +81,8 @@ colcon build
 source install/setup.bash
 
 ```
+---
+
 ## Start StoneFish with BlueROV2
 
  ```bash
@@ -92,7 +94,6 @@ ros2 launch cola2_stonefish bluerov_fls_simulation.launch.py
  ```bash
 ros2 launch cola2_stonefish blueboat_launch.py
 ```
----
 
 ## Start StoneFish with BlueROV2 and ArduPilot
 
@@ -114,7 +115,6 @@ python3 python3 pos_req.py
 
 ```
 
----
 ## Start StoneFish with BlueBoat and ArduPilot
 
 ```bash
@@ -127,7 +127,6 @@ ros2 launch stonefish_bluerov2 blueboat_sim.launch.py
 #terminal 3
 sim_vehicle.py -v Rover -f boat --model JSON --map --console -l 55.99541530863445,-3.3010225004910683,0,0
 
-
 #terminal 4
 cd /home/sf_ws/src/extras_boat
 # run example script
@@ -135,7 +134,6 @@ cd /home/sf_ws/src/extras_boat
 python3 python3 check.py
 
 ```
-
 
 ## Links
 
