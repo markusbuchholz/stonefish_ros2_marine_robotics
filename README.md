@@ -92,15 +92,16 @@ ros2 launch cola2_stonefish bluerov_fls_simulation.launch.py
  ```bash
 ros2 launch cola2_stonefish blueboat_launch.py
 ```
+---
 
-## Start StoneFish with BlueROV2 with ArduPilot
+## Start StoneFish with BlueROV2 and ArduPilot
 
 ```bash
 #terminal 1
 ros2 run stonefish_bluerov2 ardusim_patch.py
 
 #terminal 2
-ros2 launch cola2_stonefish bluerov_fls_simulation.launch.py
+ros2 launch stonefish_bluerov2 bluerov2_sim.launch.py
 
 #terminal 3
 sim_vehicle.py -v ArduSub -f vectored_6dof --model JSON --map  -l 55.99541530863445,-3.3010225004910683,0,0 -m --streamrate=-1
@@ -112,6 +113,29 @@ cd /home/sf_ws/src/extras_rov
 python3 python3 pos_req.py
 
 ```
+
+---
+## Start StoneFish with BlueBoat and ArduPilot
+
+```bash
+#terminal 1
+ros2 run stonefish_bluerov2 ardusim_patch_boat.py
+
+#terminal 2
+ros2 launch stonefish_bluerov2 blueboat_sim.launch.py
+
+#terminal 3
+sim_vehicle.py -v Rover -f boat --model JSON --map --console -l 55.99541530863445,-3.3010225004910683,0,0
+
+
+#terminal 4
+cd /home/sf_ws/src/extras_boat
+# run example script
+# check for other scripts
+python3 python3 check.py
+
+```
+
 
 ## Links
 
