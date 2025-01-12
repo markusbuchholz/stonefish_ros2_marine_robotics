@@ -1,6 +1,0 @@
-[31mCMake Error at cmake_install.cmake:70 (file):
-  file INSTALL cannot find
-  "/home/sf_ws/src/stonefish_bluerov2/scripts/ardusim_patch_boat_ros2_interface.py":
-  No such file or directory.
-
-[0m

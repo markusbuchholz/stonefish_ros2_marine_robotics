@@ -1,1 +1,0 @@
-rclcpp;ament_index_cpp;std_srvs;geometry_msgs;nav_msgs;visualization_msgs;sensor_msgs;pcl;pcl_conversions;image_transport;tf2;tf2_ros;ros2launch;rosidl_default_runtime;ament_lint_auto;ament_lint_common

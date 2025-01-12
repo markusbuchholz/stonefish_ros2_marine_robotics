@@ -1,4 +1,0 @@
-Invoking command in '/home/sf_ws/build/stonefish_ros2': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/sf_ws/build/stonefish_ros2 -- -j32 -l32
-Invoked command in '/home/sf_ws/build/stonefish_ros2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/sf_ws/build/stonefish_ros2 -- -j32 -l32
-Invoking command in '/home/sf_ws/build/stonefish_ros2': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/sf_ws/build/stonefish_ros2
-Invoked command in '/home/sf_ws/build/stonefish_ros2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/sf_ws/build/stonefish_ros2
