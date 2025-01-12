@@ -15,6 +15,8 @@ SITL allows you to simulate the vehicle hardware and firmware [ArduSub](https://
 
 There are several scripts in: ```/extras_rov```, ```/extras_boat``` to communicate with vehicle using [Pymavlink](https://www.ardusub.com/developers/pymavlink.html).<br>
 
+There is a simple ROS 2 interface to ArduPilot (only for BlueROV2). Check ```/extras_interface``` <br>
+
 
 ## Prerequisites
 
