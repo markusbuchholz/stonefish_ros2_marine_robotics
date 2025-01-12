@@ -1,0 +1,35 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cola2_msgs/msg/CaptainStatus.msg
+// generated code does not contain a copyright notice
+
+#include "cola2_msgs/msg/MissionState.idl"
+#include "std_msgs/msg/Header.idl"
+
+module cola2_msgs {
+  module msg {
+    module CaptainStatus_Constants {
+      @verbatim (language="comment", text=
+        "State")
+      const uint8 IDLE = 0;
+      const uint8 GOTO = 1;
+      const uint8 MISSION = 2;
+      const uint8 KEEPPOSITION = 3;
+      const uint8 SAFETYKEEPPOSITION = 4;
+      const uint8 EXTERNALMISSION = 5;
+      const uint8 SECTION = 6;
+    };
+    struct CaptainStatus {
+      std_msgs::msg::Header header;
+
+      uint8 state;
+
+      @verbatim (language="comment", text=
+        "Info message")
+      string message;
+
+      @verbatim (language="comment", text=
+        "List of missions")
+      sequence<cola2_msgs::msg::MissionState> loaded_missions;
+    };
+  };
+};

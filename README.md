@@ -135,6 +135,45 @@ python3 python3 check.py
 
 ```
 
+
+## Start StoneFish with BlueBoat, ArduPilot and simple ROS 2 interface
+
+ROS 2 interafce provide 2 common topics:
+
+```bash
+/bluerov2/odometry
+/bluerov2/cmd_vel
+```
+
+```bash
+#terminal 1
+ros2 run stonefish_bluerov2 ardusim_patch_ros2_interface.py 
+
+#terminal 2
+ros2 launch stonefish_bluerov2 bluerov2_sim_ros2_interface.launch.py
+
+#terminal 3
+sim_vehicle.py -v Rover -f boat --model JSON --map --console -l 55.99541530863445,-3.3010225004910683,0,0
+
+#terminal 4
+cd /home/sf_ws/src/extras_interface
+ python3 ros2_simple_interface.py
+```
+
+Move BlueROV2,
+
+```bash
+ros2 topic pub -r 10 /bluerov2/cmd_vel geometry_msgs/msg/Twist "linear:
+  x: 0.0
+  y: 0.0
+  z: -2.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: 0.0" --qos-reliability reliable --qos-durability transient_local --qos-depth 10 -1
+```
+
+
 ## Links
 
 - [StoneFish github](https://github.com/patrykcieslak/stonefish)

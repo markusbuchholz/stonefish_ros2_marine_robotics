@@ -1,0 +1,4 @@
+Invoking command in '/home/sf_ws/build/cola2_msgs': /usr/bin/cmake --build /home/sf_ws/build/cola2_msgs -- -j32 -l32
+Invoked command in '/home/sf_ws/build/cola2_msgs' returned '0': /usr/bin/cmake --build /home/sf_ws/build/cola2_msgs -- -j32 -l32
+Invoking command in '/home/sf_ws/build/cola2_msgs': /usr/bin/cmake --install /home/sf_ws/build/cola2_msgs
+Invoked command in '/home/sf_ws/build/cola2_msgs' returned '0': /usr/bin/cmake --install /home/sf_ws/build/cola2_msgs

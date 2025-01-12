@@ -1,0 +1,434 @@
+#!/usr/bin/env python3
+#Markus Buchholz, 2025
+import rclpy
+from rclpy.node import Node
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
+from rclpy.callback_groups import ReentrantCallbackGroup
+
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import Twist
+from geometry_msgs.msg import TransformStamped
+
+from tf2_ros import TransformBroadcaster
+
+from pymavlink import mavutil
+import threading
+import time
+import math
+import numpy as np
+import tf_transformations
+
+class BlueROV2ROSInterface(Node):
+    def __init__(self):
+        super().__init__('bluerov2_ros_interface')
+
+        self.declare_parameter('mavlink_connection', 'udpin:0.0.0.0:14550')
+        self.declare_parameter('odom_frame_id', 'odom')
+        self.declare_parameter('base_frame_id', 'base_link')
+        self.declare_parameter('data_stream_rate', 4)  # Hz for data stream
+        self.declare_parameter('max_attempts', 200)
+        self.declare_parameter('margin', 0.2)
+        self.declare_parameter('timeout', 60)
+        
+        # Per-Axis Gain Factors
+        self.declare_parameter('gain_forward', -1.0)  # Surge
+        self.declare_parameter('gain_lateral', 1.0)  # Sway
+        self.declare_parameter('gain_heave', 1.0)    # Heave
+        self.declare_parameter('gain_roll', 1.0)     # Roll
+        self.declare_parameter('gain_pitch', 1.0)    # Pitch
+        self.declare_parameter('gain_yaw', 1.0)      # Yaw
+
+        mavlink_connection_str = self.get_parameter('mavlink_connection').get_parameter_value().string_value
+        self.odom_frame_id = self.get_parameter('odom_frame_id').get_parameter_value().string_value
+        self.base_frame_id = self.get_parameter('base_frame_id').get_parameter_value().string_value
+        data_stream_rate = self.get_parameter('data_stream_rate').get_parameter_value().integer_value
+        self.max_attempts = self.get_parameter('max_attempts').get_parameter_value().integer_value
+        self.margin = self.get_parameter('margin').get_parameter_value().double_value
+        self.timeout = self.get_parameter('timeout').get_parameter_value().integer_value
+
+        self.gain_forward = self.get_parameter('gain_forward').get_parameter_value().double_value
+        self.gain_lateral = self.get_parameter('gain_lateral').get_parameter_value().double_value
+        self.gain_heave = self.get_parameter('gain_heave').get_parameter_value().double_value
+        self.gain_roll = self.get_parameter('gain_roll').get_parameter_value().double_value
+        self.gain_pitch = self.get_parameter('gain_pitch').get_parameter_value().double_value
+        self.gain_yaw = self.get_parameter('gain_yaw').get_parameter_value().double_value
+
+        self.get_logger().info(f'Control Gains:')
+        self.get_logger().info(f'  Forward (Surge): {self.gain_forward}')
+        self.get_logger().info(f'  Lateral (Sway): {self.gain_lateral}')
+        self.get_logger().info(f'  Heave: {self.gain_heave}')
+        self.get_logger().info(f'  Roll: {self.gain_roll}')
+        self.get_logger().info(f'  Pitch: {self.gain_pitch}')
+        self.get_logger().info(f'  Yaw: {self.gain_yaw}')
+
+        self.thrusterRanges = [1100.0, 1900.0]  # PWM range for thrusters
+        self.thrusterInputRanges = [-3.0, 3.0]   # Control input range
+
+        self.conn = mavutil.mavlink_connection(mavlink_connection_str)
+        self.get_logger().info(f'Connecting to ArduPilot via {mavlink_connection_str}...')
+        self.conn.wait_heartbeat()
+        self.get_logger().info(f'Heartbeat from system (system {self.conn.target_system} component {self.conn.target_component})')
+
+        self.num_thrusters = 8  
+
+        self.backup_params = self.backup_thruster_params()
+
+        self.enable_passthrough_mode()
+
+        self.set_stabilize_mode_and_arm()
+
+        self.request_mavlink_messages()
+
+        self.data_lock = threading.Lock()
+        self.data = {}
+
+        self.A = np.array([
+            [0.7071,  0.7071, -0.7071, -0.7071, 0,       0,       0,       0],
+            [-0.7071, 0.7071, -0.7071,  0.7071, 0,       0,       0,       0],
+            [0,       0,       0,       0,      -1.0000, -1.0000, -1.0000, -1.0000],
+            [0,       0,       0,       0,       0.2180,  0.2180, -0.2180, -0.2180],
+            [0,       0,       0,       0,       0.1200, -0.1200,  0.1200, -0.1200],
+            [-0.1888, 0.1888,  0.1888, -0.1888, 0,       0,       0,       0]
+        ])
+
+        qos_profile = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=10
+        )
+        
+        qos_profile_reliable = QoSProfile(
+            reliability=ReliabilityPolicy.RELIABLE,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=10
+        )
+        self.custom_qos = qos_profile
+
+        self.odometry_publisher = self.create_publisher(
+            Odometry,
+            '/bluerov2/odometry',
+            qos_profile_reliable,
+            callback_group=ReentrantCallbackGroup()
+        )
+
+        self.cmd_vel_subscription = self.create_subscription(
+            Twist,
+            '/bluerov2/cmd_vel',
+            self._cmd_vel_callback,
+            qos_profile,
+            callback_group=ReentrantCallbackGroup()
+        )
+
+        self.tf_broadcaster = TransformBroadcaster(self)
+
+        self.mavlink_thread = threading.Thread(target=self.mavlink_listener, daemon=True)
+        self.mavlink_thread.start()
+
+        self.timer = self.create_timer(1.0 / 30.0, self._create_odometry_msg)
+
+        self.get_logger().info('BlueROV2 ROS Interface node initialized.')
+
+    def backup_thruster_params(self):
+        """Backup the current SERVO_FUNCTION parameters."""
+        backup = []
+        for i in range(1, self.num_thrusters + 1):
+            param_name = f'SERVO{i}_FUNCTION'
+            self.conn.mav.param_request_read_send(
+                self.conn.target_system,
+                self.conn.target_component,
+                param_name.encode('utf-8'),
+                -1
+            )
+            message = self.conn.recv_match(type='PARAM_VALUE', blocking=True, timeout=5)
+            if message:
+                backup.append(int(message.param_value))
+                self.get_logger().info(f'Backed up {param_name}: {int(message.param_value)}')
+            else:
+                backup.append(0)
+                self.get_logger().warn(f'Failed to backup {param_name}, defaulting to 0')
+        return backup
+
+    def set_servo_function(self, servo_num, function):
+        """Set the SERVO_FUNCTION parameter for a specific thruster."""
+        param_name = f'SERVO{servo_num}_FUNCTION'
+        self.conn.mav.param_set_send(
+            self.conn.target_system,
+            self.conn.target_component,
+            param_name.encode('utf-8'),
+            function,
+            mavutil.mavlink.MAV_PARAM_TYPE_INT32
+        )
+        self.get_logger().info(f'Set {param_name} to {function}')
+        time.sleep(0.1)  # Small delay to ensure the command is processed
+
+    def enable_passthrough_mode(self):
+        """Enable passthrough mode for all thrusters."""
+        self.get_logger().info('Enabling passthrough mode for thrusters...')
+        for i in range(1, self.num_thrusters + 1):
+            self.set_servo_function(i, 1)  # 1 typically stands for passthrough
+        self.get_logger().info('Passthrough mode enabled.')
+
+    def disable_passthrough_mode(self):
+        """Disable passthrough mode and restore original thruster functions."""
+        self.get_logger().info('Disabling passthrough mode and restoring thruster functions...')
+        for i in range(1, self.num_thrusters + 1):
+            original_function = self.backup_params[i-1]
+            self.set_servo_function(i, original_function)
+        self.get_logger().info('Passthrough mode disabled and thruster functions restored.')
+
+    def set_stabilize_mode_and_arm(self):
+        """Set the vehicle's mode to STABILIZE and arm it."""
+        self.get_logger().info('Setting STABILIZE mode...')
+        self.conn.mav.set_mode_send(
+            self.conn.target_system,
+            mavutil.mavlink.MAV_MODE_FLAG_CUSTOM_MODE_ENABLED,
+            0 
+        )
+        time.sleep(1)  
+
+        self.get_logger().info('Arming the vehicle...')
+        self.conn.mav.command_long_send(
+            self.conn.target_system,
+            self.conn.target_component,
+            mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
+            0,
+            1, 0, 0, 0, 0, 0, 0  # Arm
+        )
+       
+        armed = False
+        for _ in range(10):
+            message = self.conn.recv_match(type='HEARTBEAT', blocking=True, timeout=1)
+            if message and (message.base_mode & mavutil.mavlink.MAV_MODE_FLAG_SAFETY_ARMED):
+                armed = True
+                self.get_logger().info('Vehicle armed successfully.')
+                break
+            time.sleep(0.5)
+        if not armed:
+            self.get_logger().error('Failed to arm the vehicle.')
+            raise Exception('Vehicle failed to arm.')
+
+    def request_mavlink_messages(self):
+        """Request specific MAVLink messages like LOCAL_POSITION_NED and ATTITUDE."""
+        self.get_logger().info('Requesting MAVLink messages: LOCAL_POSITION_NED and ATTITUDE...')
+      
+        self.conn.mav.command_long_send(
+            self.conn.target_system,
+            self.conn.target_component,
+            mavutil.mavlink.MAV_CMD_REQUEST_MESSAGE,
+            0,
+            mavutil.mavlink.MAVLINK_MSG_ID_LOCAL_POSITION_NED,
+            0, 0, 0, 0, 0, 0, 0
+        )
+      
+        self.conn.mav.command_long_send(
+            self.conn.target_system,
+            self.conn.target_component,
+            mavutil.mavlink.MAV_CMD_REQUEST_MESSAGE,
+            0,
+            mavutil.mavlink.MAVLINK_MSG_ID_ATTITUDE,
+            0, 0, 0, 0, 0, 0, 0
+        )
+        self.get_logger().info('MAVLink message requests sent.')
+
+    def mavlink_listener(self):
+        """Continuously listen for MAVLink messages and update data."""
+        while rclpy.ok():
+            try:
+                msg = self.conn.recv_match(blocking=True, timeout=1)
+                if msg:
+                    msg_type = msg.get_type()
+                    with self.data_lock:
+                        self.data[msg_type] = msg.to_dict()
+                    self.get_logger().debug(f'Received MAVLink message: {msg_type}')
+            except Exception as e:
+                self.get_logger().error(f'Error while receiving MAVLink message: {e}')
+                time.sleep(0.1)
+
+    def _create_odometry_msg(self):
+        """Create and publish the odometry message based on received MAVLink data."""
+        with self.data_lock:
+            data = self.data.copy()
+
+        if not data:
+            self.get_logger().warn('No data received yet.')
+            return
+
+    
+        local_position_ned = data.get('LOCAL_POSITION_NED', None)
+        attitude = data.get('ATTITUDE', None)
+
+        if not local_position_ned or not attitude:
+            self.get_logger().warn('Waiting for both LOCAL_POSITION_NED and ATTITUDE messages.')
+            return
+
+        msg = Odometry()
+        msg.header.stamp = self.get_clock().now().to_msg()
+        msg.header.frame_id = self.odom_frame_id
+        msg.child_frame_id = self.base_frame_id
+
+        msg.pose.pose.position.x = local_position_ned['x']
+        msg.pose.pose.position.y = -local_position_ned['y']  # Inverting Y to match ROS coordinate frame
+        msg.pose.pose.position.z = -local_position_ned['z']  # Inverting Z to match ROS coordinate frame
+
+        msg.twist.twist.linear.x = -local_position_ned['vx']
+        msg.twist.twist.linear.y = local_position_ned['vy']
+        msg.twist.twist.linear.z = -local_position_ned['vz']
+
+        roll = attitude['roll']
+        pitch = -attitude['pitch']
+        yaw = -attitude['yaw']
+
+        q = tf_transformations.quaternion_from_euler(roll, pitch, yaw)
+        msg.pose.pose.orientation.x = q[0]
+        msg.pose.pose.orientation.y = q[1]
+        msg.pose.pose.orientation.z = q[2]
+        msg.pose.pose.orientation.w = q[3]
+
+        msg.twist.twist.angular.x = attitude['rollspeed']
+        msg.twist.twist.angular.y = -attitude['pitchspeed']
+        msg.twist.twist.angular.z = -attitude['yawspeed']
+
+        ekf_status = data.get('EKF_STATUS_REPORT', None)
+        if ekf_status:
+            msg.pose.covariance[0] = ekf_status.get('pos_horiz_variance', 0.0)
+            msg.pose.covariance[7] = ekf_status.get('pos_horiz_variance', 0.0)
+            msg.pose.covariance[14] = ekf_status.get('pos_vert_variance', 0.0)
+            msg.pose.covariance[35] = ekf_status.get('compass_variance', 0.0)
+            msg.twist.covariance[0] = ekf_status.get('velocity_variance', 0.0)
+            msg.twist.covariance[7] = ekf_status.get('velocity_variance', 0.0)
+        else:
+            pass
+
+        self.odometry_publisher.publish(msg)
+
+        t = TransformStamped()
+        t.header.stamp = self.get_clock().now().to_msg()
+        t.header.frame_id = self.odom_frame_id
+        t.child_frame_id = self.base_frame_id
+        t.transform.translation.x = msg.pose.pose.position.x
+        t.transform.translation.y = msg.pose.pose.position.y
+        t.transform.translation.z = msg.pose.pose.position.z
+        t.transform.rotation = msg.pose.pose.orientation
+        self.tf_broadcaster.sendTransform(t)
+
+    def set_rc_channels_pwm(self, vals):
+        """Override RC channels with provided PWM values."""
+    
+        rc_channel_values = [int(val) for val in vals[:8]]
+        while len(rc_channel_values) < 8:
+            rc_channel_values.append(0)
+
+        self.get_logger().debug(f'Sending RC Channels Override: {rc_channel_values}')
+
+        try:
+            self.conn.mav.rc_channels_override_send(
+                self.conn.target_system,      # target_system
+                self.conn.target_component,   # target_component
+                rc_channel_values[0],
+                rc_channel_values[1],
+                rc_channel_values[2],
+                rc_channel_values[3],
+                rc_channel_values[4],
+                rc_channel_values[5],
+                rc_channel_values[6],
+                rc_channel_values[7]
+            )
+            self.get_logger().info(f'RC Channels Override sent: {rc_channel_values}')
+        except Exception as e:
+            self.get_logger().error(f'Failed to send RC override: {e}')
+
+    def mapRanges(self, value):
+        """Map a value from thruster input range to PWM range and clip."""
+        # Ensure input ranges are valid
+        in_min, in_max = self.thrusterInputRanges
+        out_min, out_max = self.thrusterRanges
+
+        mapped_value = (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
+
+        clipped_value = np.clip(mapped_value, out_min, out_max)
+
+        return clipped_value
+
+    def _cmd_vel_callback(self, msg):
+        """Handle incoming velocity commands and translate to RC overrides."""
+        # Extract control inputs from cmd_vel
+        # u = [forward, lateral, heave, roll, pitch, yaw]
+        u_forward = msg.linear.x
+        u_lateral = msg.linear.y
+        u_heave = msg.linear.z
+        u_roll = msg.angular.x
+        u_pitch = msg.angular.y
+        u_yaw = msg.angular.z
+
+        u = np.array([u_forward, u_lateral, u_heave, u_roll, u_pitch, u_yaw])
+
+        self.get_logger().debug(f'Received cmd_vel: {msg}')
+        self.get_logger().debug(f'Original Control Inputs (u): {u}')
+
+        u_scaled = np.array([
+            self.gain_forward * u_forward,  # Surge
+            self.gain_lateral * u_lateral,  # Sway
+            self.gain_heave * u_heave,      # Heave
+            self.gain_roll * u_roll,        # Roll
+            self.gain_pitch * u_pitch,      # Pitch
+            self.gain_yaw * u_yaw           # Yaw
+        ])
+
+        self.get_logger().debug(f'Scaled Control Inputs (u_scaled): {u_scaled}')
+
+        # Compute thruster commands (t = A.T * u_scaled)
+        #  8x1
+        t = self.A.T.dot(u_scaled)
+
+        self.get_logger().debug(f'Computed Thruster Commands (t): {t}')
+
+        pwm_thrusters = []
+        for i in range(self.num_thrusters):
+            pwm = self.mapRanges(t[i])
+            pwm_thrusters.append(pwm)
+
+        self.get_logger().debug(f'Mapped PWM Thrusters: {pwm_thrusters}')
+
+        # Send PWM overrides
+        self.set_rc_channels_pwm(pwm_thrusters)
+
+    def shutdown(self):
+        """Safely shutdown the node, disarm the vehicle, and disable passthrough."""
+        self.get_logger().info('Shutting down BlueROV2 ROS Interface node...')
+        try:
+            # Disarm the vehicle
+            self.conn.mav.command_long_send(
+                self.conn.target_system,
+                self.conn.target_component,
+                mavutil.mavlink.MAV_CMD_COMPONENT_ARM_DISARM,
+                0,
+                0, 0, 0, 0, 0, 0, 0  # Disarm
+            )
+            self.get_logger().info('Vehicle disarmed.')
+
+            # Disable passthrough mode
+            self.disable_passthrough_mode()
+
+            # Close MAVLink connection
+            self.conn.close()
+            self.get_logger().info('MAVLink connection closed.')
+        except Exception as e:
+            self.get_logger().error(f'Error during shutdown: {e}')
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = BlueROV2ROSInterface()
+
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().info('Keyboard Interrupt detected. Initiating shutdown...')
+    except Exception as e:
+        node.get_logger().error(f'Unexpected error: {e}')
+    finally:
+        node.shutdown()
+        node.destroy_node()
+        rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()

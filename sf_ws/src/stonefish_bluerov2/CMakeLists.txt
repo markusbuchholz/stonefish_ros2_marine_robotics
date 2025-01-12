@@ -36,6 +36,7 @@ ament_python_install_package(${PROJECT_NAME})
 install(PROGRAMS
   scripts/ardusim_patch.py
   scripts/ardusim_patch_boat.py
+  scripts/ardusim_patch_ros2_interface.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

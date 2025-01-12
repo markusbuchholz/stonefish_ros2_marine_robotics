@@ -1,0 +1,389 @@
+[0.048s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.048s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7a923e511120>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a923e65d8a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a923e65d8a0>>, mixin_verb=('build',))
+[0.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.106s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.106s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.106s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/sf_ws'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.106s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extensions ['ignore', 'ignore_ament_install']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extension 'ignore'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extension 'ignore_ament_install'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extensions ['colcon_pkg']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extension 'colcon_pkg'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extensions ['colcon_meta']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extension 'colcon_meta'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extensions ['ros']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extension 'ros'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extensions ['cmake', 'python']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extension 'cmake'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extension 'python'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extensions ['python_setup_py']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(annotations_2024-10-12) by extension 'python_setup_py'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_msgs_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_msgs_ros2) by extension 'ignore'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_msgs_ros2) by extension 'ignore_ament_install'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_msgs_ros2) by extensions ['colcon_pkg']
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_msgs_ros2) by extension 'colcon_pkg'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_msgs_ros2) by extensions ['colcon_meta']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_msgs_ros2) by extension 'colcon_meta'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_msgs_ros2) by extensions ['ros']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_msgs_ros2) by extension 'ros'
+[0.114s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cola2_msgs_ros2' with type 'ros.catkin' and name 'cola2_msgs'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_stonefish_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_stonefish_ros2) by extension 'ignore'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_stonefish_ros2) by extension 'ignore_ament_install'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_stonefish_ros2) by extensions ['colcon_pkg']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_stonefish_ros2) by extension 'colcon_pkg'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_stonefish_ros2) by extensions ['colcon_meta']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_stonefish_ros2) by extension 'colcon_meta'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_stonefish_ros2) by extensions ['ros']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/cola2_stonefish_ros2) by extension 'ros'
+[0.114s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cola2_stonefish_ros2' with type 'ros.ament_cmake' and name 'cola2_stonefish'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extensions ['ignore', 'ignore_ament_install']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extension 'ignore'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extension 'ignore_ament_install'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extensions ['colcon_pkg']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extension 'colcon_pkg'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extensions ['colcon_meta']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extension 'colcon_meta'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extensions ['ros']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extension 'ros'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extensions ['cmake', 'python']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extension 'cmake'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extension 'python'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extensions ['python_setup_py']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_boat) by extension 'python_setup_py'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extension 'ignore'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extension 'ignore_ament_install'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extensions ['colcon_pkg']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extension 'colcon_pkg'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extensions ['colcon_meta']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extension 'colcon_meta'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extensions ['ros']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extension 'ros'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extensions ['cmake', 'python']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extension 'cmake'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extension 'python'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extensions ['python_setup_py']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/extras_rov) by extension 'python_setup_py'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_bluerov2) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_bluerov2) by extension 'ignore'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_bluerov2) by extension 'ignore_ament_install'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_bluerov2) by extensions ['colcon_pkg']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_bluerov2) by extension 'colcon_pkg'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_bluerov2) by extensions ['colcon_meta']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_bluerov2) by extension 'colcon_meta'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_bluerov2) by extensions ['ros']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_bluerov2) by extension 'ros'
+[0.115s] DEBUG:colcon.colcon_core.package_identification:Package 'src/stonefish_bluerov2' with type 'ros.ament_cmake' and name 'stonefish_bluerov2'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_ros2) by extension 'ignore'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_ros2) by extension 'ignore_ament_install'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_ros2) by extensions ['colcon_pkg']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_ros2) by extension 'colcon_pkg'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_ros2) by extensions ['colcon_meta']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_ros2) by extension 'colcon_meta'
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_ros2) by extensions ['ros']
+[0.115s] Level 1:colcon.colcon_core.package_identification:_identify(src/stonefish_ros2) by extension 'ros'
+[0.116s] DEBUG:colcon.colcon_core.package_identification:Package 'src/stonefish_ros2' with type 'ros.ament_cmake' and name 'stonefish_ros2'
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.116s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_msgs' build argument 'cmake_args' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_msgs' build argument 'cmake_target' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.125s] DEBUG:colcon.colcon_core.verb:Building package 'cola2_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sf_ws/build/cola2_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sf_ws/install/cola2_msgs', 'merge_install': False, 'path': '/home/sf_ws/src/cola2_msgs_ros2', 'symlink_install': False, 'test_result_base': None}
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_bluerov2' build argument 'cmake_args' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_bluerov2' build argument 'cmake_target' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_bluerov2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_bluerov2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_bluerov2' build argument 'cmake_clean_first' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_bluerov2' build argument 'cmake_force_configure' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_bluerov2' build argument 'ament_cmake_args' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_bluerov2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_bluerov2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.125s] DEBUG:colcon.colcon_core.verb:Building package 'stonefish_bluerov2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sf_ws/build/stonefish_bluerov2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sf_ws/install/stonefish_bluerov2', 'merge_install': False, 'path': '/home/sf_ws/src/stonefish_bluerov2', 'symlink_install': False, 'test_result_base': None}
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_ros2' build argument 'cmake_args' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_ros2' build argument 'cmake_target' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'stonefish_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.125s] DEBUG:colcon.colcon_core.verb:Building package 'stonefish_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sf_ws/build/stonefish_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sf_ws/install/stonefish_ros2', 'merge_install': False, 'path': '/home/sf_ws/src/stonefish_ros2', 'symlink_install': False, 'test_result_base': None}
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_stonefish' build argument 'cmake_args' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_stonefish' build argument 'cmake_target' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_stonefish' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_stonefish' build argument 'cmake_clean_cache' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_stonefish' build argument 'cmake_clean_first' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_stonefish' build argument 'cmake_force_configure' from command line to 'False'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_stonefish' build argument 'ament_cmake_args' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_stonefish' build argument 'catkin_cmake_args' from command line to 'None'
+[0.125s] Level 5:colcon.colcon_core.verb:set package 'cola2_stonefish' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.125s] DEBUG:colcon.colcon_core.verb:Building package 'cola2_stonefish' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/sf_ws/build/cola2_stonefish', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/sf_ws/install/cola2_stonefish', 'merge_install': False, 'path': '/home/sf_ws/src/cola2_stonefish_ros2', 'symlink_install': False, 'test_result_base': None}
+[0.125s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.126s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.126s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/sf_ws/src/cola2_msgs_ros2' with build type 'catkin'
+[0.126s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sf_ws/src/cola2_msgs_ros2'
+[0.127s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.127s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.127s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.129s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sf_ws/src/stonefish_bluerov2' with build type 'ament_cmake'
+[0.129s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sf_ws/src/stonefish_bluerov2'
+[0.130s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.130s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.131s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sf_ws/src/stonefish_ros2' with build type 'ament_cmake'
+[0.132s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sf_ws/src/stonefish_ros2'
+[0.132s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.132s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.135s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sf_ws/build/cola2_msgs': /usr/bin/cmake --build /home/sf_ws/build/cola2_msgs -- -j32 -l32
+[0.136s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sf_ws/build/stonefish_bluerov2': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/sf_ws/src/stonefish_bluerov2 -DCMAKE_INSTALL_PREFIX=/home/sf_ws/install/stonefish_bluerov2
+[0.143s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sf_ws/build/stonefish_ros2': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/sf_ws/build/stonefish_ros2 -- -j32 -l32
+[0.302s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sf_ws/build/stonefish_ros2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/sf_ws/build/stonefish_ros2 -- -j32 -l32
+[0.322s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sf_ws/build/cola2_msgs' returned '0': /usr/bin/cmake --build /home/sf_ws/build/cola2_msgs -- -j32 -l32
+[0.462s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sf_ws/build/stonefish_ros2': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/sf_ws/build/stonefish_ros2
+[0.493s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(stonefish_ros2)
+[0.494s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sf_ws/build/stonefish_ros2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/sf_ws/build/stonefish_ros2
+[0.494s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2' for CMake module files
+[0.495s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2' for CMake config files
+[0.495s] Level 1:colcon.colcon_core.shell:create_environment_hook('stonefish_ros2', 'cmake_prefix_path')
+[0.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/hook/cmake_prefix_path.ps1'
+[0.495s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/hook/cmake_prefix_path.dsv'
+[0.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/hook/cmake_prefix_path.sh'
+[0.496s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2/lib'
+[0.496s] Level 1:colcon.colcon_core.shell:create_environment_hook('stonefish_ros2', 'ld_library_path_lib')
+[0.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/hook/ld_library_path_lib.ps1'
+[0.496s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/hook/ld_library_path_lib.dsv'
+[0.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/hook/ld_library_path_lib.sh'
+[0.497s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2/bin'
+[0.497s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2/lib/pkgconfig/stonefish_ros2.pc'
+[0.497s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2/lib/python3.10/site-packages'
+[0.497s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2/bin'
+[0.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/package.ps1'
+[0.498s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/package.dsv'
+[0.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/package.sh'
+[0.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/package.bash'
+[0.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/package.zsh'
+[0.499s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sf_ws/install/stonefish_ros2/share/colcon-core/packages/stonefish_ros2)
+[0.654s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(stonefish_ros2)
+[0.654s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2' for CMake module files
+[0.655s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2' for CMake config files
+[0.655s] Level 1:colcon.colcon_core.shell:create_environment_hook('stonefish_ros2', 'cmake_prefix_path')
+[0.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/hook/cmake_prefix_path.ps1'
+[0.656s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/hook/cmake_prefix_path.dsv'
+[0.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/hook/cmake_prefix_path.sh'
+[0.656s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2/lib'
+[0.656s] Level 1:colcon.colcon_core.shell:create_environment_hook('stonefish_ros2', 'ld_library_path_lib')
+[0.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/hook/ld_library_path_lib.ps1'
+[0.657s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/hook/ld_library_path_lib.dsv'
+[0.657s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/hook/ld_library_path_lib.sh'
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2/bin'
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2/lib/pkgconfig/stonefish_ros2.pc'
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2/lib/python3.10/site-packages'
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_ros2/bin'
+[0.657s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/package.ps1'
+[0.658s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/package.dsv'
+[0.658s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/package.sh'
+[0.658s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/package.bash'
+[0.658s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_ros2/share/stonefish_ros2/package.zsh'
+[0.658s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sf_ws/install/stonefish_ros2/share/colcon-core/packages/stonefish_ros2)
+[0.794s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sf_ws/build/stonefish_bluerov2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake /home/sf_ws/src/stonefish_bluerov2 -DCMAKE_INSTALL_PREFIX=/home/sf_ws/install/stonefish_bluerov2
+[0.795s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sf_ws/build/stonefish_bluerov2': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/sf_ws/build/stonefish_bluerov2 -- -j32 -l32
+[0.940s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sf_ws/build/stonefish_bluerov2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/sf_ws/build/stonefish_bluerov2 -- -j32 -l32
+[0.952s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sf_ws/build/stonefish_bluerov2': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/sf_ws/build/stonefish_bluerov2
+[1.004s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sf_ws/build/cola2_msgs': /usr/bin/cmake --install /home/sf_ws/build/cola2_msgs
+[1.034s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(stonefish_bluerov2)
+[1.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sf_ws/build/stonefish_bluerov2' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/sf_ws/build/stonefish_bluerov2
+[1.034s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2' for CMake module files
+[1.034s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2' for CMake config files
+[1.034s] Level 1:colcon.colcon_core.shell:create_environment_hook('stonefish_bluerov2', 'cmake_prefix_path')
+[1.034s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/hook/cmake_prefix_path.ps1'
+[1.035s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/hook/cmake_prefix_path.dsv'
+[1.035s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/hook/cmake_prefix_path.sh'
+[1.035s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2/lib'
+[1.035s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2/bin'
+[1.035s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2/lib/pkgconfig/stonefish_bluerov2.pc'
+[1.035s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2/lib/python3.10/site-packages'
+[1.035s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2/bin'
+[1.035s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/package.ps1'
+[1.036s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/package.dsv'
+[1.036s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/package.sh'
+[1.036s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/package.bash'
+[1.036s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/package.zsh'
+[1.036s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sf_ws/install/stonefish_bluerov2/share/colcon-core/packages/stonefish_bluerov2)
+[1.037s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sf_ws/build/cola2_msgs' returned '0': /usr/bin/cmake --install /home/sf_ws/build/cola2_msgs
+[1.050s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(stonefish_bluerov2)
+[1.050s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2' for CMake module files
+[1.050s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2' for CMake config files
+[1.051s] Level 1:colcon.colcon_core.shell:create_environment_hook('stonefish_bluerov2', 'cmake_prefix_path')
+[1.051s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/hook/cmake_prefix_path.ps1'
+[1.051s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/hook/cmake_prefix_path.dsv'
+[1.051s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/hook/cmake_prefix_path.sh'
+[1.051s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2/lib'
+[1.051s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2/bin'
+[1.051s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2/lib/pkgconfig/stonefish_bluerov2.pc'
+[1.051s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2/lib/python3.10/site-packages'
+[1.051s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/stonefish_bluerov2/bin'
+[1.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/package.ps1'
+[1.052s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/package.dsv'
+[1.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/package.sh'
+[1.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/package.bash'
+[1.052s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/stonefish_bluerov2/share/stonefish_bluerov2/package.zsh'
+[1.052s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sf_ws/install/stonefish_bluerov2/share/colcon-core/packages/stonefish_bluerov2)
+[1.362s] Level 1:colcon.colcon_core.shell:create_environment_hook('cola2_msgs', 'ros_package_path')
+[1.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/ros_package_path.ps1'
+[1.363s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/ros_package_path.dsv'
+[1.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/ros_package_path.sh'
+[1.363s] Level 1:colcon.colcon_ros.task.catkin:checking '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages'
+[1.363s] Level 1:colcon.colcon_core.shell:create_environment_hook('cola2_msgs', 'catkin_pythonpath')
+[1.363s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/catkin_pythonpath.ps1'
+[1.363s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/catkin_pythonpath.dsv'
+[1.364s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/catkin_pythonpath.sh'
+[1.364s] Level 1:colcon.colcon_core.shell:create_environment_hook('cola2_msgs', 'pkg_config_path')
+[1.364s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/pkg_config_path.ps1'
+[1.364s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/pkg_config_path.dsv'
+[1.364s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/pkg_config_path.sh'
+[1.365s] Level 1:colcon.colcon_core.shell:create_environment_hook('cola2_msgs', 'pkg_config_path_multiarch')
+[1.365s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/pkg_config_path_multiarch.ps1'
+[1.365s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/pkg_config_path_multiarch.dsv'
+[1.366s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/pkg_config_path_multiarch.sh'
+[1.366s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cola2_msgs)
+[1.366s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_msgs' for CMake module files
+[1.366s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_msgs' for CMake config files
+[1.367s] Level 1:colcon.colcon_core.shell:create_environment_hook('cola2_msgs', 'cmake_prefix_path')
+[1.367s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/cmake_prefix_path.ps1'
+[1.367s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/cmake_prefix_path.dsv'
+[1.367s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/cmake_prefix_path.sh'
+[1.367s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_msgs/lib'
+[1.367s] Level 1:colcon.colcon_core.shell:create_environment_hook('cola2_msgs', 'ld_library_path_lib')
+[1.368s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/ld_library_path_lib.ps1'
+[1.368s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/ld_library_path_lib.dsv'
+[1.368s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/hook/ld_library_path_lib.sh'
+[1.368s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_msgs/bin'
+[1.368s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_msgs/lib/pkgconfig/cola2_msgs.pc'
+[1.368s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_msgs/lib/python3.10/site-packages'
+[1.368s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_msgs/bin'
+[1.368s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/package.ps1'
+[1.369s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/package.dsv'
+[1.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/package.sh'
+[1.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/package.bash'
+[1.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/cola2_msgs/share/cola2_msgs/package.zsh'
+[1.369s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sf_ws/install/cola2_msgs/share/colcon-core/packages/cola2_msgs)
+[1.370s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/sf_ws/src/cola2_stonefish_ros2' with build type 'ament_cmake'
+[1.370s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/sf_ws/src/cola2_stonefish_ros2'
+[1.370s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.370s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.374s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sf_ws/build/cola2_stonefish': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/sf_ws/install/cola2_msgs:/home/sf_ws/install/stonefish_ros2:/usr/local PKG_CONFIG_PATH=/home/sf_ws/install/cola2_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/sf_ws/install/cola2_msgs/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig /usr/bin/cmake /home/sf_ws/src/cola2_stonefish_ros2 -DCMAKE_INSTALL_PREFIX=/home/sf_ws/install/cola2_stonefish
+[2.036s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sf_ws/build/cola2_stonefish' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/sf_ws/install/cola2_msgs:/home/sf_ws/install/stonefish_ros2:/usr/local PKG_CONFIG_PATH=/home/sf_ws/install/cola2_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/sf_ws/install/cola2_msgs/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig /usr/bin/cmake /home/sf_ws/src/cola2_stonefish_ros2 -DCMAKE_INSTALL_PREFIX=/home/sf_ws/install/cola2_stonefish
+[2.037s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sf_ws/build/cola2_stonefish': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/sf_ws/install/cola2_msgs:/home/sf_ws/install/stonefish_ros2:/usr/local PKG_CONFIG_PATH=/home/sf_ws/install/cola2_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/sf_ws/install/cola2_msgs/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig /usr/bin/cmake --build /home/sf_ws/build/cola2_stonefish -- -j32 -l32
+[8.252s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sf_ws/build/cola2_stonefish' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/sf_ws/install/cola2_msgs:/home/sf_ws/install/stonefish_ros2:/usr/local PKG_CONFIG_PATH=/home/sf_ws/install/cola2_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/sf_ws/install/cola2_msgs/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig /usr/bin/cmake --build /home/sf_ws/build/cola2_stonefish -- -j32 -l32
+[8.265s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/sf_ws/build/cola2_stonefish': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/sf_ws/install/cola2_msgs:/home/sf_ws/install/stonefish_ros2:/usr/local PKG_CONFIG_PATH=/home/sf_ws/install/cola2_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/sf_ws/install/cola2_msgs/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig /usr/bin/cmake --install /home/sf_ws/build/cola2_stonefish
+[8.484s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cola2_stonefish)
+[8.484s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish' for CMake module files
+[8.485s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/sf_ws/build/cola2_stonefish' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:/home/sf_ws/install/cola2_msgs:/home/sf_ws/install/stonefish_ros2:/usr/local PKG_CONFIG_PATH=/home/sf_ws/install/cola2_msgs/lib/x86_64-linux-gnu/pkgconfig:/home/sf_ws/install/cola2_msgs/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/local/lib/pkgconfig /usr/bin/cmake --install /home/sf_ws/build/cola2_stonefish
+[8.485s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish' for CMake config files
+[8.485s] Level 1:colcon.colcon_core.shell:create_environment_hook('cola2_stonefish', 'cmake_prefix_path')
+[8.485s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/hook/cmake_prefix_path.ps1'
+[8.486s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/hook/cmake_prefix_path.dsv'
+[8.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/hook/cmake_prefix_path.sh'
+[8.486s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish/lib'
+[8.486s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish/bin'
+[8.486s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish/lib/pkgconfig/cola2_stonefish.pc'
+[8.486s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish/lib/python3.10/site-packages'
+[8.486s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish/bin'
+[8.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/package.ps1'
+[8.486s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/package.dsv'
+[8.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/package.sh'
+[8.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/package.bash'
+[8.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/package.zsh'
+[8.487s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sf_ws/install/cola2_stonefish/share/colcon-core/packages/cola2_stonefish)
+[8.503s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cola2_stonefish)
+[8.503s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish' for CMake module files
+[8.503s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish' for CMake config files
+[8.503s] Level 1:colcon.colcon_core.shell:create_environment_hook('cola2_stonefish', 'cmake_prefix_path')
+[8.503s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/hook/cmake_prefix_path.ps1'
+[8.503s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/hook/cmake_prefix_path.dsv'
+[8.503s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/hook/cmake_prefix_path.sh'
+[8.504s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish/lib'
+[8.504s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish/bin'
+[8.504s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish/lib/pkgconfig/cola2_stonefish.pc'
+[8.504s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish/lib/python3.10/site-packages'
+[8.504s] Level 1:colcon.colcon_core.environment:checking '/home/sf_ws/install/cola2_stonefish/bin'
+[8.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/package.ps1'
+[8.504s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/package.dsv'
+[8.504s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/package.sh'
+[8.505s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/package.bash'
+[8.505s] INFO:colcon.colcon_core.shell:Creating package script '/home/sf_ws/install/cola2_stonefish/share/cola2_stonefish/package.zsh'
+[8.505s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/sf_ws/install/cola2_stonefish/share/colcon-core/packages/cola2_stonefish)
+[8.505s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.505s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.505s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[8.505s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.507s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[8.507s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.507s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.507s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.509s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[8.509s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.509s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sf_ws/install/local_setup.ps1'
+[8.510s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sf_ws/install/_local_setup_util_ps1.py'
+[8.510s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sf_ws/install/setup.ps1'
+[8.511s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sf_ws/install/local_setup.sh'
+[8.511s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/sf_ws/install/_local_setup_util_sh.py'
+[8.511s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sf_ws/install/setup.sh'
+[8.511s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sf_ws/install/local_setup.bash'
+[8.512s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sf_ws/install/setup.bash'
+[8.512s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/sf_ws/install/local_setup.zsh'
+[8.512s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/sf_ws/install/setup.zsh'

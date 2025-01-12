@@ -1,0 +1,47 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cola2_msgs/msg/WorldWaypointReq.msg
+// generated code does not contain a copyright notice
+
+#include "cola2_msgs/msg/Bool6Axis.idl"
+#include "cola2_msgs/msg/GoalDescriptor.idl"
+#include "cola2_msgs/msg/NED.idl"
+#include "cola2_msgs/msg/RPY.idl"
+#include "geometry_msgs/msg/Vector3.idl"
+#include "std_msgs/msg/Header.idl"
+
+module cola2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "World frame (absolute) waypoint request to pilot." "\n"
+      "A new waypoint request should contain a different goal.id" "\n"
+      "(incremented) from previous requests. This same message should then" "\n"
+      "be re-sent at 5-10 Hz.")
+    struct WorldWaypointReq {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Common waypoint details")
+      cola2_msgs::msg::GoalDescriptor goal;
+
+      @verbatim (language="comment", text=
+        "If true, maintain Z position relative to altitude, otherwise depth.")
+      boolean altitude_mode;
+
+      cola2_msgs::msg::NED position;
+
+      float altitude;
+
+      cola2_msgs::msg::RPY orientation;
+
+      @verbatim (language="comment", text=
+        "Axes of control to disable, in body frame.")
+      cola2_msgs::msg::Bool6Axis disable_axis;
+
+      @verbatim (language="comment", text=
+        "Tolerances are in body frame, zero indicates pilot default should be used.")
+      geometry_msgs::msg::Vector3 position_tolerance;
+
+      cola2_msgs::msg::RPY orientation_tolerance;
+    };
+  };
+};
