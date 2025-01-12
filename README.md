@@ -138,7 +138,7 @@ python3 python3 check.py
 
 ## Start StoneFish with BlueBoat, ArduPilot and simple ROS 2 interface
 
-ROS 2 interafce provide 2 common topics:
+ROS 2 interface provides two common topics (ROS 2 is a function wrapper for Mavlink protocol):
 
 ```bash
 /bluerov2/odometry
@@ -157,7 +157,7 @@ sim_vehicle.py -v Rover -f boat --model JSON --map --console -l 55.9954153086344
 
 #terminal 4
 cd /home/sf_ws/src/extras_interface
- python3 ros2_simple_interface.py
+python3 ros2_simple_interface.py
 ```
 
 Move BlueROV2,
