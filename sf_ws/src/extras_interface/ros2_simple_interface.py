@@ -8,6 +8,7 @@ from rclpy.callback_groups import ReentrantCallbackGroup
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist
 from geometry_msgs.msg import TransformStamped
+from std_msgs.msg import Int32MultiArray  # Import for PWM data
 
 from tf2_ros import TransformBroadcaster
 
@@ -22,6 +23,7 @@ class BlueROV2ROSInterface(Node):
     def __init__(self):
         super().__init__('bluerov2_ros_interface')
 
+        # Declare Parameters
         self.declare_parameter('mavlink_connection', 'udpin:0.0.0.0:14550')
         self.declare_parameter('odom_frame_id', 'odom')
         self.declare_parameter('base_frame_id', 'base_link')
@@ -30,7 +32,7 @@ class BlueROV2ROSInterface(Node):
         self.declare_parameter('margin', 0.2)
         self.declare_parameter('timeout', 60)
         
-        # Per-Axis Gain Factors
+        # **New Parameters: Per-Axis Gain Factors**
         self.declare_parameter('gain_forward', -1.0)  # Surge
         self.declare_parameter('gain_lateral', 1.0)  # Sway
         self.declare_parameter('gain_heave', 1.0)    # Heave
@@ -38,6 +40,7 @@ class BlueROV2ROSInterface(Node):
         self.declare_parameter('gain_pitch', 1.0)    # Pitch
         self.declare_parameter('gain_yaw', 1.0)      # Yaw
 
+        # Get Parameters
         mavlink_connection_str = self.get_parameter('mavlink_connection').get_parameter_value().string_value
         self.odom_frame_id = self.get_parameter('odom_frame_id').get_parameter_value().string_value
         self.base_frame_id = self.get_parameter('base_frame_id').get_parameter_value().string_value
@@ -46,6 +49,7 @@ class BlueROV2ROSInterface(Node):
         self.margin = self.get_parameter('margin').get_parameter_value().double_value
         self.timeout = self.get_parameter('timeout').get_parameter_value().integer_value
 
+        # **Retrieve Per-Axis Gains**
         self.gain_forward = self.get_parameter('gain_forward').get_parameter_value().double_value
         self.gain_lateral = self.get_parameter('gain_lateral').get_parameter_value().double_value
         self.gain_heave = self.get_parameter('gain_heave').get_parameter_value().double_value
@@ -53,6 +57,7 @@ class BlueROV2ROSInterface(Node):
         self.gain_pitch = self.get_parameter('gain_pitch').get_parameter_value().double_value
         self.gain_yaw = self.get_parameter('gain_yaw').get_parameter_value().double_value
 
+        # **Log the Gains**
         self.get_logger().info(f'Control Gains:')
         self.get_logger().info(f'  Forward (Surge): {self.gain_forward}')
         self.get_logger().info(f'  Lateral (Sway): {self.gain_lateral}')
@@ -61,6 +66,7 @@ class BlueROV2ROSInterface(Node):
         self.get_logger().info(f'  Pitch: {self.gain_pitch}')
         self.get_logger().info(f'  Yaw: {self.gain_yaw}')
 
+        # Define Thruster Ranges and Input Ranges
         self.thrusterRanges = [1100.0, 1900.0]  # PWM range for thrusters
         self.thrusterInputRanges = [-3.0, 3.0]   # Control input range
 
@@ -69,7 +75,7 @@ class BlueROV2ROSInterface(Node):
         self.conn.wait_heartbeat()
         self.get_logger().info(f'Heartbeat from system (system {self.conn.target_system} component {self.conn.target_component})')
 
-        self.num_thrusters = 8  
+        self.num_thrusters = 8  # Adjust based on your ROV's thrusters
 
         self.backup_params = self.backup_thruster_params()
 
@@ -91,6 +97,7 @@ class BlueROV2ROSInterface(Node):
             [-0.1888, 0.1888,  0.1888, -0.1888, 0,       0,       0,       0]
         ])
 
+        # Set Up ROS 2 Publishers and Subscribers
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
             history=HistoryPolicy.KEEP_LAST,
@@ -121,10 +128,17 @@ class BlueROV2ROSInterface(Node):
 
         self.tf_broadcaster = TransformBroadcaster(self)
 
+        self.servo_output_publisher = self.create_publisher(
+            Int32MultiArray,
+            '/bluerov2/servo_outputs',
+            qos_profile_reliable,
+            callback_group=ReentrantCallbackGroup()
+        )
+
         self.mavlink_thread = threading.Thread(target=self.mavlink_listener, daemon=True)
         self.mavlink_thread.start()
 
-        self.timer = self.create_timer(1.0 / 30.0, self._create_odometry_msg)
+        self.timer = self.create_timer(1.0 / 30.0, self._publish_odometry_and_servo_outputs)
 
         self.get_logger().info('BlueROV2 ROS Interface node initialized.')
 
@@ -182,9 +196,9 @@ class BlueROV2ROSInterface(Node):
         self.conn.mav.set_mode_send(
             self.conn.target_system,
             mavutil.mavlink.MAV_MODE_FLAG_CUSTOM_MODE_ENABLED,
-            0 
+            0  # 0 typically corresponds to STABILIZE mode
         )
-        time.sleep(1)  
+        time.sleep(1)  # Wait for mode to be set
 
         self.get_logger().info('Arming the vehicle...')
         self.conn.mav.command_long_send(
@@ -194,7 +208,7 @@ class BlueROV2ROSInterface(Node):
             0,
             1, 0, 0, 0, 0, 0, 0  # Arm
         )
-       
+        # Wait until vehicle is armed
         armed = False
         for _ in range(10):
             message = self.conn.recv_match(type='HEARTBEAT', blocking=True, timeout=1)
@@ -210,7 +224,7 @@ class BlueROV2ROSInterface(Node):
     def request_mavlink_messages(self):
         """Request specific MAVLink messages like LOCAL_POSITION_NED and ATTITUDE."""
         self.get_logger().info('Requesting MAVLink messages: LOCAL_POSITION_NED and ATTITUDE...')
-      
+        # Request LOCAL_POSITION_NED
         self.conn.mav.command_long_send(
             self.conn.target_system,
             self.conn.target_component,
@@ -219,13 +233,22 @@ class BlueROV2ROSInterface(Node):
             mavutil.mavlink.MAVLINK_MSG_ID_LOCAL_POSITION_NED,
             0, 0, 0, 0, 0, 0, 0
         )
-      
+        # Request ATTITUDE
         self.conn.mav.command_long_send(
             self.conn.target_system,
             self.conn.target_component,
             mavutil.mavlink.MAV_CMD_REQUEST_MESSAGE,
             0,
             mavutil.mavlink.MAVLINK_MSG_ID_ATTITUDE,
+            0, 0, 0, 0, 0, 0, 0
+        )
+        # **Request SERVO_OUTPUT_RAW Messages**
+        self.conn.mav.command_long_send(
+            self.conn.target_system,
+            self.conn.target_component,
+            mavutil.mavlink.MAV_CMD_REQUEST_MESSAGE,
+            0,
+            mavutil.mavlink.MAVLINK_MSG_ID_SERVO_OUTPUT_RAW,
             0, 0, 0, 0, 0, 0, 0
         )
         self.get_logger().info('MAVLink message requests sent.')
@@ -244,8 +267,8 @@ class BlueROV2ROSInterface(Node):
                 self.get_logger().error(f'Error while receiving MAVLink message: {e}')
                 time.sleep(0.1)
 
-    def _create_odometry_msg(self):
-        """Create and publish the odometry message based on received MAVLink data."""
+    def _publish_odometry_and_servo_outputs(self):
+        """Create and publish the odometry and servo output messages."""
         with self.data_lock:
             data = self.data.copy()
 
@@ -253,7 +276,15 @@ class BlueROV2ROSInterface(Node):
             self.get_logger().warn('No data received yet.')
             return
 
-    
+        # Publish Odometry
+        self._publish_odometry(data)
+
+        # Publish Servo Outputs
+        self._publish_servo_outputs(data)
+
+    def _publish_odometry(self, data):
+        """Create and publish the odometry message based on received MAVLink data."""
+        # Ensure both LOCAL_POSITION_NED and ATTITUDE data are available
         local_position_ned = data.get('LOCAL_POSITION_NED', None)
         attitude = data.get('ATTITUDE', None)
 
@@ -266,28 +297,34 @@ class BlueROV2ROSInterface(Node):
         msg.header.frame_id = self.odom_frame_id
         msg.child_frame_id = self.base_frame_id
 
+        # Populate position
         msg.pose.pose.position.x = local_position_ned['x']
         msg.pose.pose.position.y = -local_position_ned['y']  # Inverting Y to match ROS coordinate frame
         msg.pose.pose.position.z = -local_position_ned['z']  # Inverting Z to match ROS coordinate frame
 
+        # Populate linear velocity
         msg.twist.twist.linear.x = -local_position_ned['vx']
         msg.twist.twist.linear.y = local_position_ned['vy']
         msg.twist.twist.linear.z = -local_position_ned['vz']
 
+        # Populate orientation from ATTITUDE
         roll = attitude['roll']
         pitch = -attitude['pitch']
         yaw = -attitude['yaw']
 
+        # Convert Euler angles to quaternion
         q = tf_transformations.quaternion_from_euler(roll, pitch, yaw)
         msg.pose.pose.orientation.x = q[0]
         msg.pose.pose.orientation.y = q[1]
         msg.pose.pose.orientation.z = q[2]
         msg.pose.pose.orientation.w = q[3]
 
+        # Populate angular velocity
         msg.twist.twist.angular.x = attitude['rollspeed']
         msg.twist.twist.angular.y = -attitude['pitchspeed']
         msg.twist.twist.angular.z = -attitude['yawspeed']
 
+        # Covariance (optional: populate if EKF_STATUS_REPORT is available)
         ekf_status = data.get('EKF_STATUS_REPORT', None)
         if ekf_status:
             msg.pose.covariance[0] = ekf_status.get('pos_horiz_variance', 0.0)
@@ -297,10 +334,12 @@ class BlueROV2ROSInterface(Node):
             msg.twist.covariance[0] = ekf_status.get('velocity_variance', 0.0)
             msg.twist.covariance[7] = ekf_status.get('velocity_variance', 0.0)
         else:
+            # If EKF_STATUS_REPORT is not available, set default covariances or leave as zeros
             pass
 
         self.odometry_publisher.publish(msg)
 
+        # Broadcast TF
         t = TransformStamped()
         t.header.stamp = self.get_clock().now().to_msg()
         t.header.frame_id = self.odom_frame_id
@@ -311,9 +350,34 @@ class BlueROV2ROSInterface(Node):
         t.transform.rotation = msg.pose.pose.orientation
         self.tf_broadcaster.sendTransform(t)
 
+    def _publish_servo_outputs(self, data):
+        """Extract SERVO_OUTPUT_RAW data and publish PWM values."""
+        servo_output = data.get('SERVO_OUTPUT_RAW', None)
+        if not servo_output:
+            self.get_logger().warn('SERVO_OUTPUT_RAW message not received yet.')
+            return
+
+        # Extract servo1_raw to servo8_raw
+        pwm_values = [
+            servo_output.get('servo1_raw', 0),
+            servo_output.get('servo2_raw', 0),
+            servo_output.get('servo3_raw', 0),
+            servo_output.get('servo4_raw', 0),
+            servo_output.get('servo5_raw', 0),
+            servo_output.get('servo6_raw', 0),
+            servo_output.get('servo7_raw', 0),
+            servo_output.get('servo8_raw', 0)
+        ]
+
+        pwm_msg = Int32MultiArray()
+        pwm_msg.data = pwm_values
+        self.servo_output_publisher.publish(pwm_msg)
+
+        self.get_logger().debug(f'Published PWM Values: {pwm_values}')
+
     def set_rc_channels_pwm(self, vals):
         """Override RC channels with provided PWM values."""
-    
+        # Ensure exactly 8 PWM values
         rc_channel_values = [int(val) for val in vals[:8]]
         while len(rc_channel_values) < 8:
             rc_channel_values.append(0)
@@ -343,8 +407,10 @@ class BlueROV2ROSInterface(Node):
         in_min, in_max = self.thrusterInputRanges
         out_min, out_max = self.thrusterRanges
 
+        # Perform linear mapping
         mapped_value = (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 
+        # Clip the mapped value to thrusterRanges
         clipped_value = np.clip(mapped_value, out_min, out_max)
 
         return clipped_value
@@ -360,11 +426,13 @@ class BlueROV2ROSInterface(Node):
         u_pitch = msg.angular.y
         u_yaw = msg.angular.z
 
+        # Assemble control input vector
         u = np.array([u_forward, u_lateral, u_heave, u_roll, u_pitch, u_yaw])
 
         self.get_logger().debug(f'Received cmd_vel: {msg}')
         self.get_logger().debug(f'Original Control Inputs (u): {u}')
 
+        # **Apply Per-Axis Gains to Control Inputs**
         u_scaled = np.array([
             self.gain_forward * u_forward,  # Surge
             self.gain_lateral * u_lateral,  # Sway
@@ -377,11 +445,12 @@ class BlueROV2ROSInterface(Node):
         self.get_logger().debug(f'Scaled Control Inputs (u_scaled): {u_scaled}')
 
         # Compute thruster commands (t = A.T * u_scaled)
-        #  8x1
+        # Since A is 6x8 and u_scaled is 6x1, t will be 8x1
         t = self.A.T.dot(u_scaled)
 
         self.get_logger().debug(f'Computed Thruster Commands (t): {t}')
 
+        # Map thruster commands to PWM values
         pwm_thrusters = []
         for i in range(self.num_thrusters):
             pwm = self.mapRanges(t[i])

@@ -145,6 +145,7 @@ ROS 2 interface provides two common topics (ROS 2 is a function wrapper for Mavl
 ```bash
 /bluerov2/odometry
 /bluerov2/cmd_vel
+/bluerov2/servo_outputs
 ```
 
 ```bash
@@ -174,6 +175,15 @@ angular:
   y: 0.0
   z: 0.0" --qos-reliability reliable --qos-durability transient_local --qos-depth 10 -1
 ```
+
+
+The PWM values:  ```/bluerov2/servo_outputs``` during robot motion can be simply saved,
+
+```bash
+cd /home/sf_ws/src/extras_interface
+python3 ros2_pwm_topic_recorder.py
+```
+
 
 
 ## Links
