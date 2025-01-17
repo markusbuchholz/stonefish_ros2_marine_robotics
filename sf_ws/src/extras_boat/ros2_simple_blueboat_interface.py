@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Markus Buchholz, 2025 (Modified for Blueboat)
+
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
@@ -18,39 +19,27 @@ class BlueboatROSInterface(Node):
     def __init__(self):
         super().__init__('blueboat_ros_interface')
 
-        # Declare Parameters
         self.declare_parameter('mavlink_connection', 'udpin:0.0.0.0:14550')
-        self.declare_parameter('data_stream_rate', 4)  # Hz for data stream
-        self.declare_parameter('num_thrusters', 8)    # Adjust based on your boat's thrusters
+        self.declare_parameter('data_stream_rate', 8)  
+        self.declare_parameter('num_thrusters', 8)    
 
-        # Get Parameters
         mavlink_connection_str = self.get_parameter('mavlink_connection').get_parameter_value().string_value
         data_stream_rate = self.get_parameter('data_stream_rate').get_parameter_value().integer_value
         self.num_thrusters = self.get_parameter('num_thrusters').get_parameter_value().integer_value
 
-        # Log Connection Info
         self.get_logger().info(f'Connecting to ArduPilot via {mavlink_connection_str}...')
         self.conn = mavutil.mavlink_connection(mavlink_connection_str)
         self.conn.wait_heartbeat()
         self.get_logger().info(f'Heartbeat from system (system {self.conn.target_system} component {self.conn.target_component})')
 
-        # Define Thruster Ranges and Input Ranges
         self.thrusterRanges = [1100.0, 1900.0]  # PWM range for thrusters
         self.thrusterInputRanges = [-3.0, 3.0]   # Control input range
 
-        # Backup original thruster parameters
         #self.backup_params = self.backup_thruster_params()
-
-        # Enable Passthrough Mode
         #self.enable_passthrough_mode()
 
-        # Set Stabilize Mode and Arm
         self.set_stabilize_mode_and_arm()
 
-        # Request MAVLink Messages if needed (optional)
-        # self.request_mavlink_messages()
-
-        # Set Up ROS 2 Publishers and Subscribers
         qos_profile_reliable = QoSProfile(
             reliability=ReliabilityPolicy.RELIABLE,
             history=HistoryPolicy.KEEP_LAST,
@@ -65,7 +54,6 @@ class BlueboatROSInterface(Node):
         )
 
         self.cmd_vel_subscription = self.create_subscription(
-            # Using /blueboat/cmd_vel instead of /bluerov2/cmd_vel
             Twist,
             '/blueboat/cmd_vel',
             self._cmd_vel_callback,
@@ -77,13 +65,11 @@ class BlueboatROSInterface(Node):
             callback_group=ReentrantCallbackGroup()
         )
 
-        # Start MAVLink Listener Thread
         self.data_lock = threading.Lock()
         self.data = {}
         self.mavlink_thread = threading.Thread(target=self.mavlink_listener, daemon=True)
         self.mavlink_thread.start()
 
-        # Timer for Publishing Servo Outputs
         self.timer = self.create_timer(1.0 / 30.0, self._publish_servo_outputs)  # 30 Hz
 
         self.get_logger().info('Blueboat ROS Interface node initialized.')
@@ -210,7 +196,6 @@ class BlueboatROSInterface(Node):
 
     def mapRanges(self, value):
         """Map a value from thruster input range to PWM range and clip."""
-        # Ensure input ranges are valid
         in_min, in_max = self.thrusterInputRanges
         out_min, out_max = self.thrusterRanges
 
@@ -226,41 +211,19 @@ class BlueboatROSInterface(Node):
         """Handle incoming velocity commands and translate to RC overrides for Blueboat."""
         override = []
 
-        # Example provided by the user:
-        # override.append(1500 - msg.linear.y)  # Pitch
-        # override.append(self.mapRanges(msg.angular.x))
-        # override.append(self.mapRanges(msg.linear.z))
-        # override.append(3000 - self.mapRanges(msg.angular.z))  # Forward
-        # override.append(self.mapRanges(msg.linear.x))
-        # override.append(65535)  # Lateral
-        # override.append(65535)  # light strength
-        # override.append(65535)  # camera servo tilt
-
-        # Adjusted for Blueboat with num_thrusters=4
-        # Assuming thrusters 1-4 correspond to specific controls
-        # Modify as per your specific thruster configuration
-
         try:
-            # Example mapping; adjust indices based on your thruster setup
-            pwm_pitch = int(1500 - 2 * msg.linear.y)
-            pwm_roll = self.mapRanges(msg.angular.x)
-            pwm_heave = self.mapRanges(msg.linear.z)
-            pwm_forward = int(3000 - self.mapRanges(msg.angular.z))  # Example mapping
-            pwm_lateral = self.mapRanges(msg.linear.x)
+            # Example usage: 
+            #   ros2 topic pub /blueboat/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.0, y: 1.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}"
 
-            # For Blueboat with 4 thrusters, you might map as follows:
-            # Thruster 1: Forward/Reverse (pwm_forward)
-            # Thruster 2: Lateral (pwm_lateral)
-            # Thruster 3: Heave (pwm_heave)
-            # Thruster 4: Pitch/Roll (combination or separate)
+            override.append(1500 - msg.linear.y)        # Example pitch
+            override.append(self.mapRanges(msg.angular.x))
+            override.append(self.mapRanges(msg.linear.z))
+            override.append(3000 - self.mapRanges(msg.angular.z))  # Example forward
+            override.append(self.mapRanges(msg.linear.x))
+            override.append(65535)  # Lateral
+            override.append(65535)  # Light strength
+            override.append(65535)  # Camera servo tilt
 
-            # Construct PWM override list
-            override.append(pwm_forward)   # Thruster 1
-            override.append(pwm_lateral)   # Thruster 2
-            override.append(pwm_heave)     # Thruster 3
-            override.append(pwm_pitch)     # Thruster 4
-
-            # If your Blueboat has exactly 4 thrusters, pad the remaining with 65535
             while len(override) < 8:
                 override.append(65535)
 
@@ -272,7 +235,6 @@ class BlueboatROSInterface(Node):
 
     def set_rc_channels_pwm(self, vals):
         """Override RC channels with provided PWM values."""
-        # Ensure exactly 8 PWM values
         rc_channel_values = [int(val) for val in vals[:8]]
         while len(rc_channel_values) < 8:
             rc_channel_values.append(65535)  # Typically 65535 means no change
@@ -303,8 +265,8 @@ class BlueboatROSInterface(Node):
             )
             self.get_logger().info('Vehicle disarmed.')
 
-            # Disable passthrough mode
-            self.disable_passthrough_mode()
+            # Disable passthrough mode if previously enabled
+            # self.disable_passthrough_mode()
 
             # Close MAVLink connection
             self.conn.close()
