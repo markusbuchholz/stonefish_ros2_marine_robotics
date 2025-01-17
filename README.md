@@ -140,7 +140,7 @@ ROS 2 interface provides two common topics (ROS 2 is a function wrapper for Mavl
 
 ```bash
 cd /home/sf_ws/src/extras_boat
-python3 python3 ros2_simple_interface.py
+python3 python3 ros2_simple_blueboat_interface.py
 ```
 
 ```bash
