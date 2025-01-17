@@ -136,6 +136,27 @@ cd /home/sf_ws/src/extras_boat
 python3 python3 check.py
 
 ```
+ROS 2 interface provides two common topics (ROS 2 is a function wrapper for Mavlink protocol):
+
+```bash
+cd /home/sf_ws/src/extras_boat
+python3 python3 ros2_simple_interface.py
+```
+
+```bash
+/bluerov2/odometry
+/bluerov2/cmd_vel
+/bluerov2/servo_outputs
+```
+
+Run simple motion directly to ArduRover,
+
+```bash
+cd /home/sf_ws/src/extras_boat
+python3 pwm_control.py
+```
+
+
 
 
 ## Start StoneFish with BlueBoat, ArduPilot and simple ROS 2 interface
