@@ -89,10 +89,24 @@ class Patch(Node):
             TAM = np.array([[.5, .5],[1, -1]])
             pwm_setpoint_polar = np.array([(pwm[2]-1500)/500, (pwm[0]-1500)/500])
             pwm_setpoint = np.matmul(np.linalg.pinv(TAM), pwm_setpoint_polar)
+            
+        # if self.namespace=='/blueboat':
+        #     TAM = np.array([[.5, .5],[1, -1]])
+        #     pwm_setpoint_polar = np.array([
+        #         (pwm[0] - 1500) / 500,
+        #         (pwm[1] - 1500) / 500,
+        #         (pwm[2] - 1500) / 500,
+        #         (pwm[3] - 1500) / 500
+        #         (pwm[4] - 1500) / 500
+        #         (pwm[5] - 1500) / 500
+        #         (pwm[6] - 1500) / 500
+        #         (pwm[7] - 1500) / 500
+        #         ])
+            
+            
+        #     pwm_setpoint = np.matmul(np.linalg.pinv(TAM), pwm_setpoint_polar)
+            
 
-        # print(pwm_setpoint)
-
-        # print(pwm_setpoint)
         msg_pwm = Float64MultiArray(data=pwm_setpoint)
 
         # Publish pwm 

@@ -158,7 +158,7 @@ def main():
             elif cmd == '0':  # Stop
                 send_rc_command(master, [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500])
             elif cmd == '9':  # Example usage of move_robot()
-                move_robot(master, thrust_left=200, thrust_right=200)
+                move_robot(master, thrust_left=200, thrust_right=600)
             else:
                 print("Unknown command. Try again.")
     except Exception as e:

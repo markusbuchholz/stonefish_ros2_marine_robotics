@@ -83,6 +83,14 @@ colcon build
 source install/setup.bash
 
 ```
+
+---
+Connect to running Docker container,
+
+```bash
+sudo docker exec -it ros2sim /bin/bash
+
+```
 ---
 
 ## Start StoneFish with BlueROV2
