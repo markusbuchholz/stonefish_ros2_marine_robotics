@@ -177,7 +177,10 @@ ROS 2 interface provides two common topics (ROS 2 is a function wrapper for Mavl
 /bluerov2/servo_outputs
 ```
 
-To be FIXED,
+Run the motors individually.
+
+Note. To be FIXED by fixing ```ardusim_patch``` (it works in GazeboSim),
+
 ```bash
 ros2 topic pub /blueboat/send_port_motor_0_100_thrust std_msgs/msg/Float32 "{data: 50.0}"
 ros2 topic pub /blueboat/send_stbd_motor_0_100_thrust std_msgs/msg/Float32 "{data: 75.0}"
