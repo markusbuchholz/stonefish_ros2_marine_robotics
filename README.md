@@ -165,8 +165,6 @@ python3 pwm_control.py
 ```
 
 
-
-
 ## Start StoneFish with BlueBoat, ArduPilot and simple ROS 2 interface
 
 ROS 2 interface provides two common topics (ROS 2 is a function wrapper for Mavlink protocol):
@@ -198,7 +196,7 @@ sim_vehicle.py -v Rover -f boat --model JSON --map --console -l 55.9954153086344
 
 #terminal 4
 cd /home/sf_ws/src/extras_interface
-python3 ros2_simple_interface.py
+python3 ros2_simple_blueboat_interface
 ```
 
 Move BlueROV2,
