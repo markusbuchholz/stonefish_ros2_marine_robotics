@@ -177,6 +177,12 @@ ROS 2 interface provides two common topics (ROS 2 is a function wrapper for Mavl
 /bluerov2/servo_outputs
 ```
 
+To be FIXED,
+```bash
+ros2 topic pub /blueboat/send_port_motor_0_100_thrust std_msgs/msg/Float32 "{data: 50.0}"
+ros2 topic pub /blueboat/send_stbd_motor_0_100_thrust std_msgs/msg/Float32 "{data: 75.0}"
+```
+
 ```bash
 #terminal 1
 ros2 run stonefish_bluerov2 ardusim_patch_ros2_interface.py 

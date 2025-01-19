@@ -87,7 +87,7 @@ class Patch(Node):
 
         if self.namespace=='/blueboat':
             TAM = np.array([[.5, .5],[1, -1]])
-            pwm_setpoint_polar = np.array([(pwm[2]-1500)/500, (pwm[0]-1500)/500])
+            pwm_setpoint_polar = np.array([(pwm[2]-1500)/500, (-pwm[0]-1500)/500])
             pwm_setpoint = np.matmul(np.linalg.pinv(TAM), pwm_setpoint_polar)
             
         # if self.namespace=='/blueboat':
