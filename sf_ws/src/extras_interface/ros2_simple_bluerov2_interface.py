@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
-#Markus Buchholz, 2025
+# Markus Buchholz, 2025
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
+from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy, DurabilityPolicy
 from rclpy.callback_groups import ReentrantCallbackGroup
 
 from nav_msgs.msg import Odometry
-from geometry_msgs.msg import Twist
-from geometry_msgs.msg import TransformStamped
-from std_msgs.msg import Int32MultiArray  # Import for PWM data
+from geometry_msgs.msg import Twist, TransformStamped
+from std_msgs.msg import Int32MultiArray, Int32
 
 from tf2_ros import TransformBroadcaster
 
@@ -19,9 +18,12 @@ import math
 import numpy as np
 import tf_transformations
 
+
 class BlueROV2ROSInterface(Node):
     def __init__(self):
         super().__init__('bluerov2_ros_interface')
+        
+        self.passthrough_enabled = False
 
         # Declare Parameters
         self.declare_parameter('mavlink_connection', 'udpin:0.0.0.0:14550')
@@ -31,14 +33,14 @@ class BlueROV2ROSInterface(Node):
         self.declare_parameter('max_attempts', 200)
         self.declare_parameter('margin', 0.2)
         self.declare_parameter('timeout', 60)
-        
+
         # **New Parameters: Per-Axis Gain Factors**
         self.declare_parameter('gain_forward', -1.0)  # Surge
-        self.declare_parameter('gain_lateral', 1.0)  # Sway
-        self.declare_parameter('gain_heave', 1.0)    # Heave
-        self.declare_parameter('gain_roll', 1.0)     # Roll
-        self.declare_parameter('gain_pitch', 1.0)    # Pitch
-        self.declare_parameter('gain_yaw', 1.0)      # Yaw
+        self.declare_parameter('gain_lateral', 1.0)   # Sway
+        self.declare_parameter('gain_heave', 1.0)     # Heave
+        self.declare_parameter('gain_roll', 1.0)      # Roll
+        self.declare_parameter('gain_pitch', 1.0)     # Pitch
+        self.declare_parameter('gain_yaw', 1.0)       # Yaw
 
         # Get Parameters
         mavlink_connection_str = self.get_parameter('mavlink_connection').get_parameter_value().string_value
@@ -58,7 +60,7 @@ class BlueROV2ROSInterface(Node):
         self.gain_yaw = self.get_parameter('gain_yaw').get_parameter_value().double_value
 
         # **Log the Gains**
-        self.get_logger().info(f'Control Gains:')
+        self.get_logger().info('Control Gains:')
         self.get_logger().info(f'  Forward (Surge): {self.gain_forward}')
         self.get_logger().info(f'  Lateral (Sway): {self.gain_lateral}')
         self.get_logger().info(f'  Heave: {self.gain_heave}')
@@ -70,6 +72,7 @@ class BlueROV2ROSInterface(Node):
         self.thrusterRanges = [1100.0, 1900.0]  # PWM range for thrusters
         self.thrusterInputRanges = [-3.0, 3.0]   # Control input range
 
+        # Initialize MAVLink connection
         self.conn = mavutil.mavlink_connection(mavlink_connection_str)
         self.get_logger().info(f'Connecting to ArduPilot via {mavlink_connection_str}...')
         self.conn.wait_heartbeat()
@@ -103,13 +106,19 @@ class BlueROV2ROSInterface(Node):
             history=HistoryPolicy.KEEP_LAST,
             depth=10
         )
-        
+
         qos_profile_reliable = QoSProfile(
             reliability=ReliabilityPolicy.RELIABLE,
             history=HistoryPolicy.KEEP_LAST,
             depth=10
         )
         self.custom_qos = qos_profile
+
+        self.custom_qos_thrust = QoSProfile(
+            reliability=ReliabilityPolicy.RELIABLE,
+            durability=DurabilityPolicy.TRANSIENT_LOCAL,
+            depth=1
+        )
 
         self.odometry_publisher = self.create_publisher(
             Odometry,
@@ -135,12 +144,50 @@ class BlueROV2ROSInterface(Node):
             callback_group=ReentrantCallbackGroup()
         )
 
+        
+
+        # **Fixed Subscription Topics to Match Published Topics**
+        for i in range(1, self.num_thrusters + 1):
+            topic_name = f'/bluerov2/thruster_{i}_pwm_set'  # Reverted back to '_pwm_set'
+            self.create_subscription(
+                Int32,
+                topic_name,
+                self.create_thruster_callback(i),
+                self.custom_qos_thrust,
+                callback_group=ReentrantCallbackGroup()
+            )
+            self.get_logger().info(f'Subscribed to {topic_name}')
+
         self.mavlink_thread = threading.Thread(target=self.mavlink_listener, daemon=True)
         self.mavlink_thread.start()
 
         self.timer = self.create_timer(1.0 / 30.0, self._publish_odometry_and_servo_outputs)
 
         self.get_logger().info('BlueROV2 ROS Interface node initialized.')
+
+    def send_rc_override_for_pwm_set(self, channels):
+        self.get_logger().debug('Sending PWM to thrusters.')
+        self.conn.mav.rc_channels_override_send(
+            self.conn.target_system,
+            self.conn.target_component,
+            channels[0], channels[1], channels[2], channels[3],
+            channels[4], channels[5], channels[6], channels[7]
+        )
+
+    def control_motor(self, motor_number, pwm_value):
+        channels = [1500] * 8
+        channels[motor_number - 1] = pwm_value
+        self.send_rc_override_for_pwm_set(channels)
+
+    def create_thruster_callback(self, thruster_num):
+        def callback(msg):
+            self.get_logger().info(f'Received PWM command for Thruster {thruster_num}: {msg.data}')
+            if self.passthrough_enabled:
+                self.control_motor(thruster_num, msg.data)
+                self.get_logger().info(f'Control signal sent to Thruster {thruster_num}: PWM {msg.data}')
+            else:
+                self.get_logger().warn(f"Passthrough mode not enabled. Cannot control thruster {thruster_num}.")
+        return callback
 
     def backup_thruster_params(self):
         """Backup the current SERVO_FUNCTION parameters."""
@@ -180,14 +227,16 @@ class BlueROV2ROSInterface(Node):
         self.get_logger().info('Enabling passthrough mode for thrusters...')
         for i in range(1, self.num_thrusters + 1):
             self.set_servo_function(i, 1)  # 1 typically stands for passthrough
+        self.passthrough_enabled = True
         self.get_logger().info('Passthrough mode enabled.')
 
     def disable_passthrough_mode(self):
         """Disable passthrough mode and restore original thruster functions."""
         self.get_logger().info('Disabling passthrough mode and restoring thruster functions...')
         for i in range(1, self.num_thrusters + 1):
-            original_function = self.backup_params[i-1]
+            original_function = self.backup_params[i - 1]
             self.set_servo_function(i, original_function)
+        self.passthrough_enabled = False
         self.get_logger().info('Passthrough mode disabled and thruster functions restored.')
 
     def set_stabilize_mode_and_arm(self):
@@ -338,6 +387,7 @@ class BlueROV2ROSInterface(Node):
             pass
 
         self.odometry_publisher.publish(msg)
+        self.get_logger().debug('Published Odometry message.')
 
         # Broadcast TF
         t = TransformStamped()
@@ -349,6 +399,7 @@ class BlueROV2ROSInterface(Node):
         t.transform.translation.z = msg.pose.pose.position.z
         t.transform.rotation = msg.pose.pose.orientation
         self.tf_broadcaster.sendTransform(t)
+        self.get_logger().debug('Broadcasted TF transform.')
 
     def _publish_servo_outputs(self, data):
         """Extract SERVO_OUTPUT_RAW data and publish PWM values."""
@@ -484,6 +535,7 @@ class BlueROV2ROSInterface(Node):
         except Exception as e:
             self.get_logger().error(f'Error during shutdown: {e}')
 
+
 def main(args=None):
     rclpy.init(args=args)
     node = BlueROV2ROSInterface()
@@ -498,6 +550,7 @@ def main(args=None):
         node.shutdown()
         node.destroy_node()
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()
