@@ -129,7 +129,7 @@ python3 python3 pos_req.py
 
 Setting the ArduSub [RCPassThru](https://ardupilot.org/copter/docs/parameters.html#servo1-function-servo-output-function) parameter allows setting PWM directly for individual motors with values ranging from 1100 to 1900. <br>
 
-BlueRobotics T200 thruster [specification](https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster-r2-rp/#:~:text=The%20T200%20propeller%20has%20a,and%203600%20RPM%2016%20V.)
+BlueRobotics T200 thruster [specification](https://bluerobotics.com/store/thrusters/t100-t200-thrusters/t200-thruster-r2-rp/#:~:text=The%20T200%20propeller%20has%20a,and%203600%20RPM%2016%20V.).
 
 Before use, Passthrough mode must be enabled via a service; the ROS 2 Interface for StonFish does this automatically.<br>
 
@@ -138,7 +138,7 @@ Before use, Passthrough mode must be enabled via a service; the ROS 2 Interface 
 
 
 
-Complete commands pipline,
+**Complete commands pipline**,
 
 ```bash
 #terminal 1
@@ -150,11 +150,11 @@ ros2 launch stonefish_bluerov2 bluerov2_sim.launch.py
 #terminal 3
 sim_vehicle.py -v ArduSub -f vectored_6dof --model JSON --map  -l 55.99541530863445,-3.3010225004910683,0,0 -m --streamrate=-1
 
-#terminal 4 # Run ROS 2 interface for StonFish
+#terminal 4 
+# Run ROS 2 interface for StonFish
 cd /home/sf_ws/src/extras_interface
 
 python3 ros2_simple_bluerov2_interface.py
-
 ```
 
 The motor can be controlled using the topics. 
