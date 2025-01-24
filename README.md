@@ -163,10 +163,10 @@ Example usage,
 
 ```bash
 # motor 2
-ros2 topic pub /bluerov2/thruster_2_pwm std_msgs/msg/Int32 "{data: 1600}"
+ros2 topic pub /bluerov2/thruster_2_pwm_set std_msgs/msg/Int32 "{data: 1600}"
 
 # motor 7
-ros2 topic pub /bluerov2/thruster_7_pwm std_msgs/msg/Int32 "{data: 1640}"
+ros2 topic pub /bluerov2/thruster_7_pwm_set std_msgs/msg/Int32 "{data: 1640}"
 ```
 
 
