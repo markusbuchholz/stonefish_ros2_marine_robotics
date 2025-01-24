@@ -134,11 +134,10 @@ BlueRobotics T200 thruster [specification](https://bluerobotics.com/store/thrust
 Before use, Passthrough mode must be enabled via a service; the ROS 2 Interface for StonFish does this automatically.<br>
 
 
-![image](https://github.com/user-attachments/assets/51212fd0-6c6e-4918-a4af-d4916575ad32)
+![image](https://github.com/user-attachments/assets/6e98db5a-1ded-4dca-89e7-a998c48100ae)
 
 
-
-**Complete command pipline**
+**Complete command pipeline**
 
 ```bash
 #terminal 1
