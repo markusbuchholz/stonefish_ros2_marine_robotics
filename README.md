@@ -121,8 +121,15 @@ sim_vehicle.py -v ArduSub -f vectored_6dof --model JSON --map  -l 55.99541530863
 cd /home/sf_ws/src/extras_rov
 # run example script
 # check for other scripts
-python3 python3 pos_req.py
+python3 pos_req.py
 
+```
+
+Check BlueROV2 abilities using ```Mavlink```(fetch status information from ArduSub), <br>
+
+```bash
+cd /home/sf_ws/src/extras_rov
+python3 print_abilities.py
 ```
 
 ## Thrust (PWM) Control Mode
