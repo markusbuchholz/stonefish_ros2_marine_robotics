@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cola2_msgs/msg/GoalDescriptor.msg
+// generated code does not contain a copyright notice
+
+
+module cola2_msgs {
+  module msg {
+    module GoalDescriptor_Constants {
+      @verbatim (language="comment", text=
+        "PRIORITY DEFINITIONS")
+      const uint32 PRIORITY_TELEOPERATION_LOW = 0;
+      const uint32 PRIORITY_SAFETY_LOW = 5;
+      const uint32 PRIORITY_NORMAL = 10;
+      const uint32 PRIORITY_SAFETY = 30;
+      const uint32 PRIORITY_TELEOPERATION = 40;
+      const uint32 PRIORITY_SAFETY_HIGH = 50;
+      const uint32 PRIORITY_TELEOPERATION_HIGH = 60;
+    };
+    @verbatim (language="comment", text=
+      "Contains values common to all waypoint request and status messages." "\n"
+      "Waypoint goals with higher priority trump lower priority goals. For" "\n"
+      "goals of the same priority, the pilot should follow the latest" "\n"
+      "received.")
+    struct GoalDescriptor {
+      @verbatim (language="comment", text=
+        "Name of the requesting node, used with id to identify the request.")
+      string requester;
+
+      uint32 priority;
+    };
+  };
+};

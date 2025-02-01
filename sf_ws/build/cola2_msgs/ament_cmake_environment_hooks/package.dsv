@@ -1,0 +1,4 @@
+source;share/cola2_msgs/local_setup.bash
+source;share/cola2_msgs/local_setup.dsv
+source;share/cola2_msgs/local_setup.sh
+source;share/cola2_msgs/local_setup.zsh

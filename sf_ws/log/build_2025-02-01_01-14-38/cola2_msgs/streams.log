@@ -1,0 +1,1094 @@
+[0.006s] Invoking command in '/home/sf_ws/build/cola2_msgs': /usr/bin/cmake /home/sf_ws/src/cola2_msgs_ros2 -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/sf_ws/install/cola2_msgs
+[0.043s] -- The C compiler identification is GNU 11.4.0
+[0.069s] -- The CXX compiler identification is GNU 11.4.0
+[0.072s] -- Detecting C compiler ABI info
+[0.110s] -- Detecting C compiler ABI info - done
+[0.114s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.114s] -- Detecting C compile features
+[0.114s] -- Detecting C compile features - done
+[0.116s] -- Detecting CXX compiler ABI info
+[0.156s] -- Detecting CXX compiler ABI info - done
+[0.162s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.162s] -- Detecting CXX compile features
+[0.162s] -- Detecting CXX compile features - done
+[0.164s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.253s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.303s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.305s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.309s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.332s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.351s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[0.364s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.379s] -- Found action_msgs: 1.2.1 (/opt/ros/humble/share/action_msgs/cmake)
+[0.390s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.634s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.781s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.971s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.981s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[0.983s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.999s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[0.999s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.999s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.999s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.014s] -- Found PythonExtra: .so  
+[1.054s] -- Configuring done
+[1.086s] -- Generating done
+[1.087s] [33mCMake Warning:
+[1.087s]   Manually-specified variables were not used by the project:
+[1.087s] 
+[1.087s]     CATKIN_INSTALL_INTO_PREFIX_ROOT
+[1.087s] 
+[1.087s] [0m
+[1.087s] -- Build files have been written to: /home/sf_ws/build/cola2_msgs
+[1.091s] Invoked command in '/home/sf_ws/build/cola2_msgs' returned '0': /usr/bin/cmake /home/sf_ws/src/cola2_msgs_ros2 -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/sf_ws/install/cola2_msgs
+[1.092s] Invoking command in '/home/sf_ws/build/cola2_msgs': /usr/bin/cmake --build /home/sf_ws/build/cola2_msgs -- -j32 -l32
+[1.126s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.132s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.135s] [  1%] Built target ament_cmake_python_copy_cola2_msgs
+[1.235s] running egg_info
+[1.235s] creating cola2_msgs.egg-info
+[1.235s] writing cola2_msgs.egg-info/PKG-INFO
+[1.235s] writing dependency_links to cola2_msgs.egg-info/dependency_links.txt
+[1.235s] writing top-level names to cola2_msgs.egg-info/top_level.txt
+[1.235s] writing manifest file 'cola2_msgs.egg-info/SOURCES.txt'
+[1.236s] reading manifest file 'cola2_msgs.egg-info/SOURCES.txt'
+[1.236s] writing manifest file 'cola2_msgs.egg-info/SOURCES.txt'
+[1.249s] [  1%] Built target ament_cmake_python_build_cola2_msgs_egg
+[2.223s] [  1%] Built target cola2_msgs__cpp
+[2.229s] [  2%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.231s] [  4%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.231s] [  4%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.282s] [  4%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/dvl_beam__functions.c.o[0m
+[2.282s] [  4%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/decimal_lat_lon__functions.c.o[0m
+[2.282s] [  4%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/goal_descriptor__functions.c.o[0m
+[2.283s] [  4%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/bool6_axis__functions.c.o[0m
+[2.283s] [  4%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/float32_stamped__functions.c.o[0m
+[2.283s] [  4%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/landmark__functions.c.o[0m
+[2.283s] [  4%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/body_velocity_req__functions.c.o[0m
+[2.283s] [  5%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/body_force_req__functions.c.o[0m
+[2.283s] [  6%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/captain_state_feedback__functions.c.o[0m
+[2.283s] [  6%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/mission_state__functions.c.o[0m
+[2.283s] [  6%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/captain_status__functions.c.o[0m
+[2.284s] [  7%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/dvl__functions.c.o[0m
+[2.287s] [  9%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/map__functions.c.o[0m
+[2.287s] [  9%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/key_value__functions.c.o[0m
+[2.287s] [  9%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/nav_sts__functions.c.o[0m
+[2.287s] [ 10%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/ned__functions.c.o[0m
+[2.287s] [ 10%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/setpoints__functions.c.o[0m
+[2.287s] [ 10%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/recovery_action__functions.c.o[0m
+[2.287s] [ 10%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/rpy__functions.c.o[0m
+[2.287s] [ 11%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/safety_supervisor_status__functions.c.o[0m
+[2.287s] [ 12%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/srv/detail/digital_output__functions.c.o[0m
+[2.287s] [ 12%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/msg/detail/world_waypoint_req__functions.c.o[0m
+[2.288s] [ 12%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/srv/detail/max_joy_velocity__functions.c.o[0m
+[2.288s] [ 13%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/srv/detail/mission__functions.c.o[0m
+[2.288s] [ 13%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/srv/detail/action__functions.c.o[0m
+[2.288s] [ 14%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/srv/detail/goto__functions.c.o[0m
+[2.288s] [ 14%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/srv/detail/recovery__functions.c.o[0m
+[2.288s] [ 14%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/srv/detail/section__functions.c.o[0m
+[2.290s] [ 15%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/srv/detail/string__functions.c.o[0m
+[2.327s] [ 15%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_c.dir/rosidl_generator_c/cola2_msgs/action/detail/pilot__functions.c.o[0m
+[2.390s] [ 15%] [32m[1mLinking C shared library libcola2_msgs__rosidl_generator_c.so[0m
+[2.414s] [ 15%] Built target cola2_msgs__rosidl_generator_c
+[2.421s] [ 16%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.421s] [ 17%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.422s] [ 18%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.025s] [ 19%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/captain_status__type_support.cpp.o[0m
+[3.026s] [ 19%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/bool6_axis__type_support.cpp.o[0m
+[3.026s] [ 19%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/dvl_beam__type_support.cpp.o[0m
+[3.026s] [ 20%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/body_force_req__type_support.cpp.o[0m
+[3.026s] [ 20%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/body_velocity_req__type_support.cpp.o[0m
+[3.026s] [ 20%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/captain_state_feedback__type_support.cpp.o[0m
+[3.026s] [ 20%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/decimal_lat_lon__type_support.cpp.o[0m
+[3.027s] [ 21%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/dvl__type_support.cpp.o[0m
+[3.028s] [ 19%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/goal_descriptor__type_support.cpp.o[0m
+[3.028s] [ 22%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/key_value__type_support.cpp.o[0m
+[3.028s] [ 22%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/recovery_action__type_support.cpp.o[0m
+[3.028s] [ 22%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/nav_sts__type_support.cpp.o[0m
+[3.028s] [ 22%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/map__type_support.cpp.o[0m
+[3.028s] [ 22%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/landmark__type_support.cpp.o[0m
+[3.028s] [ 23%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/ned__type_support.cpp.o[0m
+[3.029s] [ 23%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/rpy__type_support.cpp.o[0m
+[3.029s] [ 25%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/mission_state__type_support.cpp.o[0m
+[3.029s] [ 25%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/world_waypoint_req__type_support.cpp.o[0m
+[3.029s] [ 26%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/safety_supervisor_status__type_support.cpp.o[0m
+[3.029s] [ 26%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/float32_stamped__type_support.cpp.o[0m
+[3.029s] [ 26%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/msg/setpoints__type_support.cpp.o[0m
+[3.029s] [ 26%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/srv/action__type_support.cpp.o[0m
+[3.030s] [ 26%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/srv/digital_output__type_support.cpp.o[0m
+[3.030s] [ 27%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/srv/goto__type_support.cpp.o[0m
+[3.030s] [ 27%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/srv/max_joy_velocity__type_support.cpp.o[0m
+[3.030s] [ 27%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/srv/mission__type_support.cpp.o[0m
+[3.031s] [ 28%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/srv/recovery__type_support.cpp.o[0m
+[3.247s] [ 28%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/srv/section__type_support.cpp.o[0m
+[3.252s] [ 29%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/srv/string__type_support.cpp.o[0m
+[3.254s] [ 29%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/cola2_msgs/action/pilot__type_support.cpp.o[0m
+[3.291s] [ 30%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/goal_descriptor__type_support.cpp.o[0m
+[3.291s] [ 30%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/captain_state_feedback__type_support.cpp.o[0m
+[3.291s] [ 30%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/bool6_axis__type_support.cpp.o[0m
+[3.291s] [ 30%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/body_force_req__type_support.cpp.o[0m
+[3.292s] [ 31%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/captain_status__type_support.cpp.o[0m
+[3.292s] [ 31%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/dvl_beam__type_support.cpp.o[0m
+[3.292s] [ 31%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/float32_stamped__type_support.cpp.o[0m
+[3.292s] [ 31%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/body_velocity_req__type_support.cpp.o[0m
+[3.292s] [ 32%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/key_value__type_support.cpp.o[0m
+[3.292s] [ 32%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/decimal_lat_lon__type_support.cpp.o[0m
+[3.292s] [ 33%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/dvl__type_support.cpp.o[0m
+[3.308s] [ 33%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/landmark__type_support.cpp.o[0m
+[3.308s] [ 33%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/goal_descriptor__type_support.cpp.o[0m
+[3.313s] [ 34%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/map__type_support.cpp.o[0m
+[3.314s] [ 34%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/mission_state__type_support.cpp.o[0m
+[3.315s] [ 34%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/bool6_axis__type_support.cpp.o[0m
+[3.315s] [ 34%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/body_velocity_req__type_support.cpp.o[0m
+[3.316s] [ 34%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/rpy__type_support.cpp.o[0m
+[3.316s] [ 35%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/body_force_req__type_support.cpp.o[0m
+[3.316s] [ 35%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/captain_status__type_support.cpp.o[0m
+[3.317s] [ 35%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/recovery_action__type_support.cpp.o[0m
+[3.317s] [ 36%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/setpoints__type_support.cpp.o[0m
+[3.317s] [ 36%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/safety_supervisor_status__type_support.cpp.o[0m
+[3.317s] [ 37%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/captain_state_feedback__type_support.cpp.o[0m
+[3.317s] [ 38%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/ned__type_support.cpp.o[0m
+[3.317s] [ 38%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/srv/action__type_support.cpp.o[0m
+[3.317s] [ 38%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/nav_sts__type_support.cpp.o[0m
+[3.317s] [ 38%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/decimal_lat_lon__type_support.cpp.o[0m
+[3.320s] [ 39%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/msg/world_waypoint_req__type_support.cpp.o[0m
+[3.322s] [ 40%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/dvl__type_support.cpp.o[0m
+[3.330s] [ 41%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/float32_stamped__type_support.cpp.o[0m
+[3.331s] [ 41%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/dvl_beam__type_support.cpp.o[0m
+[3.331s] [ 41%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/srv/digital_output__type_support.cpp.o[0m
+[3.331s] [ 42%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/srv/goto__type_support.cpp.o[0m
+[3.339s] [ 42%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/landmark__type_support.cpp.o[0m
+[3.339s] [ 42%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/srv/max_joy_velocity__type_support.cpp.o[0m
+[3.339s] [ 42%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/key_value__type_support.cpp.o[0m
+[3.341s] [ 42%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/srv/mission__type_support.cpp.o[0m
+[3.342s] [ 43%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/map__type_support.cpp.o[0m
+[3.347s] [ 43%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/srv/section__type_support.cpp.o[0m
+[3.347s] [ 44%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/srv/recovery__type_support.cpp.o[0m
+[3.348s] [ 45%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/ned__type_support.cpp.o[0m
+[3.348s] [ 45%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/mission_state__type_support.cpp.o[0m
+[3.348s] [ 45%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/nav_sts__type_support.cpp.o[0m
+[3.350s] [ 46%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/srv/string__type_support.cpp.o[0m
+[3.353s] [ 46%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/recovery_action__type_support.cpp.o[0m
+[3.354s] [ 46%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/cola2_msgs/action/pilot__type_support.cpp.o[0m
+[3.357s] [ 47%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/rpy__type_support.cpp.o[0m
+[3.364s] [ 47%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/safety_supervisor_status__type_support.cpp.o[0m
+[3.369s] [ 47%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/setpoints__type_support.cpp.o[0m
+[3.376s] [ 48%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/msg/detail/world_waypoint_req__type_support.cpp.o[0m
+[3.396s] [ 48%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/srv/detail/digital_output__type_support.cpp.o[0m
+[3.396s] [ 48%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/srv/detail/action__type_support.cpp.o[0m
+[3.404s] [ 48%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/srv/detail/max_joy_velocity__type_support.cpp.o[0m
+[3.404s] [ 49%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/srv/detail/goto__type_support.cpp.o[0m
+[3.408s] [ 49%] [32m[1mLinking CXX shared library libcola2_msgs__rosidl_typesupport_c.so[0m
+[3.417s] [ 50%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/srv/detail/mission__type_support.cpp.o[0m
+[3.423s] [ 50%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/srv/detail/recovery__type_support.cpp.o[0m
+[3.442s] [ 50%] Built target cola2_msgs__rosidl_typesupport_c
+[3.449s] [ 50%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/srv/detail/section__type_support.cpp.o[0m
+[3.607s] [ 51%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/srv/detail/string__type_support.cpp.o[0m
+[3.607s] [ 51%] [32m[1mLinking CXX shared library libcola2_msgs__rosidl_typesupport_cpp.so[0m
+[3.607s] [ 51%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/cola2_msgs/action/detail/pilot__type_support.cpp.o[0m
+[3.642s] [ 51%] Built target cola2_msgs__rosidl_typesupport_cpp
+[3.691s] [ 51%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/body_velocity_req__type_support.cpp.o[0m
+[3.691s] [ 51%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/goal_descriptor__type_support.cpp.o[0m
+[3.691s] [ 52%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/body_force_req__type_support.cpp.o[0m
+[3.691s] [ 53%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/captain_status__type_support.cpp.o[0m
+[3.692s] [ 53%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/captain_state_feedback__type_support.cpp.o[0m
+[3.692s] [ 53%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/bool6_axis__type_support.cpp.o[0m
+[3.692s] [ 53%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/dvl_beam__type_support.cpp.o[0m
+[3.692s] [ 54%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/dvl__type_support.cpp.o[0m
+[3.692s] [ 54%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/decimal_lat_lon__type_support.cpp.o[0m
+[3.693s] [ 54%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/float32_stamped__type_support.cpp.o[0m
+[3.697s] [ 55%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/key_value__type_support.cpp.o[0m
+[3.698s] [ 56%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/map__type_support.cpp.o[0m
+[3.698s] [ 56%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/landmark__type_support.cpp.o[0m
+[3.699s] [ 57%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/bool6_axis__type_support.c.o[0m
+[3.699s] [ 57%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/goal_descriptor__type_support.c.o[0m
+[3.713s] [ 57%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/body_force_req__type_support.c.o[0m
+[3.714s] [ 57%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/body_velocity_req__type_support.c.o[0m
+[3.716s] [ 57%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/mission_state__type_support.cpp.o[0m
+[3.724s] [ 58%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/captain_state_feedback__type_support.c.o[0m
+[3.727s] [ 58%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/captain_status__type_support.c.o[0m
+[3.731s] [ 58%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/nav_sts__type_support.cpp.o[0m
+[3.732s] [ 59%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/ned__type_support.cpp.o[0m
+[3.734s] [ 59%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/recovery_action__type_support.cpp.o[0m
+[3.741s] [ 59%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/rpy__type_support.cpp.o[0m
+[3.747s] [ 60%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/safety_supervisor_status__type_support.cpp.o[0m
+[3.748s] [ 60%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/setpoints__type_support.cpp.o[0m
+[3.753s] [ 61%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/msg/detail/dds_fastrtps/world_waypoint_req__type_support.cpp.o[0m
+[3.755s] [ 61%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/srv/detail/dds_fastrtps/action__type_support.cpp.o[0m
+[3.757s] [ 61%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/decimal_lat_lon__type_support.c.o[0m
+[3.761s] [ 62%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/dvl__type_support.c.o[0m
+[3.772s] [ 62%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/srv/detail/dds_fastrtps/digital_output__type_support.cpp.o[0m
+[3.774s] [ 63%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/srv/detail/dds_fastrtps/goto__type_support.cpp.o[0m
+[3.789s] [ 63%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/dvl_beam__type_support.c.o[0m
+[3.789s] [ 63%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/srv/detail/dds_fastrtps/max_joy_velocity__type_support.cpp.o[0m
+[3.814s] [ 64%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/float32_stamped__type_support.c.o[0m
+[3.818s] [ 64%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/key_value__type_support.c.o[0m
+[3.820s] [ 64%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/landmark__type_support.c.o[0m
+[3.828s] [ 65%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/srv/detail/dds_fastrtps/mission__type_support.cpp.o[0m
+[3.846s] [ 65%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/srv/detail/dds_fastrtps/recovery__type_support.cpp.o[0m
+[3.852s] [ 65%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/srv/detail/dds_fastrtps/section__type_support.cpp.o[0m
+[3.854s] [ 66%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/map__type_support.c.o[0m
+[3.867s] [ 67%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/srv/detail/dds_fastrtps/string__type_support.cpp.o[0m
+[3.890s] [ 67%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/mission_state__type_support.c.o[0m
+[3.921s] [ 67%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/nav_sts__type_support.c.o[0m
+[3.956s] [ 68%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/ned__type_support.c.o[0m
+[3.981s] [ 68%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/recovery_action__type_support.c.o[0m
+[3.996s] [ 69%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/rpy__type_support.c.o[0m
+[3.997s] [ 69%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/cola2_msgs/action/detail/dds_fastrtps/pilot__type_support.cpp.o[0m
+[4.004s] [ 69%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/safety_supervisor_status__type_support.c.o[0m
+[4.012s] [ 69%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/setpoints__type_support.c.o[0m
+[4.013s] [ 70%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/msg/detail/world_waypoint_req__type_support.c.o[0m
+[4.014s] [ 70%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/srv/detail/action__type_support.c.o[0m
+[4.021s] [ 71%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/srv/detail/digital_output__type_support.c.o[0m
+[4.024s] [ 71%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/srv/detail/goto__type_support.c.o[0m
+[4.028s] [ 71%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/srv/detail/max_joy_velocity__type_support.c.o[0m
+[4.030s] [ 72%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/srv/detail/mission__type_support.c.o[0m
+[4.041s] [ 72%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/srv/detail/recovery__type_support.c.o[0m
+[4.043s] [ 73%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/srv/detail/string__type_support.c.o[0m
+[4.043s] [ 73%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/srv/detail/section__type_support.c.o[0m
+[4.046s] [ 73%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/cola2_msgs/action/detail/pilot__type_support.c.o[0m
+[4.056s] [ 75%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/body_force_req__type_support_c.cpp.o[0m
+[4.056s] [ 75%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/goal_descriptor__type_support_c.cpp.o[0m
+[4.056s] [ 75%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/bool6_axis__type_support_c.cpp.o[0m
+[4.056s] [ 75%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/captain_state_feedback__type_support_c.cpp.o[0m
+[4.056s] [ 75%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/body_velocity_req__type_support_c.cpp.o[0m
+[4.056s] [ 75%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/captain_status__type_support_c.cpp.o[0m
+[4.059s] [ 75%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/decimal_lat_lon__type_support_c.cpp.o[0m
+[4.065s] [ 76%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/dvl_beam__type_support_c.cpp.o[0m
+[4.066s] [ 76%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/dvl__type_support_c.cpp.o[0m
+[4.070s] [ 76%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/float32_stamped__type_support_c.cpp.o[0m
+[4.071s] [ 77%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/key_value__type_support_c.cpp.o[0m
+[4.071s] [ 77%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/landmark__type_support_c.cpp.o[0m
+[4.079s] [ 78%] [32m[1mLinking CXX shared library libcola2_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[4.079s] [ 79%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/map__type_support_c.cpp.o[0m
+[4.082s] [ 79%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/mission_state__type_support_c.cpp.o[0m
+[4.082s] [ 80%] [32m[1mLinking C shared library libcola2_msgs__rosidl_typesupport_introspection_c.so[0m
+[4.089s] [ 81%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/ned__type_support_c.cpp.o[0m
+[4.094s] [ 81%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/nav_sts__type_support_c.cpp.o[0m
+[4.107s] [ 81%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/recovery_action__type_support_c.cpp.o[0m
+[4.116s] [ 81%] Built target cola2_msgs__rosidl_typesupport_introspection_c
+[4.123s] [ 82%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/rpy__type_support_c.cpp.o[0m
+[4.125s] [ 82%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/safety_supervisor_status__type_support_c.cpp.o[0m
+[4.128s] [ 82%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/setpoints__type_support_c.cpp.o[0m
+[4.133s] [ 83%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/msg/detail/world_waypoint_req__type_support_c.cpp.o[0m
+[4.136s] [ 83%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/srv/detail/action__type_support_c.cpp.o[0m
+[4.138s] [ 83%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/srv/detail/digital_output__type_support_c.cpp.o[0m
+[4.142s] [ 84%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/srv/detail/goto__type_support_c.cpp.o[0m
+[4.145s] [ 84%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/srv/detail/max_joy_velocity__type_support_c.cpp.o[0m
+[4.146s] [ 85%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/srv/detail/mission__type_support_c.cpp.o[0m
+[4.151s] [ 85%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/srv/detail/recovery__type_support_c.cpp.o[0m
+[4.151s] [ 85%] Built target cola2_msgs__rosidl_typesupport_introspection_cpp
+[4.158s] [ 85%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/srv/detail/section__type_support_c.cpp.o[0m
+[4.167s] [ 86%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/srv/detail/string__type_support_c.cpp.o[0m
+[4.181s] [ 86%] [32mBuilding CXX object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/cola2_msgs/action/detail/pilot__type_support_c.cpp.o[0m
+[4.300s] [ 86%] [32m[1mLinking CXX shared library libcola2_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.351s] [ 86%] Built target cola2_msgs__rosidl_typesupport_fastrtps_cpp
+[4.455s] [ 86%] [32m[1mLinking CXX shared library libcola2_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[4.500s] [ 86%] Built target cola2_msgs__rosidl_typesupport_fastrtps_c
+[4.513s] [ 86%] Built target cola2_msgs
+[4.525s] [ 86%] [34m[1mGenerating Python code for ROS interfaces[0m
+[6.540s] [ 86%] Built target cola2_msgs__py
+[6.556s] [ 86%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_body_velocity_req_s.c.o[0m
+[6.556s] [ 86%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_float32_stamped_s.c.o[0m
+[6.556s] [ 87%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_goal_descriptor_s.c.o[0m
+[6.556s] [ 87%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_landmark_s.c.o[0m
+[6.556s] [ 87%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_bool6_axis_s.c.o[0m
+[6.556s] [ 88%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_body_force_req_s.c.o[0m
+[6.556s] [ 88%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_captain_state_feedback_s.c.o[0m
+[6.556s] [ 89%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_mission_state_s.c.o[0m
+[6.556s] [ 90%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_key_value_s.c.o[0m
+[6.557s] [ 90%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_map_s.c.o[0m
+[6.557s] [ 90%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_nav_sts_s.c.o[0m
+[6.557s] [ 91%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_dvl_beam_s.c.o[0m
+[6.557s] [ 92%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_captain_status_s.c.o[0m
+[6.557s] [ 92%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_decimal_lat_lon_s.c.o[0m
+[6.557s] [ 92%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_dvl_s.c.o[0m
+[6.559s] [ 93%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_world_waypoint_req_s.c.o[0m
+[6.559s] [ 93%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/srv/_action_s.c.o[0m
+[6.559s] [ 93%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_recovery_action_s.c.o[0m
+[6.559s] [ 94%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_rpy_s.c.o[0m
+[6.559s] [ 94%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_ned_s.c.o[0m
+[6.559s] [ 94%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/srv/_digital_output_s.c.o[0m
+[6.559s] [ 95%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/srv/_goto_s.c.o[0m
+[6.559s] [ 95%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/srv/_max_joy_velocity_s.c.o[0m
+[6.559s] [ 96%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_safety_supervisor_status_s.c.o[0m
+[6.559s] [ 96%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/msg/_setpoints_s.c.o[0m
+[6.560s] [ 96%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/srv/_section_s.c.o[0m
+[6.560s] [ 96%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/srv/_string_s.c.o[0m
+[6.560s] [ 97%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/srv/_recovery_s.c.o[0m
+[6.560s] [ 97%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/srv/_mission_s.c.o[0m
+[6.562s] [ 98%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_generator_py.dir/rosidl_generator_py/cola2_msgs/action/_pilot_s.c.o[0m
+[6.689s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/cola2_msgs/libcola2_msgs__rosidl_generator_py.so[0m
+[6.714s] [ 98%] Built target cola2_msgs__rosidl_generator_py
+[6.724s] [ 98%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/cola2_msgs/_cola2_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[6.725s] [ 99%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/cola2_msgs/_cola2_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[6.726s] [100%] [32mBuilding C object CMakeFiles/cola2_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/cola2_msgs/_cola2_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[6.828s] [100%] [32m[1mLinking C shared library rosidl_generator_py/cola2_msgs/cola2_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.828s] [100%] [32m[1mLinking C shared library rosidl_generator_py/cola2_msgs/cola2_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.830s] [100%] [32m[1mLinking C shared library rosidl_generator_py/cola2_msgs/cola2_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.860s] [100%] Built target cola2_msgs__rosidl_typesupport_c__pyext
+[6.861s] [100%] Built target cola2_msgs__rosidl_typesupport_introspection_c__pyext
+[6.862s] [100%] Built target cola2_msgs__rosidl_typesupport_fastrtps_c__pyext
+[6.869s] Invoked command in '/home/sf_ws/build/cola2_msgs' returned '0': /usr/bin/cmake --build /home/sf_ws/build/cola2_msgs -- -j32 -l32
+[7.510s] Invoking command in '/home/sf_ws/build/cola2_msgs': /usr/bin/cmake --install /home/sf_ws/build/cola2_msgs
+[7.514s] -- Install configuration: ""
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/share/ament_index/resource_index/rosidl_interfaces/cola2_msgs
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__type_support.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__functions.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__functions.c
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__struct.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/pilot.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/captain_status.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/goal_descriptor.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/float32_stamped.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/safety_supervisor_status.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/setpoints.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/map.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/key_value.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/dvl_beam.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/dvl.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/decimal_lat_lon.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/bool6_axis.h
+[7.514s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__functions.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__functions.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__type_support.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__type_support.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__functions.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__functions.c
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__functions.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__functions.c
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__functions.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__functions.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__functions.c
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__functions.c
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__functions.c
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__functions.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__functions.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__type_support.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__functions.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__type_support.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__type_support.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__type_support.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__struct.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__functions.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__type_support.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__functions.c
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__functions.h
+[7.515s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__type_support.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__type_support.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__type_support.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__type_support.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__struct.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__functions.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__functions.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__type_support.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__functions.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__functions.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__struct.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__functions.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__type_support.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__struct.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__struct.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__type_support.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__type_support.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__type_support.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__functions.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__functions.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__type_support.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__struct.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__struct.h
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__functions.c
+[7.516s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__functions.c
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__functions.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__functions.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__type_support.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__functions.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__type_support.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__functions.c
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__type_support.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__struct.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__type_support.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/nav_sts.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/body_velocity_req.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/rosidl_generator_c__visibility_control.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/mission_state.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/recovery_action.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/ned.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/body_force_req.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/captain_state_feedback.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/world_waypoint_req.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/landmark.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/rpy.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/mission.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/digital_output.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/goto.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__functions.c
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__type_support.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__functions.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__type_support.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__struct.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__functions.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__functions.c
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__struct.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__type_support.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__type_support.h
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__functions.c
+[7.517s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__functions.c
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__functions.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__functions.c
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__functions.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__struct.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__type_support.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__struct.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__struct.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__struct.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__type_support.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__functions.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__functions.c
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__functions.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__type_support.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__functions.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__functions.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__functions.c
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__struct.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__struct.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__functions.c
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__type_support.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/recovery.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/max_joy_velocity.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/section.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/action.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/string.h
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/environment/library_path.sh
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/environment/library_path.dsv
+[7.518s] -- Installing: /home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_generator_c.so
+[7.519s] -- Set runtime path of "/home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_generator_c.so" to ""
+[7.519s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs
+[7.519s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action
+[7.519s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[7.519s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv
+[7.519s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__rosidl_typesupport_fastrtps_c.h
+[7.519s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__rosidl_typesupport_fastrtps_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__rosidl_typesupport_fastrtps_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_typesupport_fastrtps_c.so
+[7.520s] -- Set runtime path of "/home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[7.520s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs
+[7.520s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action
+[7.520s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__rosidl_typesupport_introspection_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__type_support.c
+[7.520s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg
+[7.520s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__rosidl_typesupport_introspection_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__type_support.c
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__rosidl_typesupport_introspection_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__type_support.c
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__rosidl_typesupport_introspection_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__rosidl_typesupport_introspection_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__type_support.c
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__rosidl_typesupport_introspection_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__rosidl_typesupport_introspection_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__rosidl_typesupport_introspection_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__type_support.c
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__rosidl_typesupport_introspection_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__type_support.c
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__type_support.c
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__rosidl_typesupport_introspection_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__type_support.c
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__type_support.c
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__rosidl_typesupport_introspection_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__type_support.c
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__type_support.c
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__rosidl_typesupport_introspection_c.h
+[7.520s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[7.521s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv
+[7.521s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__rosidl_typesupport_introspection_c.h
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__type_support.c
+[7.521s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__type_support.c
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__rosidl_typesupport_introspection_c.h
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__rosidl_typesupport_introspection_c.h
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__type_support.c
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__rosidl_typesupport_introspection_c.h
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__rosidl_typesupport_introspection_c.h
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__type_support.c
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__rosidl_typesupport_introspection_c.h
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__type_support.c
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_typesupport_introspection_c.so
+[7.522s] -- Set runtime path of "/home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_typesupport_introspection_c.so" to ""
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_typesupport_c.so
+[7.522s] -- Set runtime path of "/home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_typesupport_c.so" to ""
+[7.522s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs
+[7.522s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action
+[7.522s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__struct.hpp
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__traits.hpp
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__builder.hpp
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/pilot.hpp
+[7.522s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/dvl.hpp
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/captain_state_feedback.hpp
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/landmark.hpp
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/key_value.hpp
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/float32_stamped.hpp
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/mission_state.hpp
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/bool6_axis.hpp
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/setpoints.hpp
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/safety_supervisor_status.hpp
+[7.522s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/decimal_lat_lon.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/dvl_beam.hpp
+[7.523s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__struct.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__struct.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__struct.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__struct.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__builder.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__struct.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__struct.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__struct.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__struct.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__traits.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__builder.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__builder.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__builder.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__traits.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__traits.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__builder.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__traits.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__struct.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__struct.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__traits.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__builder.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__builder.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__struct.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__builder.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__traits.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__traits.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__builder.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__struct.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__builder.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__traits.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__traits.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__builder.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__builder.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__traits.hpp
+[7.523s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__traits.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__struct.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__struct.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__struct.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__traits.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__builder.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__traits.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__traits.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__builder.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__struct.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__struct.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__struct.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__traits.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__struct.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__builder.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__builder.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__traits.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__traits.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__builder.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__struct.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__builder.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__struct.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__traits.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__builder.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__traits.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__builder.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__traits.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__builder.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__traits.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/captain_status.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/ned.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/map.hpp
+[7.524s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/body_velocity_req.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/body_force_req.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/recovery_action.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/nav_sts.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/rpy.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/goal_descriptor.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/world_waypoint_req.hpp
+[7.525s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/section.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/mission.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/max_joy_velocity.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/recovery.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/digital_output.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/string.hpp
+[7.525s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__builder.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__builder.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__traits.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__builder.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__builder.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__struct.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__struct.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__traits.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__builder.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__builder.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__struct.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__builder.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__traits.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__builder.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__struct.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__traits.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__struct.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__traits.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__struct.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__struct.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__traits.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__traits.hpp
+[7.525s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__struct.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__traits.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/action.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/goto.hpp
+[7.526s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs
+[7.526s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action
+[7.526s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/dds_fastrtps
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg
+[7.526s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dds_fastrtps
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__rosidl_typesupport_fastrtps_cpp.hpp
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[7.526s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv
+[7.526s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail
+[7.526s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/dds_fastrtps
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__rosidl_typesupport_fastrtps_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__rosidl_typesupport_fastrtps_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__rosidl_typesupport_fastrtps_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__rosidl_typesupport_fastrtps_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__rosidl_typesupport_fastrtps_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__rosidl_typesupport_fastrtps_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__rosidl_typesupport_fastrtps_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__rosidl_typesupport_fastrtps_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_typesupport_fastrtps_cpp.so
+[7.527s] -- Set runtime path of "/home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[7.527s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs
+[7.527s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action
+[7.527s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__rosidl_typesupport_introspection_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/action/detail/pilot__type_support.cpp
+[7.527s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg
+[7.527s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__rosidl_typesupport_introspection_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__type_support.cpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__rosidl_typesupport_introspection_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__rosidl_typesupport_introspection_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__type_support.cpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__rosidl_typesupport_introspection_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__rosidl_typesupport_introspection_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/landmark__type_support.cpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__type_support.cpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__type_support.cpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__rosidl_typesupport_introspection_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/float32_stamped__rosidl_typesupport_introspection_cpp.hpp
+[7.527s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/mission_state__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_force_req__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/ned__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/dvl_beam__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/bool6_axis__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/recovery_action__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/safety_supervisor_status__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/decimal_lat_lon__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/rpy__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_state_feedback__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/nav_sts__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/setpoints__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/world_waypoint_req__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/goal_descriptor__type_support.cpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/map__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/body_velocity_req__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/key_value__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/msg/detail/captain_status__type_support.cpp
+[7.528s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv
+[7.528s] -- Up-to-date: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__rosidl_typesupport_introspection_cpp.hpp
+[7.528s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__rosidl_typesupport_introspection_cpp.hpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__type_support.cpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__rosidl_typesupport_introspection_cpp.hpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/max_joy_velocity__type_support.cpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__type_support.cpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/digital_output__type_support.cpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__rosidl_typesupport_introspection_cpp.hpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__rosidl_typesupport_introspection_cpp.hpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/mission__rosidl_typesupport_introspection_cpp.hpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/action__type_support.cpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__rosidl_typesupport_introspection_cpp.hpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/recovery__type_support.cpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/section__type_support.cpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/string__rosidl_typesupport_introspection_cpp.hpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/include/cola2_msgs/cola2_msgs/srv/detail/goto__type_support.cpp
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_typesupport_introspection_cpp.so
+[7.529s] -- Set runtime path of "/home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_typesupport_cpp.so
+[7.529s] -- Set runtime path of "/home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_typesupport_cpp.so" to ""
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/environment/pythonpath.sh
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/environment/pythonpath.dsv
+[7.529s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs-1.3.0-py3.10.egg-info
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs-1.3.0-py3.10.egg-info/SOURCES.txt
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs-1.3.0-py3.10.egg-info/top_level.txt
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs-1.3.0-py3.10.egg-info/PKG-INFO
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs-1.3.0-py3.10.egg-info/dependency_links.txt
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/_cola2_msgs_s.ep.rosidl_typesupport_c.c
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/action
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/action/_pilot.py
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/action/__init__.py
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/action/_pilot_s.c
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/cola2_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_landmark.py
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_recovery_action_s.c
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_decimal_lat_lon_s.c
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_rpy.py
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_key_value_s.c
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_dvl_s.c
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_goal_descriptor.py
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_decimal_lat_lon.py
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_captain_state_feedback.py
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_setpoints.py
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_captain_state_feedback_s.c
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_key_value.py
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_float32_stamped_s.c
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_nav_sts_s.c
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_safety_supervisor_status_s.c
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_mission_state_s.c
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_body_velocity_req.py
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_dvl.py
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_ned_s.c
+[7.530s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_body_velocity_req_s.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_ned.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_recovery_action.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_landmark_s.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_dvl_beam_s.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_body_force_req.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_safety_supervisor_status.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_bool6_axis_s.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_map.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/__init__.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_body_force_req_s.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_map_s.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_setpoints_s.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_float32_stamped.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_bool6_axis.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_mission_state.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_captain_status.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_world_waypoint_req_s.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_nav_sts.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_goal_descriptor_s.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_rpy_s.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_world_waypoint_req.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_captain_status_s.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_dvl_beam.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/_cola2_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/_cola2_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/__init__.py
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/cola2_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[7.531s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/libcola2_msgs__rosidl_generator_py.so
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_string.py
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_string_s.c
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_recovery.py
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_section.py
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_max_joy_velocity.py
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_action.py
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_digital_output.py
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_mission_s.c
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/__init__.py
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_max_joy_velocity_s.c
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_recovery_s.c
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_digital_output_s.c
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_goto_s.c
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_action_s.c
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_mission.py
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_goto.py
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_section_s.c
+[7.532s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/cola2_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[7.566s] Listing '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs'...
+[7.566s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/__init__.py'...
+[7.566s] Listing '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/action'...
+[7.566s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/action/__init__.py'...
+[7.566s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/action/_pilot.py'...
+[7.566s] Listing '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg'...
+[7.566s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/__init__.py'...
+[7.566s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_body_force_req.py'...
+[7.566s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_body_velocity_req.py'...
+[7.566s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_bool6_axis.py'...
+[7.566s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_captain_state_feedback.py'...
+[7.566s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_captain_status.py'...
+[7.566s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_decimal_lat_lon.py'...
+[7.566s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_dvl.py'...
+[7.566s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_dvl_beam.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_float32_stamped.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_goal_descriptor.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_key_value.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_landmark.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_map.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_mission_state.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_nav_sts.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_ned.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_recovery_action.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_rpy.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_safety_supervisor_status.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_setpoints.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/msg/_world_waypoint_req.py'...
+[7.567s] Listing '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/__init__.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_action.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_digital_output.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_goto.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_max_joy_velocity.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_mission.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_recovery.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_section.py'...
+[7.567s] Compiling '/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/srv/_string.py'...
+[7.568s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/cola2_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[7.568s] -- Set runtime path of "/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/cola2_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[7.568s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/cola2_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[7.568s] -- Set runtime path of "/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/cola2_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[7.568s] -- Installing: /home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/cola2_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[7.569s] -- Set runtime path of "/home/sf_ws/install/cola2_msgs/local/lib/python3.10/dist-packages/cola2_msgs/cola2_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_generator_py.so
+[7.569s] -- Set runtime path of "/home/sf_ws/install/cola2_msgs/lib/libcola2_msgs__rosidl_generator_py.so" to ""
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/GoalDescriptor.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/Bool6Axis.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/BodyForceReq.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/BodyVelocityReq.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/CaptainStateFeedback.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/CaptainStatus.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/DecimalLatLon.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/DVL.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/DVLBeam.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/Float32Stamped.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/KeyValue.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/Landmark.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/Map.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/MissionState.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/NavSts.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/NED.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/RecoveryAction.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/RPY.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/SafetySupervisorStatus.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/Setpoints.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/WorldWaypointReq.idl
+[7.569s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Action.idl
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/DigitalOutput.idl
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Goto.idl
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/MaxJoyVelocity.idl
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Mission.idl
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Recovery.idl
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Section.idl
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/String.idl
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/action/Pilot.idl
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/GoalDescriptor.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/Bool6Axis.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/BodyForceReq.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/BodyVelocityReq.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/CaptainStateFeedback.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/CaptainStatus.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/DecimalLatLon.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/DVL.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/DVLBeam.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/Float32Stamped.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/KeyValue.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/Landmark.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/Map.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/MissionState.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/NavSts.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/NED.msg
+[7.570s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/RecoveryAction.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/RPY.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/SafetySupervisorStatus.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/Setpoints.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/msg/WorldWaypointReq.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Action.srv
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Action_Request.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Action_Response.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/DigitalOutput.srv
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/DigitalOutput_Request.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/DigitalOutput_Response.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Goto.srv
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Goto_Request.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Goto_Response.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/MaxJoyVelocity.srv
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/MaxJoyVelocity_Request.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/MaxJoyVelocity_Response.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Mission.srv
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Mission_Request.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Mission_Response.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Recovery.srv
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Recovery_Request.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Recovery_Response.msg
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Section.srv
+[7.571s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Section_Request.msg
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/Section_Response.msg
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/String.srv
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/String_Request.msg
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/srv/String_Response.msg
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/action/Pilot.action
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/ament_index/resource_index/package_run_dependencies/cola2_msgs
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/ament_index/resource_index/parent_prefix_path/cola2_msgs
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/environment/ament_prefix_path.sh
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/environment/ament_prefix_path.dsv
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/environment/path.sh
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/environment/path.dsv
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/local_setup.bash
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/local_setup.sh
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/local_setup.zsh
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/local_setup.dsv
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/package.dsv
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/ament_index/resource_index/packages/cola2_msgs
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/export_cola2_msgs__rosidl_generator_cExport.cmake
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/export_cola2_msgs__rosidl_generator_cExport-noconfig.cmake
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/export_cola2_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/export_cola2_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[7.572s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/cola2_msgs__rosidl_typesupport_introspection_cExport.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/cola2_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/cola2_msgs__rosidl_typesupport_cExport.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/cola2_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/export_cola2_msgs__rosidl_generator_cppExport.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/export_cola2_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/export_cola2_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/cola2_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/cola2_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/cola2_msgs__rosidl_typesupport_cppExport.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/cola2_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/export_cola2_msgs__rosidl_generator_pyExport.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/export_cola2_msgs__rosidl_generator_pyExport-noconfig.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/rosidl_cmake-extras.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/cola2_msgsConfig.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/cmake/cola2_msgsConfig-version.cmake
+[7.573s] -- Installing: /home/sf_ws/install/cola2_msgs/share/cola2_msgs/package.xml
+[7.575s] Invoked command in '/home/sf_ws/build/cola2_msgs' returned '0': /usr/bin/cmake --install /home/sf_ws/build/cola2_msgs

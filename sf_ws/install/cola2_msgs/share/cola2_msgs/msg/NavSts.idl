@@ -1,0 +1,45 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cola2_msgs/msg/NavSts.msg
+// generated code does not contain a copyright notice
+
+#include "cola2_msgs/msg/DecimalLatLon.idl"
+#include "cola2_msgs/msg/NED.idl"
+#include "cola2_msgs/msg/RPY.idl"
+#include "geometry_msgs/msg/Point.idl"
+#include "std_msgs/msg/Header.idl"
+
+module cola2_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Sent by the navigator")
+    struct NavSts {
+      std_msgs::msg::Header header;
+
+      cola2_msgs::msg::DecimalLatLon global_position;
+
+      cola2_msgs::msg::DecimalLatLon origin;
+
+      @verbatim (language="comment", text=
+        "NED position and altitude in metres.")
+      cola2_msgs::msg::NED position;
+
+      float altitude;
+
+      @verbatim (language="comment", text=
+        "Body velocities in metres/sec.")
+      geometry_msgs::msg::Point body_velocity;
+
+      @verbatim (language="comment", text=
+        "Orientation and orientation rate are in radians and radians/sec")
+      cola2_msgs::msg::RPY orientation;
+
+      cola2_msgs::msg::RPY orientation_rate;
+
+      @verbatim (language="comment", text=
+        "Variances for position and orientation")
+      cola2_msgs::msg::NED position_variance;
+
+      cola2_msgs::msg::RPY orientation_variance;
+    };
+  };
+};

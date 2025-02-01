@@ -1,0 +1,64 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from cola2_msgs/srv/Section.srv
+// generated code does not contain a copyright notice
+
+
+module cola2_msgs {
+  module srv {
+    module Section_Request_Constants {
+      @verbatim (language="comment", text=
+        "Reference frame for both the inital and final positions")
+      const uint8 NED = 0;
+      const uint8 GLOBAL = 1;
+      const uint64 DEPTH = 0;
+      const uint64 ALTITUDE = 1;
+      const uint64 BOTH = 2;
+    };
+    @verbatim (language="comment", text=
+      "Initial state")
+    struct Section_Request {
+      double initial_x;
+
+      double initial_y;
+
+      double initial_depth;
+
+      @verbatim (language="comment", text=
+        "Final state")
+      double final_x;
+
+      double final_y;
+
+      double final_depth;
+
+      double final_altitude;
+
+      uint8 reference;
+
+      @verbatim (language="comment", text=
+        "Heave mode")
+      uint64 heave_mode;
+
+      @verbatim (language="comment", text=
+        "Surge velocity")
+      double surge_velocity;
+
+      @verbatim (language="comment", text=
+        "Tolerance")
+      double tolerance_xy;
+
+      @verbatim (language="comment", text=
+        "Timeout")
+      double timeout;
+
+      @verbatim (language="comment", text=
+        "No altitude reactive behavior")
+      boolean no_altitude_goes_up;
+    };
+    struct Section_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

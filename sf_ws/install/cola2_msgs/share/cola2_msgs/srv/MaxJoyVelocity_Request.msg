@@ -1,0 +1,1 @@
+float64[6] max_joy_velocity
